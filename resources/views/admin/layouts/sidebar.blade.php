@@ -1,9 +1,9 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('admin.index')}}">
         <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
+
         </div>
         <div class="sidebar-brand-text mx-3">Angkut Apps</div>
     </a>
@@ -13,7 +13,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="{{route('admin.index')}}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
@@ -27,33 +27,20 @@
         Master Data
     </div>
 
-    <!-- Nav Item - Pages Collapse Menu -->
+    <!-- Nav Item - DriverMenu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDriver" aria-expanded="true" aria-controls="collapseDriver">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Daftar Driver</span>
+        <a class="nav-link" href="#">
+            <i class="fas fa-fw fa-car-side"></i>
+            <span>Data Driver</span>
         </a>
-        <div id="collapseDriver" class="collapse" aria-labelledby="headingDriver" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Driver</h6>
-                <a class="collapse-item" href="buttons.html">All Driver</a>
-            </div>
-        </div>
     </li>
-
-    <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseKeluhan" aria-expanded="true" aria-controls="collapseKeluhan">
+        <a class="nav-link" href="#">
             <i class="fas fa-fw fa-wrench"></i>
             <span>Daftar keluhan</span>
         </a>
-        <div id="collapseKeluhan" class="collapse" aria-labelledby="headingKeluhan" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Keluhan</h6>
-                <a class="collapse-item" href="utilities-color.html">All Keluhan</a>
-            </div>
-        </div>
     </li>
+
 
     <!-- Divider -->
     <hr class="sidebar-divider">
@@ -66,14 +53,14 @@
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
+            <i class="fas fa-fw fa-bookmark"></i>
             <span>Category</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Category</h6>
-                <a class="collapse-item" href="buttons.html">All Category</a>
-                <a class="collapse-item" href="cards.html">Trash Category</a>
+                <a class="collapse-item" href="{{route('category.index')}}">All Category</a>
+                <a class="collapse-item" href="{{route('category.trash')}}">Trash Category</a>
             </div>
         </div>
     </li>
@@ -81,7 +68,7 @@
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-fw fa-wrench"></i>
+            <i class="fas fa-fw fa-newspaper"></i>
             <span>Artikel</span>
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
@@ -96,7 +83,19 @@
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
+    <div class="sidebar-heading">
+        Site Setting
+    </div>
 
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <i class="fas fa-fw fa-user"></i>
+            <span>User Setting</span>
+        </a>
+    </li>
+
+
+    <hr class="sidebar-divider d-none d-md-block">
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">
         <button class="rounded-circle border-0" id="sidebarToggle"></button>

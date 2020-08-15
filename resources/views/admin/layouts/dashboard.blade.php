@@ -18,6 +18,8 @@
     <!-- Custom styles for this template-->
     <link href="{{asset('asset_backend/css/sb-admin-2.min.css')}}" rel="stylesheet">
 
+    <link href="{{asset('asset_backend/vendor/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet">
+
 </head>
 
 <body id="page-top">
@@ -83,15 +85,56 @@
                 </div>
                 <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary" href="login.html">Logout</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Delete Modal -->
+    <div class="modal fade" id="modal-hapus" tabindex="-1" role="dialog" aria-labelledby="modal-notification" aria-hidden="true">
+        <div class="modal-dialog modal-default modal-dialog-centered modal-" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h6 class="modal-title" id="modal-title-notification">Your attention is required</h6>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="py-3 text-center">
+                        <i class="ni ni-bell-55 ni-3x"></i>
+                        <h4 class="heading mt-4">Apakah kamu yakin ingin menghapus data ini?</h4>
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <form action="" method="post">
+                        {{ csrf_field() }}
+                        {{ method_field('delete') }}
+                        <p>
+                            <button type="submit" class="btn btn-danger btn-flat btn-sm menu-sidebar">Ok, Hapus</button>
+                            <button type="button" class="btn btn-primary btn-sm ml-auto" data-dismiss="modal">Close</button>
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
     <!-- Bootstrap core JavaScript-->
-    <script src="{{asset('asset_backend/vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('asset_backend/vendor/jquery/jquery.min.js')}}">
+    </script>
     <script src="{{asset('asset_backend/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
     <!-- Core plugin JavaScript-->
@@ -102,11 +145,28 @@
 
     <!-- Page level plugins -->
     <script src="{{asset('asset_backend/vendor/chart.js/Chart.min.js')}}"></script>
+    <script src="{{asset('asset_backend/vendor/datatables/jquery.dataTables.min.js')}}"></script>
+    <script src="{{asset('asset_backend/vendor/datatables/dataTables.bootstrap4.min.js')}}"></script>
 
     <!-- Page level custom scripts -->
     <script src="{{asset('asset_backend/js/demo/chart-area-demo.js')}}"></script>
     <script src="{{asset('asset_backend/js/demo/chart-pie-demo.js')}}"></script>
+    <script src="{{asset('asset_backend/js/demo/datatables-demo.js')}}"></script>
 
+    <!-- script js custom -->
+
+    <script>
+        $(document).ready(function() {
+            $('body').on('click', '.btn-hapus', function(e) {
+                e.preventDefault();
+                var url = $(this).attr('href');
+                $('#modal-hapus').find('form').attr('action', url);
+                $('#modal-hapus').modal();
+            });
+        });
+    </script>
+
+    @include('sweetalert::alert')
 
 </body>
 
