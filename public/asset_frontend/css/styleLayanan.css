@@ -1,0 +1,616 @@
+/* global style */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green: #16a085;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+/* nav */
+nav.navbar {
+  background: var(--green);
+}
+
+nav.navbar {
+  z-index: 999;
+  width: 100%;
+}
+
+.navbar-brand {
+  width: 70px;
+}
+
+.nav-link {
+  color: white !important;
+  font-size: 1.2rem;
+}
+
+button.navbar-toggler {
+  background: unset;
+  border: unset;
+  outline: unset;
+}
+
+.carousel {
+  height: 450px;
+  background-color: #16a085;
+  color: white;
+}
+
+.carousel .display-4 {
+  text-align: center;
+  color: white;
+  margin-top: 38%;
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.carousel h2 {
+  text-align: center;
+  color: white;
+  font-size: 2.1rem;
+  font-weight: 200;
+}
+
+.carousel span {
+  font-weight: 500;
+}
+
+/* brands */
+.brands h1 {
+  font-size: 3rem;
+  color: var(--green);
+  font-weight: 700;
+  text-align: center;
+}
+
+.cek-tarif h2 {
+  font-size: 3rem;
+  color: var(--green);
+  font-weight: 700;
+  text-align: center;
+}
+
+.brands hr {
+  width: 45%;
+  margin: auto;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+  border: 1px solid var(--green);
+}
+
+.brands img {
+  width: 29%;
+}
+
+.info-panel {
+  background: var(--green);
+  position: relative;
+  border-radius: 1rem;
+  margin: 1.5rem 0;
+}
+
+.info-panel span {
+  position: absolute;
+  background: white;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  line-height: 4rem;
+  text-align: center;
+  top: 2.5rem;
+  left: 1rem;
+}
+
+.text-info {
+  margin-left: 6rem;
+  padding: 1rem 0;
+}
+
+.text-info h2 {
+  color: white;
+  font-size: 1.8rem;
+}
+
+.text-info p {
+  color: white;
+  font-size: 1.4rem;
+}
+
+/*form cek tarif*/
+.input-group {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+
+.input-group-text {
+  border: unset;
+  background: unset;
+  font-size: 1.7rem;
+  color: #ff0000ce;
+  padding-top: 1.8rem;
+}
+
+.input-group input {
+  font-size: 1.5rem;
+  height: 3rem;
+  background: unset !important;
+  outline: none !important;
+  border: unset;
+  margin-top: 2rem;
+}
+
+textarea:focus,
+textarea.form-control:focus,
+input.form-control:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+[type="text"].form-control:focus,
+[type="password"].form-control:focus,
+[type="email"].form-control:focus,
+[type="tel"].form-control:focus,
+[contenteditable].form-control:focus {
+  box-shadow: inset 0 -1px 0 #ddd !important;
+}
+
+
+.cek-tarif button.btn-success {
+  outline: unset;
+  border: unset;
+  background: var(--green);
+  padding: 1rem;
+  color: white;
+  width: 70%;
+  font-size: 1.3rem;
+  border-radius: 12px;
+  margin-top: 12px;
+}
+
+.cek-tarif button.btn-success:hover {
+  background-color: #106d5a;
+  transition: 0.5s;
+}
+
+/* berita pengguna */
+.driver h1 {
+  font-size: 3rem;
+  color: var(--green);
+  font-weight: 700;
+  text-align: center;
+}
+
+.driver hr {
+  width: 50%;
+  margin: 1rem auto;
+  border: 1px solid var(--green);
+}
+
+.driver .card {
+  margin-top: 6rem !important;
+  border: unset;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+}
+
+.profile-card-2 .card-body {
+  position: relative;
+}
+
+.profile-card-2 .profile {
+  border-radius: 50%;
+  position: absolute;
+  top: -42px;
+  left: 0;
+  max-width: 75px;
+  border: 3px solid #16a085;
+}
+
+.profile-card-2 h5 {
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 2rem;
+}
+
+.profile-card-2 h6 {
+  margin-top: -0.5rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.3rem;
+}
+
+.card .card-body hr {
+  width: 50%;
+  margin: auto;
+}
+
+.profile-card-2 .card-text {
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 1rem;
+}
+
+/* faq */
+
+.question h1 {
+  color: var(--green);
+  font-weight: 550;
+}
+
+.question hr {
+  width: 50%;
+  border: 1px solid var(--green);
+  margin: auto;
+}
+
+.question .collapsible-link::before {
+  content: "";
+  width: 14px;
+  height: 2px;
+  background: #333;
+  position: absolute;
+  top: calc(50% - 1px);
+  right: 1rem;
+  display: block;
+  transition: all 0.3s;
+}
+
+/* Vertical line */
+.question .collapsible-link::after {
+  content: "";
+  width: 2px;
+  height: 14px;
+  background: #333;
+  position: absolute;
+  top: calc(50% - 7px);
+  right: calc(1rem + 6px);
+  display: block;
+  transition: all 0.3s;
+}
+
+.question .collapsible-link[aria-expanded="true"]::after {
+  transform: rotate(90deg) translateX(-1px);
+}
+
+.question .collapsible-link[aria-expanded="true"]::before {
+  transform: rotate(180deg);
+}
+
+/* footer */
+.footer {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  background: #367c6d;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+.footer h3,
+.footer h1 {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}
+
+.footer p {
+  color: rgb(224, 224, 224);
+  font-weight: 500;
+}
+
+.footer .nav-footer {
+  color: rgb(224, 224, 224);
+}
+
+.footer-top picture {
+  display: flex;
+}
+
+.footer .footer-top img {
+  width: 15rem;
+  padding-right: 10px;
+  opacity: 0.9;
+}
+
+.footer .footer-item {
+  line-height: 3rem;
+}
+
+.nav-footer a {
+  color: rgb(224, 224, 224);
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.sosmed .nav-footer {
+  list-style: none;
+  display: inline-block;
+}
+
+.sosmed-item {
+  display: inline;
+  margin-right: 5px;
+}
+
+.sosmed-link {
+  border: 1px solid rgba(255, 255, 255, 1);
+  display: inline-block;
+  padding: 5px 8px;
+  border-radius: 9px;
+}
+
+.sosmed-item .fa-instagram,
+.sosmed-item .fa-facebook-square,
+.sosmed-item .fa-youtube,
+.sosmed-item .fa-twitter-square {
+  font-size: 1.6rem;
+  line-height: unset;
+}
+
+.footer-top .driver {
+  padding-top: 1rem;
+}
+
+.footer-bottom hr {
+  margin-top: 4rem;
+  width: 100%;
+  border: 1px solid rgb(211, 211, 211);
+}
+
+.footer-bottom p {
+  color: rgb(211, 211, 211);
+}
+
+@media (min-width: 768px) {
+  .carousel .display-4 {
+    font-size: 5rem;
+    text-align: left;
+    margin-top: 10%;
+  }
+
+  .carousel h2 {
+    font-size: 3rem;
+    text-align: left;
+  }
+
+  .carousel img {
+    margin-top: 10rem;
+  }
+
+  .brands hr {
+    width: 20%;
+  }
+
+  .brands img {
+    width: 95%;
+    margin-left: 0rem;
+  }
+
+  .brands .info-panel {
+    margin-top: 0rem;
+  }
+
+  .driver hr {
+    width: 20%;
+  }
+
+  .question hr {
+    width: 20%;
+    margin: 2rem auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .nav-link {
+    margin-right: 30px;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color: white !important;
+  }
+
+  .nav-link:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid white;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+  }
+
+  /* header */
+  .carousel {
+    height: 600px;
+  }
+
+  .carousel .display-4 {
+    text-align: left;
+    font-size: 5rem;
+    margin-top: 30%;
+  }
+
+  .carousel h2 {
+    font-size: 3.1rem;
+    text-align: left;
+  }
+
+  .carousel img {
+    margin-top: 30%;
+  }
+
+  /* brands */
+  .brands h1 {
+    font-size: 3.5rem;
+  }
+
+  .brands hr {
+    width: 15%;
+  }
+
+  .brands img {
+    width: 50%;
+    margin-left: 10rem;
+  }
+
+  .info-panel {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  .info-panel span {
+    font-size: 1.9rem;
+  }
+
+  .text-info h2 {
+    font-size: 2rem;
+  }
+
+  .text-info p {
+    font-size: 1.6rem;
+  }
+
+  /*berita pengguna*/
+  .driver h1 {
+    font-size: 3.5rem;
+  }
+
+  .driver hr {
+    width: 15%;
+  }
+
+  .profile-card-2 .profile {
+    top: -4.2rem;
+    left: 0;
+    max-width: 75px;
+    border: 2px solid #16a085;
+  }
+
+  /* faq */
+
+  .question h1 {
+    font-size: 3.5rem;
+  }
+
+  .question hr {
+    width: 15%;
+    margin-bottom: 2rem;
+  }
+
+  .question .card h6 {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  /* footer */
+  footer.footer {
+    padding: 3rem 0 1rem 0;
+    background: #367c6d;
+  }
+
+  .footer h3,
+  .footer h1 {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 2.8rem;
+  }
+
+  .footer p {
+    color: rgb(224, 224, 224);
+    font-weight: 500;
+    font-size: 1.7rem;
+  }
+
+  .footer .nav-footer {
+    color: rgb(224, 224, 224);
+  }
+
+  .footer .footer-top img {
+    width: 15rem;
+    padding-right: 10px;
+    opacity: 0.9;
+  }
+
+  .footer .footer-item {
+    line-height: 2.5rem;
+  }
+
+  .footer .footer-item:hover {
+    transform: translateX(5px);
+    transition: 0.5s;
+  }
+
+  .nav-footer a {
+    color: rgb(224, 224, 224);
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+
+  .sosmed .nav-footer {
+    list-style: none;
+    display: inline-block;
+  }
+
+  .sosmed-item {
+    display: inline;
+    margin-right: 5px;
+  }
+
+  .sosmed-link {
+    border: 1px solid rgba(255, 255, 255, 1);
+    display: inline-block;
+    padding: 5px 8px;
+    border-radius: 9px;
+  }
+
+  .sosmed-item .fa-instagram,
+  .sosmed-item .fa-facebook-square,
+  .sosmed-item .fa-youtube,
+  .sosmed-item .fa-twitter-square {
+    font-size: 2rem;
+    line-height: unset;
+    transform: translateY(2px);
+  }
+
+  .footer-top .driver {
+    padding-top: 10px;
+  }
+
+  .footer-bottom p {
+    color: rgb(211, 211, 211);
+  }
+}

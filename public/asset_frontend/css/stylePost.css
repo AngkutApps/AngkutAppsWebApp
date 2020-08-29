@@ -1,0 +1,521 @@
+/* global style */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --green: #16a085;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+/* nav */
+nav.navbar {
+    background: var(--green);
+}
+
+nav.navbar {
+    z-index: 999;
+    width: 100%;
+}
+
+.navbar-brand {
+    width: 70px;
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+button.navbar-toggler {
+    background: unset;
+    border: unset;
+    outline: unset;
+}
+
+/* header */
+.jumbotron.jumbotron-fluid {
+    margin-top: 15%;
+    background: transparent;
+}
+
+.kategori .link-kategori {
+    color: rgba(0, 0, 0, .8);
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.kategori .link-kategori:hover {
+    color: var(--green);
+}
+
+.kategori .link-kategori:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid var(--green);
+    width: 50%;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+}
+
+.form-group {
+    margin-top: 2.5rem;
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 1rem;
+}
+
+.form-group .form-input::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, .6)
+}
+
+.form-group .form-input:-moz-input-placeholder {
+    6 color: rgba(0, 0, 0, .6)
+}
+
+.form-group .form-input {
+    padding: 6.7px;
+    width: 25rem;
+    font-size: 1.6rem;
+    color: rgba(0, 0, 0, .6);
+    border-radius: 10px;
+    background: unset;
+    border: unset;
+    outline: unset;
+    padding-left: 2rem;
+    font-weight: 600;
+}
+
+.form-group .search-btn {
+    background: unset;
+    border: unset;
+    outline: unset;
+    cursor: pointer;
+}
+
+.search-btn .fa-search {
+    font-size: 22px;
+    padding-right: 5px;
+    color: var(--green);
+    margin-top: 5px;
+}
+
+.search-btn .fa-search:hover {
+    color: darkgreen;
+}
+
+/* main */
+main .card-wrapper {
+    margin-bottom: 2rem;
+}
+
+main .card-wrapper img {
+    width: 100%;
+    border-radius: 1.2rem 1.2rem 0 0;
+}
+
+main .card-wrapper a {
+    font-size: 1.9rem;
+    text-decoration: none;
+    color: rgba(0, 0, 0, .7);
+    font-weight: 700;
+}
+
+
+main .card {
+    border: unset;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+}
+
+main .card img {
+    width: 50%;
+    border-radius: .5rem;
+}
+
+.card .card-body a {
+    font-size: 1.3rem;
+    text-decoration: none;
+    position: absolute;
+    left: 50%;
+    top: 4rem;
+    color: rgba(0, 0, 0, .7);
+    font-weight: 500;
+}
+
+.card .card-footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+}
+
+.card .text-muted {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 1rem;
+}
+
+.card-wrapper .card-footer {
+    border-top: unset;
+    text-align: right;
+}
+
+.card-wrapper .text-muted {
+    font-size: 1.3rem;
+}
+
+.pagination {
+    padding-top: 5rem;
+}
+
+.page-item {
+    padding: 2rem;
+}
+
+.page-link.prev,
+.page-link.next {
+    background-color: var(--green) !important;
+    color: white;
+    border-radius: 10%;
+    font-size: 1.8rem;
+}
+
+.page-link.prev:hover,
+.page-link.next:hover {
+    background-color: #106d5a !important;
+    transition: 0.5s;
+}
+
+.page-link {
+    border: unset !important;
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, .7);
+    font-weight: 700;
+}
+
+@media (min-width: 320px) and (max-width: 450px) {
+    .jumbotron.jumbotron-fluid {
+        margin-top: 20%;
+    }
+
+    .kategori .link-kategori {
+        font-size: 1.1rem;
+    }
+
+    .form-group .form-input {
+        padding: 6px;
+        width: 20rem;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        padding-left: 1rem;
+    }
+
+    .form-group {
+        margin-top: 2rem;
+    }
+
+    .search-btn .fa-search {
+        font-size: 18px;
+        padding-right: 8px;
+        margin-top: 3px;
+    }
+
+    /* main */
+    main .card-wrapper a {
+        font-size: 1.5rem;
+    }
+
+    main .card {
+        margin-bottom: 5rem;
+    }
+
+    .card .card-body a {
+        font-size: 1.1rem;
+        top: 0;
+    }
+}
+
+
+/* footer */
+.footer {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    background: #367c6d;
+    position: relative;
+    left: 0;
+    right: 0;
+}
+
+.footer h3,
+.footer h1 {
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+
+.footer p {
+    color: rgb(224, 224, 224);
+    font-weight: 500;
+}
+
+.footer .nav-footer {
+    color: rgb(224, 224, 224);
+}
+
+.footer-top picture {
+    display: flex;
+}
+
+.footer .footer-top img {
+    width: 15rem;
+    padding-right: 10px;
+    opacity: 0.9;
+}
+
+.footer .footer-item {
+    line-height: 3rem;
+}
+
+.nav-footer a {
+    color: rgb(224, 224, 224);
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.sosmed .nav-footer {
+    list-style: none;
+    display: inline-block;
+}
+
+.sosmed-item {
+    display: inline;
+    margin-right: 5px;
+}
+
+.sosmed-link {
+    border: 1px solid rgba(255, 255, 255, 1);
+    display: inline-block;
+    padding: 5px 8px;
+    border-radius: 9px;
+}
+
+.sosmed-item .fa-instagram,
+.sosmed-item .fa-facebook-square,
+.sosmed-item .fa-youtube,
+.sosmed-item .fa-twitter-square {
+    font-size: 1.6rem;
+    line-height: unset;
+}
+
+.footer-top .driver {
+    padding-top: 1rem;
+}
+
+.footer-bottom hr {
+    margin-top: 4rem;
+    width: 100%;
+    border: 1px solid rgb(211, 211, 211);
+}
+
+.footer-bottom p {
+    color: rgb(211, 211, 211);
+}
+
+@media (min-width: 768px) {
+    .jumbotron.jumbotron-fluid {
+        margin-top: 7.5%;
+    }
+
+    main .card-wrapper a {
+        font-size: 2.5rem;
+    }
+
+    .card-wrapper .text-muted {
+        font-size: 2rem;
+    }
+
+    .card .card-body a {
+        font-size: 2rem;
+    }
+
+    .card .text-muted {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .nav-link {
+        margin-right: 30px;
+        font-size: 1.4rem;
+        color: white !important;
+    }
+
+    .nav-link:hover::after {
+        content: "";
+        display: block;
+        border-bottom: 2px solid white;
+        width: 50%;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+    }
+
+    /* header */
+    .jumbotron.jumbotron-fluid {
+        margin-top: 5%;
+    }
+
+    .kategori .link-kategori {
+        font-size: 1.7rem;
+    }
+
+    .form-group .form-input {
+        width: 52rem;
+    }
+
+
+    /* main */
+    main.wrapper {
+        padding-bottom: 8rem;
+    }
+
+    main .card {
+        display: unset;
+    }
+
+    main .card img {
+        width: 100%;
+        border-radius: 1.2rem 1.2rem 0 0;
+    }
+
+    .card .card-body a {
+        font-size: 1.5rem;
+        text-decoration: none;
+        position: unset;
+    }
+
+    .card .card-footer {
+        position: unset;
+    }
+
+    .card .text-muted {
+        position: unset;
+        font-size: 1.2rem;
+    }
+
+    /* footer */
+    footer.footer {
+        padding: 3rem 0 1rem 0;
+        background: #367c6d;
+    }
+
+    .footer h3,
+    .footer h1 {
+        color: rgb(255, 255, 255);
+        font-weight: 700;
+        font-size: 2.8rem;
+    }
+
+    .footer p {
+        color: rgb(224, 224, 224);
+        font-weight: 500;
+        font-size: 1.7rem;
+    }
+
+    .footer .nav-footer {
+        color: rgb(224, 224, 224);
+    }
+
+    .footer .footer-top img {
+        width: 15rem;
+        padding-right: 10px;
+        opacity: 0.9;
+    }
+
+    .footer .footer-item {
+        line-height: 2.5rem;
+    }
+
+    .footer .footer-item:hover {
+        transform: translateX(5px);
+        transition: 0.5s;
+    }
+
+    .nav-footer a {
+        color: rgb(224, 224, 224);
+        text-decoration: none;
+        font-size: 1.5rem;
+    }
+
+    .sosmed .nav-footer {
+        list-style: none;
+        display: inline-block;
+    }
+
+    .sosmed-item {
+        display: inline;
+        margin-right: 5px;
+    }
+
+    .sosmed-link {
+        border: 1px solid rgba(255, 255, 255, 1);
+        display: inline-block;
+        padding: 5px 8px;
+        border-radius: 9px;
+    }
+
+    .sosmed-item .fa-instagram,
+    .sosmed-item .fa-facebook-square,
+    .sosmed-item .fa-youtube,
+    .sosmed-item .fa-twitter-square {
+        font-size: 2rem;
+        line-height: unset;
+        transform: translateY(2px);
+    }
+
+    .footer-top .driver {
+        padding-top: 10px;
+    }
+
+    .footer-bottom p {
+        color: rgb(211, 211, 211);
+    }
+}

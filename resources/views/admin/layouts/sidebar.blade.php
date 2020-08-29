@@ -31,16 +31,27 @@
     <li class="nav-item">
         <a class="nav-link" href="#">
             <i class="fas fa-fw fa-car-side"></i>
-            <span>Data Driver</span>
+            <span>All Driver</span>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{route('message.index')}}">
             <i class="fas fa-fw fa-wrench"></i>
-            <span>Daftar keluhan</span>
+            <span>All Pesan</span>
         </a>
     </li>
 
+    <hr class="sidebar-divider d-none d-md-block">
+    <div class="sidebar-heading">
+        SMS Broadcasting
+    </div>
+
+    <li class="nav-item">
+        <a class="nav-link" href="#">
+            <i class="fas fa-fw fa-sms"></i>
+            <span>Send SMS</span>
+        </a>
+    </li>
 
     <!-- Divider -->
     <hr class="sidebar-divider">
@@ -74,8 +85,8 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Artikel</h6>
-                <a class="collapse-item" href="utilities-color.html">All Artikel</a>
-                <a class="collapse-item" href="utilities-border.html">Trash Artikel</a>
+                <a class="collapse-item" href="{{route('article.index')}}">All Artikel</a>
+                <a class="collapse-item" href="{{route('article.trash')}}">Trash Artikel</a>
             </div>
         </div>
     </li>

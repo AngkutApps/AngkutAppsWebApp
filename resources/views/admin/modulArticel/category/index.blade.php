@@ -9,7 +9,7 @@
                 <a href="{{route('category.create')}}" class="btn btn-md btn-primary rounded-pill shadow-lg"><i class="fas fa-plus"></i> Add Category</a>
             </div>
             <div class="card-body">
-                <div class="table-responsive text-center">
+                <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>

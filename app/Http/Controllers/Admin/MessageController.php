@@ -3,9 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Message;
 use Illuminate\Http\Request;
 
-class ArticelController extends Controller
+class MessageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,8 @@ class ArticelController extends Controller
      */
     public function index()
     {
-        //
+        $messages = Message::all();
+        return view('admin.message.index', compact('messages'));
     }
 
     /**

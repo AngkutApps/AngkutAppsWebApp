@@ -1,0 +1,493 @@
+/* global style */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --green: #16a085;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+/* nav */
+nav.navbar {
+  z-index: 999;
+}
+
+.navbar-brand {
+  width: 70px;
+}
+
+.nav-link {
+  color: white !important;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+button.navbar-toggler {
+  background: unset;
+  border: unset;
+  outline: unset;
+}
+
+/* jumbotron */
+.jumbotron {
+  background: var(--green);
+  width: 100%;
+  height: 480px;
+  background-position-x: -85px;
+  position: relative;
+}
+
+.jumbotron::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  top: 0;
+}
+
+.jumbotron .container {
+  z-index: 1;
+  position: relative;
+}
+
+.jumbotron .display-4 {
+  text-align: center;
+  color: white;
+  margin-top: 38%;
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.jumbotron h2 {
+  text-align: center;
+  color: white;
+  font-size: 2.1rem;
+  font-weight: 200;
+}
+
+.jumbotron span {
+  font-weight: 500;
+}
+
+/* layanan */
+section.layanan h1 {
+  color: var(--green);
+}
+
+section.layanan hr {
+  width: 30%;
+  margin: 15px auto;
+  border: 1px solid var(--green);
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+section.layanan img {
+  padding: 10px 0;
+  width: 35%;
+  height: 70%;
+  border-radius: 30px;
+}
+
+section.layanan p {
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* pilar */
+.pilar-angkut .container {
+  margin-top: -30px;
+}
+
+section.pilar-angkut h1 {
+  color: var(--green);
+}
+
+section.pilar-angkut hr {
+  width: 25%;
+  margin: 15px auto;
+  border: 1px solid var(--green);
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+.pilar-angkut .card {
+  overflow-y: hidden;
+}
+
+.pilar-angkut img {
+  border-radius: 50%;
+  background: var(--green);
+  width: 20%;
+  padding: 8px 0;
+  margin: 1.5rem auto;
+}
+
+.pilar-angkut h5 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.pilar-angkut p {
+  font-size: 1.4rem;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* testi */
+section.testimonial {
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+
+section.testimonial h1 {
+  color: var(--green);
+}
+
+section.testimonial hr {
+  width: 23%;
+  margin: 15px auto;
+  border: 1px solid var(--green);
+  opacity: 0.8;
+  margin-bottom: 3rem;
+}
+
+.testimonial .card {
+  border: unset;
+  margin-bottom: 2rem;
+}
+
+.testimonial .card img {
+  width: 30%;
+  margin: 1.5rem auto;
+}
+
+.testimonial .card p {
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 1.1rem !important;
+}
+
+.testimonial .card .blockquote-footer {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* footer */
+.footer {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  background: #367c6d;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+.footer h3,
+.footer h1 {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}
+
+.footer p {
+  color: rgb(224, 224, 224);
+  font-weight: 500;
+}
+
+.footer .nav-footer {
+  color: rgb(224, 224, 224);
+}
+
+.footer-top picture {
+  display: flex;
+}
+
+.footer .footer-top img {
+  width: 15rem;
+  padding-right: 10px;
+  opacity: 0.9;
+}
+
+.footer .footer-item {
+  line-height: 3rem;
+}
+
+.nav-footer a {
+  color: rgb(224, 224, 224);
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.sosmed .nav-footer {
+  list-style: none;
+  display: inline-block;
+}
+
+.sosmed-item {
+  display: inline;
+  margin-right: 5px;
+}
+
+.sosmed-link {
+  border: 1px solid rgba(255, 255, 255, 1);
+  display: inline-block;
+  padding: 5px 8px;
+  border-radius: 9px;
+}
+
+.sosmed-item .fa-instagram,
+.sosmed-item .fa-facebook-square,
+.sosmed-item .fa-youtube,
+.sosmed-item .fa-twitter-square {
+  font-size: 1.6rem;
+  line-height: unset;
+}
+
+.footer-top .driver {
+  padding-top: 1rem;
+}
+
+.footer-bottom hr {
+  margin-top: 4rem;
+  width: 100%;
+  border: 1px solid rgb(211, 211, 211);
+}
+
+.footer-bottom p {
+  color: rgb(211, 211, 211);
+}
+
+@media (min-width: 320px) and (max-width: 450px) {
+  .jumbotron {
+    height: 400px;
+  }
+
+  .jumbotron .display-4 {
+    font-size: 3rem !important;
+  }
+
+  .jumbotron h2 {
+    font-size: 2rem !important;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 991.9px) {
+  .jumbotron .display-4 {
+    font-size: 5rem;
+    margin-top: 12rem !important;
+  }
+
+  .jumbotron h2 {
+    font-size: 3rem;
+  }
+
+  section.layanan hr {
+    width: 18%;
+  }
+
+  section.layanan img {
+    width: 50%;
+    height: 50%;
+    border-radius: 18%;
+  }
+
+  section.pilar-angkut hr {
+    width: 18%;
+  }
+
+  section.testimonial hr {
+    width: 13%;
+  }
+}
+
+@media (min-width: 992px) {
+  .nav-link {
+    margin-right: 30px;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+  }
+
+  .nav-link:hover::after {
+    content: "";
+    display: block;
+    border-bottom: 2px solid white;
+    width: 50%;
+    margin: auto;
+    padding-bottom: 5px;
+    margin-bottom: -8px;
+  }
+
+  .jumbotron {
+    background-position-x: 0px;
+    margin-top: -70px;
+    background-image: url("../img/bg1.svg");
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 695px;
+    background-position-y: -23rem !important;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .jumbotron::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to top,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0));
+    bottom: 0;
+  }
+
+  .jumbotron .display-4 {
+    font-size: 60px;
+    margin-top: 22% !important;
+    text-align: left;
+  }
+
+  .jumbotron h2 {
+    font-size: 30px;
+    text-align: left;
+  }
+
+  section.layanan h1 {
+    font-size: 3rem;
+  }
+
+  section.layanan hr {
+    width: 8%;
+  }
+
+  section.layanan img {
+    width: 50%;
+    height: 45%;
+    border-radius: 25px;
+    margin-top: 38px;
+  }
+
+  section.layanan p {
+    font-size: 1.7rem;
+    padding-top: 30px;
+  }
+
+  /* pilar angkut */
+  .pilar-angkut .container {
+    margin-top: -50px;
+  }
+
+  section.pilar-angkut h1 {
+    font-size: 3rem;
+  }
+
+  section.pilar-angkut hr {
+    width: 8%;
+  }
+
+  .pilar-angkut img {
+    border-radius: 50%;
+    background: var(--green);
+    width: 30%;
+    padding: 8px 0;
+    margin: 1.5rem auto;
+  }
+
+  .pilar-angkut h5 {
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .pilar-angkut p {
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 40px;
+  }
+
+  /* testimonial */
+  section.testimonial h1 {
+    font-size: 3rem;
+  }
+
+  section.testimonial hr {
+    width: 7%;
+  }
+
+  .testimonial .card img {
+    width: 50%;
+  }
+
+  .testimonial .card p {
+    margin-bottom: 1.2rem !important;
+  }
+
+  .testimonial .card .blockquote-footer {
+    font-size: 1.5rem;
+  }
+
+  /* footer */
+  .footer h3,
+  .footer h1 {
+    font-size: 2.8rem;
+  }
+
+  .footer p {
+    font-size: 1.7rem;
+  }
+
+  .footer .footer-item {
+    line-height: 2.5rem;
+  }
+
+  .footer .footer-item:hover {
+    transform: translateX(5px);
+    transition: 0.5s;
+  }
+
+  .nav-footer a {
+    font-size: 1.5rem;
+  }
+
+  .sosmed-item .fa-instagram,
+  .sosmed-item .fa-facebook-square,
+  .sosmed-item .fa-youtube,
+  .sosmed-item .fa-twitter-square {
+    font-size: 2rem;
+    transform: translateY(0.1rem);
+  }
+}

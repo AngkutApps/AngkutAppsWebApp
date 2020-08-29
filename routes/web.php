@@ -11,13 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index');
+
+Auth::routes(['register' => false]);
+
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::get('/', 'AdminController@index')->name('admin.index');
@@ -28,5 +27,12 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::delete('category/trash/{id}', 'Admin\CategoryController@kill')->name('category.kill');
     Route::resource('/category', 'Admin\CategoryController');
 
-    //articel
+    //article
+    Route::get('/article/trash', 'Admin\ArticleController@getTrash')->name('article.trash');
+    Route::get('/article/trash/{id}/restore', 'Admin\ArticleController@restore')->name('article.restore');
+    Route::delete('article/trash/{id}', 'Admin\ArticleController@kill')->name('article.kill');
+    Route::resource('/article', 'Admin\ArticleController');
+
+    //meesagge
+    Route::resource('/message', 'Admin\MessageController');
 });

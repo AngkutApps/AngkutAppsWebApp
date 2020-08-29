@@ -34,7 +34,7 @@
                                 <td>{{$category->name}}</td>
                                 <td>{{$category->slug}}</td>
                                 <td>
-                                    <a href="{{route('category.restore',$category->id)}}" class="btn btn-sm btn-success">Restore</a>
+                                    <a href="{{route('category.restore',$category->id)}}" class="btn btn-sm btn-success"><i class="fas fa-recycle"></i></a>
                                     <a href="{{route('category.kill',$category->id)}}" class="btn btn-sm btn-danger btn-hapus">Delete</a>
                                 </td>
                             </tr>

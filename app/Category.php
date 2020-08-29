@@ -10,4 +10,9 @@ class Category extends Model
     use SoftDeletes;
 
     protected $fillable = ['name', 'slug'];
+
+    public function article()
+    {
+        return $this->hasMany('App\Articel', 'id_category', 'id');
+    }
 }
