@@ -12,13 +12,16 @@
 */
 
 
-
 Route::get('/', 'HomeController@index');
 
-Auth::routes(['register' => false]);
+Route::group(['prefix' => 'adminweb'], function () {
+    Auth::routes(['register' => false]);
+});
 
 
-Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
+
+
+Route::group(['prefix' => 'adminweb', 'middleware' => ['auth']], function () {
     Route::get('/', 'AdminController@index')->name('admin.index');
 
     //category
@@ -35,4 +38,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
 
     //meesagge
     Route::resource('/message', 'Admin\MessageController');
+
+    //users
+    Route::resource('/user', 'Admin\UserController');
 });
