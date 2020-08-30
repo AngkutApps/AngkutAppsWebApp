@@ -162,6 +162,31 @@
                 $('#modal-hapus').find('form').attr('action', url);
                 $('#modal-hapus').modal();
             });
+
+            $(".save-data").click(function(event) {
+                event.preventDefault();
+
+                let title = $("input[name=title]").val();
+                let body = $("input[name=body]").val();
+                let userId = 1;
+
+                $.ajax({
+                    url: "https://jsonplaceholder.typicode.com/posts",
+                    type: "POST",
+                    data: {
+                        title: title,
+                        body: body,
+                        userId: userId,
+                    },
+                    success: function(response) {
+                        console.log(response);
+                        if (response) {
+                            $('.success').text(response.success);
+                            $("#ajaxform")[0].reset();
+                        }
+                    },
+                });
+            });
         });
     </script>
 

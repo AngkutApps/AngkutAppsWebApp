@@ -41,4 +41,8 @@ Route::group(['prefix' => 'adminweb', 'middleware' => ['auth']], function () {
 
     //users
     Route::resource('/user', 'Admin\UserController');
+
+    //SMS broadcasting
+
+    Route::get('/sms', 'Admin\SmsBroadcastingController@index')->name('sms.index');
 });

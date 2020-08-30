@@ -36,7 +36,7 @@
     </li>
     <li class="nav-item">
         <a class="nav-link" href="{{route('message.index')}}">
-            <i class="fas fa-fw fa-wrench"></i>
+            <i class="fas fa-fw fa-envelope"></i>
             <span>All Pesan</span>
         </a>
     </li>
@@ -47,7 +47,7 @@
     </div>
 
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{route('sms.index')}}">
             <i class="fas fa-fw fa-sms"></i>
             <span>Send SMS</span>
         </a>
