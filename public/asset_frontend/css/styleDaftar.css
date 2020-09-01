@@ -13,10 +13,13 @@
 }
 
 html {
-  font-family: "Poppins", sans-serif;
   font-size: 10px;
   box-sizing: border-box;
   overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -44,17 +47,22 @@ section {
 /* nav */
 nav.navbar {
   z-index: 999;
-  width: 100%;
+  padding: .7rem 1rem !important;
 }
 
 .navbar-brand {
-  width: 70px;
+  width: 60px;
 }
 
 .nav-link {
-  color: white !important;
+  color: rgba(0, 0, 0, 0.8) !important;
   font-size: 1.2rem;
-  text-transform: uppercase;
+  font-weight: 600;
+  margin-right: 2.5rem;
+}
+
+.nav-link:hover {
+  color: var(--green) !important;
 }
 
 button.navbar-toggler {
@@ -63,23 +71,34 @@ button.navbar-toggler {
   outline: unset;
 }
 
-/* jumbotron */
-.jumbotron {
-  background-color: var(--green);
-  background-size: cover;
-  width: 100%;
-  height: 460px;
-  background-position-x: -85px;
-  position: relative;
+.navbar .fa-angle-down {
+  margin-left: .6rem;
 }
 
-.jumbotron::after {
-  content: "";
-  position: absolute;
-  height: 100%;
+.navbar .dropdown-menu .dropdown-item {
+  font-size: 1.2rem;
+}
+
+/* jumbotron */
+.jumbotron {
+  background-image: url('../img/pusat-bantuan/Group-642.png');
+  background-size: cover;
   width: 100%;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  bottom: 0;
+  height: 325px;
+  position: relative;
+  margin-top: 6rem;
+}
+
+.jumbotron .text-heading {
+  color: white;
+  font-weight: 600;
+  margin-top: 3rem;
+}
+
+.jumbotron .text-p {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
 .jumbotron .container {
@@ -87,35 +106,18 @@ button.navbar-toggler {
   position: relative;
 }
 
-.jumbotron .display-4 {
-  text-align: center;
-  color: white;
-  margin-top: 25%;
-  font-size: 30px;
-  font-weight: 200;
-}
-
-.display-4 span {
-  font-weight: 500;
-}
-
+/* info-panel  */
 .container .info-panel {
-  margin-top: -10rem;
+  margin-top: -8rem;
   z-index: 2;
-  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
   background-color: white;
-  border-radius: 12px;
+  border-radius: 10px;
+  padding: 1rem;
 }
 
 .info-panel img {
-  width: 5.5rem;
-  float: left;
-  margin-left: 15%;
-}
-
-.info-panel img::after {
-  content: "";
-  clear: both;
+  width: 5rem;
+  height: 2.5rem;
 }
 
 .info-panel p {
@@ -126,123 +128,27 @@ button.navbar-toggler {
   margin-top: 1.8rem;
 }
 
-/* daftar offline */
-section.daftar {
-  margin-top: 4rem;
-}
-
-.daftar h2 {
-  color: var(--green);
-  text-align: center;
-}
-
-.daftar h5 {
-  background: var(--green);
-  display: block;
-  width: 20%;
-  text-align: center;
-  padding: 10px;
-  border-radius: 15px;
-  color: white;
-  letter-spacing: 0.2rem;
-  font-weight: 200;
-  margin: 2rem auto;
-}
-
-.cara-daftar {
-  margin-top: 5.7rem;
-}
-
-.cara-daftar img {
-  width: 35%;
-  float: left;
-  margin-right: 5rem;
-}
-
-.cara-daftar .cara-daftar::after {
-  content: "";
-  clear: both;
-}
-
-.petunjuk {
-  position: relative;
-}
-
-.petunjuk span {
-  position: absolute;
-  display: inline-block;
-  background: var(--green);
-  margin-left: -3.5rem;
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  text-align: center;
-  color: white;
-}
-
-.petunjuk p {
-  font-size: 1.5rem;
-  line-height: 2;
-}
-
-@media (min-width: 360px) and (max-width: 450px) {
-  .cara-daftar img {
-    width: 50%;
-    float: unset;
-    margin-left: 8.9rem;
-  }
-
-  .petunjuk {
-    top: 3rem;
-  }
-
-  .petunjuk span {
-    left: 4rem;
-    width: 3.2rem;
-    height: 3.2rem;
-  }
-
-  .petunjuk p {
-    margin-left: 5rem;
-  }
-
-  .petunjuk p::before {
-    content: "";
-    position: absolute;
-    display: inline-block;
-    top: 0;
-    bottom: 0;
-    left: 1.9rem;
-    width: 2px;
-    background: var(--green);
-    z-index: -99;
-  }
-
-  .barcode p.android {
-    margin-left: 2.5rem !important;
-  }
-
-  .barcode p.ios {
-    margin-left: 4.4rem !important;
-  }
-}
-
 /* form daftar */
 .form-daftar {
-  border: 2px solid var(--green);
+  border: 1px solid rgba(0, 0, 0, .1);
   padding: 20px;
   margin-top: 5rem;
-  border-radius: 15px;
-  margin-left: -3rem;
+  border-radius: .5rem;
 }
 
 .form-daftar h2 {
-  text-align: center;
+  font-weight: 500;
+}
+
+.form-daftar p {
+  font-size: 1.1rem;
+  font-weight: 300;
 }
 
 .form-group input {
   font-size: 1.2rem;
-  margin-bottom: 10px;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
   height: 3rem;
   background: unset !important;
   outline: none !important;
@@ -268,11 +174,11 @@ section.daftar {
   outline: unset;
   border: unset;
   background: var(--green);
-  padding: 1rem;
+  padding: .6rem;
   color: white;
   width: 100%;
   font-size: 1.3rem;
-  border-radius: 12px;
+  border-radius: .5rem;
   margin-top: 12px;
 }
 
@@ -298,28 +204,34 @@ input[type="number"]:focus,
 
 .download {
   padding: 30px 0;
-  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .download h1 {
-  margin-bottom: 4rem;
   text-align: center;
-  color: var(--green);
-  line-height: 4rem;
 }
 
-.download .barcode {
+.download hr {
+  width: 55%;
+  margin: 2rem auto 3rem;
+  border: 1px solid #EF8641;
+}
+
+
+.barcode {
   display: flex;
+  justify-content: space-evenly;
+
 }
 
-.barcode img {
-  width: 70%;
+.barcode-ios img,
+.barcode-android img {
+  width: 18rem;
 }
 
-.barcode p {
-  color: rgba(0, 0, 0, 0.8);
-  font-weight: 700;
-  margin-top: 1.2rem;
+.barcode-ios p,
+.barcode-android p {
+  font-weight: 500;
+  text-align: center;
 }
 
 .barcode p.android {
@@ -330,472 +242,214 @@ input[type="number"]:focus,
   margin-left: 6.4rem;
 }
 
-.mobile {
+.app-store {
   margin-top: 3rem;
+  display: flex;
+  justify-content: space-around;
 }
 
-.mobile img {
-  width: 70%;
-  margin-bottom: 1.5rem;
+.app-store .android-store img,
+.app-store .ios-store img {
+  width: 15rem;
 }
+
 
 /* footer */
 .footer {
-  padding-top: 3rem;
-  padding-bottom: 1rem;
-  background: #367c6d;
   position: relative;
-  left: 0;
-  right: 0;
+  background: #F1F1F1;
+  padding-top: 2rem;
 }
 
-.footer h3,
-.footer h1 {
-  color: rgb(255, 255, 255);
-  font-weight: 700;
+.footer-top {
+  padding-bottom: 5rem;
 }
 
-.footer p {
-  color: rgb(224, 224, 224);
-  font-weight: 500;
+.footer-top .footer-item {
+  padding-top: .8rem
 }
 
-.footer .nav-footer {
-  color: rgb(224, 224, 224);
-}
-
-.footer-top picture {
-  display: flex;
-}
-
-.footer .footer-top img {
-  width: 15rem;
-  padding-right: 10px;
-  opacity: 0.9;
-}
-
-.footer .footer-item {
-  line-height: 3rem;
-}
-
-.nav-footer a {
-  color: rgb(224, 224, 224);
+.footer-top .footer-link {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, .8);
+  font-weight: 300;
   text-decoration: none;
-  font-size: 1.3rem;
 }
 
-.sosmed .nav-footer {
-  list-style: none;
-  display: inline-block;
+.footer-link span {
+  color: var(--green);
+  font-weight: 600;
 }
 
-.sosmed-item {
-  display: inline;
+.footer-top h3 {
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+.footer-top .link-download img {
+  margin-top: 8px;
+}
+
+.footer-top .follow-us img {
   margin-right: 5px;
 }
 
-.sosmed-link {
-  border: 1px solid rgba(255, 255, 255, 1);
-  display: inline-block;
-  padding: 5px 8px;
-  border-radius: 9px;
+.footer-top .follow-us a {
+  text-decoration: none;
 }
 
-.sosmed-item .fa-instagram,
-.sosmed-item .fa-facebook-square,
-.sosmed-item .fa-youtube,
-.sosmed-item .fa-twitter-square {
-  font-size: 1.6rem;
-  line-height: unset;
-}
-
-.footer-top .driver {
-  padding-top: 1rem;
-}
-
-.footer-bottom hr {
-  margin-top: 4rem;
-  width: 100%;
-  border: 1px solid rgb(211, 211, 211);
+.footer .footer-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #f1f1f1;
 }
 
 .footer-bottom p {
-  color: rgb(211, 211, 211);
+  text-transform: capitalize;
+  font-size: 1.1rem;
 }
 
-@media (max-width: 320px) {
-  .jumbotron .display-4 {
-    margin-top: 40%;
-    font-size: 2.3rem;
-  }
-
-  .daftar h5 {
-    width: 30%;
-  }
-
-  .info-panel img {
-    margin-left: 5%;
-  }
-
-  .cara-daftar img {
-    width: 100%;
-    float: unset;
-    margin-left: 8.9rem;
-  }
-
-  .petunjuk {
-    top: 3rem;
-  }
-
-  .petunjuk span {
-    left: 4rem;
-    width: 3.2rem;
-    height: 3.2rem;
-  }
-
-  .petunjuk p {
-    margin-left: 5rem;
-  }
-
-  .form-daftar {
-    margin: 5rem auto;
-  }
-
-  .download {
-    background: unset;
-    margin-left: 2rem;
-  }
-
-  .barcode p.android {
-    margin-left: 1rem;
-  }
-
-  .barcode p.ios {
-    margin-left: 3rem;
-  }
+.footer-bottom span {
+  color: var(--green);
 }
 
-@media (max-width: 360px) {
-  .jumbotron .display-4 {
-    margin-top: 40%;
-  }
+@media (min-width: 768px) and (max-width: 1199.98px) {
 
-  .info-panel img {
-    margin-left: 10%;
-  }
-
-  .cara-daftar img {
-    width: 30%;
-    margin-right: 1.8rem;
-  }
-
-  .form-daftar {
-    margin-left: -3rem;
-  }
-}
-
-@media (min-width: 768px) {
-  .jumbotron .display-4 {
-    font-size: 4.5rem;
-    margin-top: 15%;
-  }
-
-  .container .info-panel {
-    margin-top: -6.5rem;
-    z-index: 2;
-    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
-    background-color: white;
-    border-radius: 12px;
-  }
-
-  .info-panel img {
-    width: 7rem;
-    margin-left: 25rem;
-    float: unset;
-  }
-
-  .info-panel p {
-    text-align: center;
-    font-size: 1.7rem;
-    font-weight: 500;
-    margin-top: 0;
-  }
-
-  .cara-daftar img {
-    width: 40% !important;
-  }
-
-  .petunjuk span {
-    line-height: 2rem;
-    width: 2rem;
-    height: 2rem;
-  }
-
-  .petunjuk p {
-    font-size: 1rem;
-    line-height: 2;
-  }
-
-  .barcode p {
-    margin-top: 1.8rem;
-  }
-
-  .barcode p.android {
-    margin-left: 0.7rem;
-  }
-
-  .barcode p.ios {
-    margin-left: 2.5rem;
-  }
-
-  .mobile {
-    margin-top: unset;
-  }
-
-  .download .mobile::before {
-    content: "";
-    display: block;
-    position: absolute;
-    height: 16rem;
-    width: 0.5rem;
-    background-color: var(--green);
-    top: -2rem;
-    left: -8rem;
-  }
-}
-
-@media (min-width: 992px) {
-  nav.navbar {
-    background: var(--green);
+  /* navbar */
+  .navbar-brand {
+    width: 80px;
   }
 
   .nav-link {
-    margin-right: 30px;
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    color: white !important;
-  }
-
-  .nav-link:hover::after {
-    content: "";
-    display: block;
-    border-bottom: 2px solid white;
-    width: 50%;
-    margin: auto;
-    padding-bottom: 5px;
-    margin-bottom: -8px;
+    font-size: 1.5rem;
   }
 
   .jumbotron {
-    height: 550px;
+    height: 450px;
     background-position-x: 0px;
   }
 
-  .jumbotron .display-4 {
-    font-size: 60px;
-    margin-top: 11%;
+  .jumbotron .text-heading {
+    color: white;
+    font-weight: 600;
+    margin-top: 8rem;
+    font-size: 4rem;
   }
 
+  .jumbotron .text-p {
+    color: white;
+    font-size: 2rem;
+  }
+
+  /* info-panel */
   .container .info-panel {
-    margin-top: -6.5rem;
+    margin-top: -8rem;
     z-index: 2;
-    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
     background-color: white;
-    border-radius: 12px;
-  }
-
-  .info-panel img {
-    width: 7rem;
-    margin-left: 6.9rem;
-    float: unset;
+    border-radius: 10px;
+    padding: 2rem .5rem;
   }
 
   .info-panel p {
-    text-align: center;
-    font-size: 1.3rem;
-    font-weight: 500;
-    margin-top: -0.2rem;
-  }
-
-  /* cara daftar */
-  section.daftar {
-    margin-top: 8rem;
-  }
-
-  .daftar h2 {
-    text-align: unset;
-    margin-left: 20rem;
-  }
-
-  .daftar h5 {
-    width: 15%;
-    padding: 10px;
-    margin: 2rem 0 3rem 11.4rem;
-    margin-left: 21rem;
-  }
-
-  .cara-daftar {
-    margin-top: 6rem;
-  }
-
-  .cara-daftar img {
-    width: 30% !important;
-    float: left;
-    margin-right: 5rem !important;
-  }
-
-  .petunjuk {
-    position: relative;
-  }
-
-  .petunjuk span {
-    line-height: 3rem;
-    width: 3rem;
-    height: 3rem;
-  }
-
-  .petunjuk p {
-    font-size: 1.5rem;
-    line-height: 2.4;
-  }
-
-  .form-daftar {
-    margin-top: unset;
-    margin-left: unset;
-  }
-
-  .form-daftar h2 {
-    margin-left: 12.3rem;
-    text-align: unset;
-  }
-
-  .download h1 {
-    margin-bottom: 8rem;
-  }
-
-  .barcode p {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+    margin-left: 2px;
     margin-top: 1.8rem;
   }
 
-  .barcode p.android {
-    margin-left: 2.5rem;
-  }
-
-  .barcode p.ios {
-    margin-left: 4rem;
-  }
-
-  .mobile {
-    margin-top: unset;
-  }
-
-  .download .mobile::before {
-    content: "";
-    display: block;
-    position: absolute;
-    height: 20rem;
-    width: 0.5rem;
-    background-color: var(--green);
-    top: -2rem;
-    left: -11rem;
-  }
-
-  /* footer */
-  footer.footer {
-    padding: 3rem 0 1rem 0;
-    background: #367c6d;
-  }
-
-  .footer h3,
-  .footer h1 {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-size: 2.8rem;
-  }
-
-  .footer p {
-    color: rgb(224, 224, 224);
-    font-weight: 500;
-    font-size: 1.7rem;
-  }
-
-  .footer .nav-footer {
-    color: rgb(224, 224, 224);
-  }
-
-  .footer .footer-top img {
-    width: 15rem;
-    padding-right: 10px;
-    opacity: 0.9;
-  }
-
-  .footer .footer-item {
-    line-height: 2.5rem;
-  }
-
-  .footer .footer-item:hover {
-    transform: translateX(5px);
-    transition: 0.5s;
-  }
-
-  .nav-footer a {
-    color: rgb(224, 224, 224);
-    text-decoration: none;
-    font-size: 1.5rem;
-  }
-
-  .sosmed .nav-footer {
-    list-style: none;
-    display: inline-block;
-  }
-
-  .sosmed-item {
-    display: inline;
-    margin-right: 5px;
-  }
-
-  .sosmed-link {
-    border: 1px solid rgba(255, 255, 255, 1);
-    display: inline-block;
-    padding: 5px 8px;
-    border-radius: 9px;
-  }
-
-  .sosmed-item .fa-instagram,
-  .sosmed-item .fa-facebook-square,
-  .sosmed-item .fa-youtube,
-  .sosmed-item .fa-twitter-square {
-    font-size: 2rem;
-    line-height: unset;
-    transform: translateY(2px);
-  }
-
-  .footer-top .driver {
-    padding-top: 10px;
-  }
-
-  .footer-bottom p {
-    color: rgb(211, 211, 211);
-  }
-}
-
-@media (min-width: 1024px) {
-  .jumbotron .display-4 {
-    margin-top: 13%;
-  }
-
-  .cara-daftar img {
-    width: 45% !important;
-  }
-
-  .petunjuk span {
-    margin-left: -3.5rem;
-    width: 3rem;
+  .info-panel .friendly img {
+    margin-top: -6px;
+    width: 5rem;
     height: 3rem;
   }
 
-  .petunjuk p {
-    font-size: 1.7rem;
-    line-height: 2;
+  /* download */
+  .download h1 {
+    font-size: 3rem;
+  }
+
+  .download hr {
+    width: 45%;
+    margin: 2rem auto 3rem;
+    border: 1px solid #EF8641;
+  }
+
+  .app-store {
+    display: unset;
+  }
+
+  .app-store .android-store img,
+  .app-store .ios-store img {
+    width: 20rem;
+    margin-top: 1rem;
+  }
+
+
+}
+
+@media (min-width: 1200px) {
+
+  /* navbar */
+  .navbar-brand {
+    width: 80px;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+  }
+
+  .jumbotron {
+    height: 500px;
+  }
+
+  .jumbotron .text-heading {
+    color: white;
+    font-weight: 600;
+    margin-top: 8rem;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+  }
+
+  .jumbotron .text-p {
+    color: white;
+    font-size: 2.5rem;
+  }
+
+  /*   info-panel */
+  .container .info-panel {
+    margin-top: -8rem;
+    z-index: 2;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem .5rem;
+  }
+
+  .info-panel .friendly img {
+    margin-top: -6px;
+    width: 5rem;
+    height: 3rem;
+  }
+
+  /* download */
+  .download h1 {
+    font-size: 3.5rem;
+  }
+
+  .download hr {
+    width: 30%;
+    margin: 2rem auto 5rem;
+    border: 1px solid #EF8641;
+  }
+
+  .app-store {
+    display: unset;
+  }
+
+  .app-store .android-store img,
+  .app-store .ios-store img {
+    width: 24rem;
+    margin-top: 1rem;
   }
 }

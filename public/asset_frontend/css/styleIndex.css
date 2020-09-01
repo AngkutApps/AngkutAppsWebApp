@@ -13,10 +13,13 @@
 }
 
 html {
-  font-family: "Poppins", sans-serif;
   font-size: 10px;
   box-sizing: border-box;
   overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -44,16 +47,22 @@ section {
 /* nav */
 nav.navbar {
   z-index: 999;
+  padding: .7rem 1rem !important;
 }
 
 .navbar-brand {
-  width: 70px;
+  width: 48px;
 }
 
 .nav-link {
-  color: white !important;
+  color: rgba(0, 0, 0, 0.8) !important;
   font-size: 1.2rem;
-  text-transform: uppercase;
+  font-weight: 600;
+  margin-right: 2.5rem;
+}
+
+.nav-link:hover {
+  color: var(--green) !important;
 }
 
 button.navbar-toggler {
@@ -62,88 +71,121 @@ button.navbar-toggler {
   outline: unset;
 }
 
-/* jumbotron */
-.jumbotron {
-  background: var(--green);
+.navbar .fa-angle-down {
+  margin-left: .6rem;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+  font-size: 1.2rem;
+}
+
+/* hero */
+section.hero {
+  margin-top: 0rem;
+}
+
+.column-text {
+  margin-top: 2rem;
+}
+
+.column-text .display-4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.column-text h2 {
+  margin-top: -0.3rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.column-text h2 span {
+  font-weight: 550;
+}
+
+.column-img-illustration img {
   width: 100%;
-  height: 480px;
-  background-position-x: -85px;
-  position: relative;
-}
-
-.jumbotron::after {
-  content: "";
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  top: 0;
-}
-
-.jumbotron .container {
-  z-index: 1;
-  position: relative;
-}
-
-.jumbotron .display-4 {
-  text-align: center;
-  color: white;
-  margin-top: 38%;
-  font-size: 3.2rem;
-  font-weight: 700;
-}
-
-.jumbotron h2 {
-  text-align: center;
-  color: white;
-  font-size: 2.1rem;
-  font-weight: 200;
-}
-
-.jumbotron span {
-  font-weight: 500;
+  margin-top: 1.5rem;
 }
 
 /* layanan */
-section.layanan h1 {
-  color: var(--green);
+.layanan {
+  margin-top: 8rem;
 }
 
-section.layanan hr {
-  width: 30%;
-  margin: 15px auto;
-  border: 1px solid var(--green);
-  opacity: 0.8;
-  margin-bottom: 30px;
+.layanan h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-section.layanan img {
-  padding: 10px 0;
-  width: 35%;
-  height: 70%;
-  border-radius: 30px;
+.layanan hr {
+  width: 20%;
+  margin: auto;
+  margin-bottom: 2rem;
+  border: 1px solid #EF8641;
 }
 
-section.layanan p {
-  font-size: 1.4rem;
-  color: rgba(0, 0, 0, 0.6);
+.layanan img {
+  width: 10rem;
+  height: 8rem;
+  margin-bottom: 1rem;
+  border-radius: 1.2rem;
 }
 
-/* pilar */
+.layanan p {
+  font-size: 0.8rem;
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+
+.layanan .card {
+  border-radius: 1.9rem;
+}
+
+.layanan .card .inner {
+  height: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.layanan .card img {
+  width: 100%;
+  border-radius: 0 0 0 0;
+}
+
+.layanan .card-title {
+  position: absolute;
+  margin-top: 3rem;
+  color: white;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.layanan .card-text {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: -1.2rem
+}
+
+/* pilar-angkut */
 .pilar-angkut .container {
   margin-top: -30px;
 }
 
-section.pilar-angkut h1 {
-  color: var(--green);
+.pilar-angkut h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-section.pilar-angkut hr {
-  width: 25%;
-  margin: 15px auto;
-  border: 1px solid var(--green);
-  opacity: 0.8;
-  margin-bottom: 30px;
+.pilar-angkut hr {
+  width: 20%;
+  margin: auto;
+  margin-bottom: 2rem;
+  border: 1px solid #EF8641;
 }
 
 .pilar-angkut .card {
@@ -151,9 +193,7 @@ section.pilar-angkut hr {
 }
 
 .pilar-angkut img {
-  border-radius: 50%;
-  background: var(--green);
-  width: 20%;
+  width: 25%;
   padding: 8px 0;
   margin: 1.5rem auto;
 }
@@ -161,12 +201,10 @@ section.pilar-angkut hr {
 .pilar-angkut h5 {
   font-size: 2rem;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.8);
 }
 
 .pilar-angkut p {
   font-size: 1.4rem;
-  color: rgba(0, 0, 0, 0.6);
 }
 
 /* testi */
@@ -175,16 +213,17 @@ section.testimonial {
   margin-bottom: 50px;
 }
 
-section.testimonial h1 {
-  color: var(--green);
+.testimonial h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-section.testimonial hr {
-  width: 23%;
-  margin: 15px auto;
-  border: 1px solid var(--green);
-  opacity: 0.8;
-  margin-bottom: 3rem;
+.testimonial hr {
+  width: 20%;
+  margin: auto;
+  margin-bottom: 2rem;
+  border: 1px solid #EF8641;
 }
 
 .testimonial .card {
@@ -198,7 +237,6 @@ section.testimonial hr {
 }
 
 .testimonial .card p {
-  color: rgba(0, 0, 0, 0.8);
   margin-bottom: 1.1rem !important;
 }
 
@@ -207,287 +245,678 @@ section.testimonial hr {
   font-weight: 600;
 }
 
+.owl-theme .owl-dots .owl-dot {
+  outline: unset;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  margin-top: 2rem;
+  background: var(--green);
+}
+
 /* footer */
 .footer {
-  padding-top: 3rem;
-  padding-bottom: 1rem;
-  background: #367c6d;
   position: relative;
-  left: 0;
-  right: 0;
+  background: #F1F1F1;
+  padding-top: 2rem;
 }
 
-.footer h3,
-.footer h1 {
-  color: rgb(255, 255, 255);
-  font-weight: 700;
+.footer-top {
+  padding-bottom: 5rem;
 }
 
-.footer p {
-  color: rgb(224, 224, 224);
-  font-weight: 500;
+.footer-top .footer-item {
+  padding-top: .8rem
 }
 
-.footer .nav-footer {
-  color: rgb(224, 224, 224);
-}
-
-.footer-top picture {
-  display: flex;
-}
-
-.footer .footer-top img {
-  width: 15rem;
-  padding-right: 10px;
-  opacity: 0.9;
-}
-
-.footer .footer-item {
-  line-height: 3rem;
-}
-
-.nav-footer a {
-  color: rgb(224, 224, 224);
+.footer-top .footer-link {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, .8);
+  font-weight: 300;
   text-decoration: none;
-  font-size: 1.3rem;
 }
 
-.sosmed .nav-footer {
-  list-style: none;
-  display: inline-block;
+.footer-link span {
+  color: var(--green);
+  font-weight: 600;
 }
 
-.sosmed-item {
-  display: inline;
+.footer-top h3 {
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+.footer-top .link-download img {
+  margin-top: 8px;
+}
+
+.footer-top .follow-us img {
   margin-right: 5px;
 }
 
-.sosmed-link {
-  border: 1px solid rgba(255, 255, 255, 1);
-  display: inline-block;
-  padding: 5px 8px;
-  border-radius: 9px;
+.footer-top .follow-us a {
+  text-decoration: none;
 }
 
-.sosmed-item .fa-instagram,
-.sosmed-item .fa-facebook-square,
-.sosmed-item .fa-youtube,
-.sosmed-item .fa-twitter-square {
-  font-size: 1.6rem;
-  line-height: unset;
-}
-
-.footer-top .driver {
-  padding-top: 1rem;
-}
-
-.footer-bottom hr {
-  margin-top: 4rem;
-  width: 100%;
-  border: 1px solid rgb(211, 211, 211);
+.footer .footer-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #f1f1f1;
 }
 
 .footer-bottom p {
-  color: rgb(211, 211, 211);
+  text-transform: capitalize;
+  font-size: 1rem;
 }
 
-@media (min-width: 320px) and (max-width: 450px) {
-  .jumbotron {
-    height: 400px;
-  }
-
-  .jumbotron .display-4 {
-    font-size: 3rem !important;
-  }
-
-  .jumbotron h2 {
-    font-size: 2rem !important;
-  }
+.footer-bottom span {
+  color: var(--green);
 }
 
-@media (min-width: 600px) and (max-width: 991.9px) {
-  .jumbotron .display-4 {
-    font-size: 5rem;
-    margin-top: 12rem !important;
+@media (min-width: 350px) and (max-width: 449.98px) {
+
+  /* hero */
+  section.hero {
+    margin-top: 2rem;
   }
 
-  .jumbotron h2 {
-    font-size: 3rem;
+  .column-text {
+    margin-top: 1.7rem;
+    margin-left: -.5rem;
   }
 
-  section.layanan hr {
-    width: 18%;
+  .column-text .display-4 {
+    font-size: 2.1rem;
+    padding-bottom: 0.2rem;
   }
 
-  section.layanan img {
-    width: 50%;
-    height: 50%;
-    border-radius: 18%;
+  .column-text hr {
+    width: 8rem;
   }
 
-  section.pilar-angkut hr {
-    width: 18%;
+  .column-text h2 {
+    font-size: 1.1rem;
   }
 
-  section.testimonial hr {
-    width: 13%;
-  }
-}
-
-@media (min-width: 992px) {
-  .nav-link {
-    margin-right: 30px;
-    text-transform: uppercase;
-    font-size: 1.4rem;
+  .column-img-illustration img {
+    margin-top: 0rem;
+    margin-left: 1rem;
   }
 
-  .nav-link:hover::after {
-    content: "";
-    display: block;
-    border-bottom: 2px solid white;
-    width: 50%;
+  /* layanan */
+  .layanan h1 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .layanan hr {
+    width: 20%;
+    margin-bottom: 2.5rem;
+  }
+
+  .layanan .card {
+    border-radius: 1.9rem;
+    width: 65%;
     margin: auto;
-    padding-bottom: 5px;
-    margin-bottom: -8px;
+    margin-bottom: 2rem;
   }
 
-  .jumbotron {
-    background-position-x: 0px;
-    margin-top: -70px;
-    background-image: url("../img/bg1.svg");
-    background-size: cover;
-    background-attachment: fixed;
-    width: 100%;
-    height: 695px;
-    background-position-y: -23rem !important;
-    position: relative;
-    overflow: hidden;
+  .layanan .card-title {
+    margin-top: 2.3rem;
+    font-size: 2rem;
   }
 
-  .jumbotron::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: linear-gradient(to top,
-        rgba(0, 0, 0, 1),
-        rgba(0, 0, 0, 0));
-    bottom: 0;
-  }
-
-  .jumbotron .display-4 {
-    font-size: 60px;
-    margin-top: 22% !important;
-    text-align: left;
-  }
-
-  .jumbotron h2 {
-    font-size: 30px;
-    text-align: left;
-  }
-
-  section.layanan h1 {
-    font-size: 3rem;
-  }
-
-  section.layanan hr {
-    width: 8%;
-  }
-
-  section.layanan img {
-    width: 50%;
-    height: 45%;
-    border-radius: 25px;
-    margin-top: 38px;
-  }
-
-  section.layanan p {
-    font-size: 1.7rem;
-    padding-top: 30px;
+  .layanan .card-text {
+    font-size: 1.1rem;
+    margin-top: -1rem;
   }
 
   /* pilar angkut */
-  .pilar-angkut .container {
-    margin-top: -50px;
+  .pilar-angkut h1 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
   }
 
-  section.pilar-angkut h1 {
-    font-size: 3rem;
+  .pilar-angkut hr {
+    width: 20%;
+    margin-bottom: 2.5rem;
   }
 
-  section.pilar-angkut hr {
-    width: 8%;
+  /* testi */
+  .testimonial h1 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
   }
 
-  .pilar-angkut img {
-    border-radius: 50%;
-    background: var(--green);
-    width: 30%;
-    padding: 8px 0;
-    margin: 1.5rem auto;
-  }
-
-  .pilar-angkut h5 {
-    font-size: 2.1rem;
-    font-weight: 700;
-    color: rgba(0, 0, 0, 0.8);
-  }
-
-  .pilar-angkut p {
-    font-size: 1.4rem;
-    color: rgba(0, 0, 0, 0.6);
-    margin-bottom: 40px;
-  }
-
-  /* testimonial */
-  section.testimonial h1 {
-    font-size: 3rem;
-  }
-
-  section.testimonial hr {
-    width: 7%;
-  }
-
-  .testimonial .card img {
-    width: 50%;
-  }
-
-  .testimonial .card p {
-    margin-bottom: 1.2rem !important;
-  }
-
-  .testimonial .card .blockquote-footer {
-    font-size: 1.5rem;
+  .testimonial hr {
+    width: 20%;
+    margin-bottom: 2.5rem;
   }
 
   /* footer */
-  .footer h3,
-  .footer h1 {
-    font-size: 2.8rem;
+  .footer-bottom p {
+    font-size: 1.1rem;
   }
 
-  .footer p {
+}
+
+@media (min-width: 450px) and (max-width: 575.98px) {
+  section.hero {
+    margin-top: 3rem;
+  }
+
+  .column-text {
+    margin-top: 4rem;
+  }
+
+  .column-text .display-4 {
+    font-size: 2.5rem;
+    padding-bottom: 0.2rem;
+  }
+
+  .column-text hr {
+    width: 10rem;
+  }
+
+  .column-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .column-img-illustration img {
+    margin-top: 0rem;
+  }
+
+  /* layanan */
+  .layanan h1 {
+    font-size: 2.3rem;
+    margin-bottom: 1.3rem
+  }
+
+  .layanan hr {
+    width: 16%;
+    margin-bottom: 2.8rem;
+  }
+
+  .layanan .card {
+    border-radius: 2.5rem;
+    width: 65%;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  .layanan .card-title {
+    margin-top: 2.1rem;
+    font-size: 2.1rem;
+  }
+
+  .layanan .card-text {
+    font-size: 1.2rem;
+  }
+
+  /* pilar angkut */
+  .pilar-angkut h1 {
+    font-size: 2.3rem;
+    margin-bottom: 1.3rem
+  }
+
+  .pilar-angkut hr {
+    width: 16%;
+    margin-bottom: 2.8rem;
+  }
+
+  /* testi */
+  .testimonial h1 {
+    font-size: 2.3rem;
+    margin-bottom: 1.3rem
+  }
+
+  .testimonial hr {
+    width: 16%;
+    margin-bottom: 2.8rem;
+  }
+
+  /* footer */
+  .footer-bottom p {
+    font-size: 1.2rem;
+  }
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  section.hero {
+    margin-top: 4rem;
+  }
+
+  .column-text {
+    margin-top: 3.9rem;
+  }
+
+  .column-text .display-4 {
+    font-size: 3rem;
+    padding-bottom: 0.4rem;
+  }
+
+  .column-text hr {
+    width: 12rem;
+    border: 1.5px solid var(--green);
+  }
+
+  .column-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .column-img-illustration img {
+    margin-top: 0rem;
+  }
+
+  /* layanan */
+  .layanan h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem
+  }
+
+  .layanan hr {
+    width: 16%;
+    margin-bottom: 3rem;
+  }
+
+  .layanan .card-deck {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .layanan .card {
+    border-radius: 2.5rem;
+    width: 40%;
+    margin-bottom: 2.5rem;
+  }
+
+  .layanan .card-title {
+    margin-top: 2.3rem;
+    font-size: 2rem;
+  }
+
+  .layanan .card-text {
+    font-size: 1.1rem;
+  }
+
+  /* pilar angkut */
+  .pilar-angkut h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem
+  }
+
+  .pilar-angkut hr {
+    width: 16%;
+    margin-bottom: 3rem;
+  }
+
+  .pilar-angkut .card-deck {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pilar-angkut .card {
+    width: 25rem;
+  }
+
+  /* testi */
+  .testimonial h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem
+  }
+
+  .testimonial hr {
+    width: 16%;
+    margin-bottom: 3rem;
+  }
+
+  .testimonial .card img {
+    width: 45%;
+    margin: 1.5rem auto;
+  }
+
+  /* footer */
+  .footer-bottom p {
+    font-size: 1.2rem;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+
+  /* navbar */
+  .navbar-brand {
+    width: 70px;
+  }
+
+  .nav-link {
+    font-size: 1.4rem;
+  }
+
+  /* hero */
+  section.hero {
+    margin-top: 6rem;
+  }
+
+  .column-text {
+    margin-top: 5rem;
+  }
+
+  .column-text .display-4 {
+    font-size: 3.7rem;
+    padding-bottom: 1rem;
+  }
+
+  .column-text hr {
+    width: 15rem;
+    border: 1.5px solid var(--green);
+    margin-top: -0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .column-text h2 {
     font-size: 1.7rem;
   }
 
-  .footer .footer-item {
-    line-height: 2.5rem;
+  .column-img-illustration img {
+    margin-top: 0rem;
   }
 
-  .footer .footer-item:hover {
-    transform: translateX(5px);
-    transition: 0.5s;
+  /* layanan */
+  .layanan h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.6rem
   }
 
-  .nav-footer a {
+  .layanan hr {
+    width: 13%;
+    margin-bottom: 3.3rem;
+  }
+
+  .layanan .card {
+    border-radius: 2.5rem;
+  }
+
+  .layanan .card-title {
+    margin-top: 2.5rem;
+    font-size: 2.1rem;
+  }
+
+  .layanan .card-text {
+    font-size: 1.3rem;
+  }
+
+  /* pilar angkut */
+  .pilar-angkut h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.6rem
+  }
+
+  .pilar-angkut hr {
+    width: 13%;
+    margin-bottom: 3.3rem;
+  }
+
+  /* testi */
+  .testimonial h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.6rem
+  }
+
+  .testimonial hr {
+    width: 13%;
+    margin-bottom: 3.3rem;
+  }
+
+  .testimonial .card img {
+    width: 45%;
+    margin: 1.5rem auto;
+  }
+
+  /* footer */
+  .footer-bottom p {
+    font-size: 1.2rem;
+  }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+  /* navbar */
+  .navbar-brand {
+    width: 75px;
+  }
+
+  .nav-link {
     font-size: 1.5rem;
   }
 
-  .sosmed-item .fa-instagram,
-  .sosmed-item .fa-facebook-square,
-  .sosmed-item .fa-youtube,
-  .sosmed-item .fa-twitter-square {
-    font-size: 2rem;
-    transform: translateY(0.1rem);
+  /* hero */
+  .column-text {
+    margin-top: 8rem;
+  }
+
+  .column-text .display-4 {
+    font-size: 4.5rem;
+    padding-bottom: 1.2rem;
+  }
+
+  .column-text hr {
+    width: 18rem;
+    border: 1.5px solid var(--green);
+    margin-top: -0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .column-text h2 {
+    font-size: 2.5rem;
+  }
+
+  /* layanan */
+
+  .layanan h1 {
+    font-size: 3rem;
+  }
+
+  .layanan hr {
+    width: 13%;
+    margin-top: 1.5rem;
+    margin-bottom: 4.5rem;
+  }
+
+  .layanan img {
+    width: 55%;
+    height: 35%;
+  }
+
+  .layanan .text-layanan {
+    width: 85%;
+    margin: 1.4rem auto;
+  }
+
+  .text-layanan p {
+    font-size: 1.6rem;
+  }
+
+  .layanan .card {
+    border-radius: 1.9rem;
+  }
+
+  .layanan .card .inner {
+    height: 46%;
+  }
+
+  .layanan .card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 0 0;
+  }
+
+  .layanan .card-title {
+    margin-top: 5rem;
+  }
+
+  .layanan .card-text {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-top: .1rem;
+  }
+
+  /* pilar angkut */
+  .pilar-angkut h1 {
+    font-size: 3rem;
+  }
+
+  .pilar-angkut hr {
+    width: 13%;
+    margin-top: 1.5rem;
+    margin-bottom: 4.5rem;
+  }
+
+  /* testi */
+  .testimonial h1 {
+    font-size: 3rem;
+  }
+
+  .testimonial hr {
+    width: 13%;
+    margin-top: 1.5rem;
+    margin-bottom: 4.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  /* navbar */
+  .navbar-brand {
+    width: 80px;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+  }
+
+  /* hero */
+  .column-text {
+    margin-top: 15rem;
+  }
+
+  .column-text .display-4 {
+    font-size: 4.7rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .column-text hr {
+    width: 20rem;
+    border: 1.5px solid var(--green);
+    margin-top: -0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .column-text h2 {
+    font-size: 2.8rem;
+  }
+
+  .column-img-illustration img {
+    margin-top: 3rem;
+  }
+
+  /* layanan */
+  .layanan h1 {
+    font-size: 3.4rem;
+    margin-bottom: 2.3rem;
+  }
+
+  .layanan hr {
+    width: 10%;
+    margin-bottom: 5rem;
+  }
+
+  .layanan img {
+    width: 50%;
+    height: 45%;
+  }
+
+  .layanan .text-layanan {
+    width: 90%;
+    margin: 1.5rem auto;
+  }
+
+  .text-layanan p {
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .layanan .card {
+    border-radius: 1.9rem;
+  }
+
+  .layanan .card .inner {
+    height: 45%;
+    overflow: hidden;
+  }
+
+  .layanan .card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 0 0;
+    transition: all .5s ease;
+  }
+
+  .layanan .card img:hover {
+    transform: scale(1.1);
+  }
+
+  .layanan .card-title {
+    font-size: 2.8rem;
+    margin-top: 4.5rem;
+  }
+
+  .layanan .card-text {
+    margin-top: .7rem;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  /* pilar angkut */
+  .pilar-angkut h1 {
+    font-size: 3.4rem;
+    margin-bottom: 2.3rem;
+  }
+
+  .pilar-angkut hr {
+    width: 10%;
+    margin-bottom: 5rem;
+  }
+
+  /* testi */
+  .testimonial h1 {
+    font-size: 3.4rem;
+    margin-bottom: 2.3rem;
+  }
+
+  .testimonial hr {
+    width: 10%;
+    margin-bottom: 5rem;
+  }
+
+  /* footer */
+  .footer-top .footer-item:hover {
+    transform: translateX(5px);
+    transition: .6s;
+  }
+
+  .footer-item .footer-link:hover {
+    color: black;
+    transition: .3s;
+  }
+
+  .footer-bottom p {
+    font-size: 1.3rem;
   }
 }

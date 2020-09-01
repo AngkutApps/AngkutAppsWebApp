@@ -1,3 +1,6 @@
+<?php header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: POST');
+header('Access-Control-Max-Age: 1000'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -151,11 +154,13 @@
     <script src="{{asset('asset_backend/js/demo/chart-area-demo.js')}}"></script>
     <script src="{{asset('asset_backend/js/demo/chart-pie-demo.js')}}"></script>
     <script src="{{asset('asset_backend/js/demo/datatables-demo.js')}}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
     <!-- script js custom -->
 
     <script>
         $(document).ready(function() {
+
             $('body').on('click', '.btn-hapus', function(e) {
                 e.preventDefault();
                 var url = $(this).attr('href');
@@ -165,21 +170,35 @@
 
             $(".save-data").click(function(event) {
                 event.preventDefault();
-
-                let title = $("input[name=title]").val();
-                let body = $("input[name=body]").val();
-                let userId = 1;
+                // let title = $("input[name=title]").val();
+                // let body = $("input[name=body]").val();
+                var formData = {
+                    "smsblast_username": "",
+                    "smsblast_password": "",
+                    "smsblast_senderid": "",
+                    "msisdns": ["+62895806368692"],
+                    "text": "testing"
+                };
 
                 $.ajax({
-                    url: "https://jsonplaceholder.typicode.com/posts",
+                    url: "https://api.thebigbox.id/sms-broadcast/1.0.0/send",
                     type: "POST",
-                    data: {
-                        title: title,
-                        body: body,
-                        userId: userId,
+                    contentType: "application/json; charset=utf-8",
+                    dataType: 'json',
+                    CrossDomain: true,
+                    async: false,
+                    cache: false,
+                    data: JSON.stringify(formData),
+                    headers: {
+                        "x-api-key": "b4emnOXwXDdGSeTZH2DcHKqhHCXCFSqI"
                     },
                     success: function(response) {
                         console.log(response);
+                        Swal.fire(
+                            'Good job!',
+                            'You clicked the button!',
+                            'success'
+                        )
                         if (response) {
                             $('.success').text(response.success);
                             $("#ajaxform")[0].reset();

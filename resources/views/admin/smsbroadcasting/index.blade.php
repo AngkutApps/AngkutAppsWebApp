@@ -9,7 +9,7 @@
                 <a href="{{route('user.index')}}" class="btn btn-md btn-success rounded-pill shadow-lg"><i class="fas fa-arrow-left"></i> Back</a>
             </div>
             <div class="card-body">
-                <form id="ajaxform">
+                <form id="ajaxform" method="post">
                     @csrf
                     <div class="form-group">
                         <label>Title</label>

@@ -13,10 +13,13 @@
 }
 
 html {
-    font-family: "Poppins", sans-serif;
     font-size: 10px;
     box-sizing: border-box;
     overflow-x: hidden;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -43,22 +46,23 @@ section {
 
 /* nav */
 nav.navbar {
-    background: var(--green);
-}
-
-nav.navbar {
     z-index: 999;
-    width: 100%;
+    padding: .7rem 1rem !important;
 }
 
 .navbar-brand {
-    width: 70px;
+    width: 48px;
 }
 
 .nav-link {
-    color: white !important;
+    color: rgba(0, 0, 0, 0.8) !important;
     font-size: 1.2rem;
-    text-transform: uppercase;
+    font-weight: 600;
+    margin-right: 2.5rem;
+}
+
+.nav-link:hover {
+    color: var(--green) !important;
 }
 
 button.navbar-toggler {
@@ -67,37 +71,40 @@ button.navbar-toggler {
     outline: unset;
 }
 
+.navbar .fa-angle-down {
+    margin-left: .6rem;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+    font-size: 1.2rem;
+}
+
 /* header */
 .jumbotron.jumbotron-fluid {
-    margin-top: 15%;
+    margin-top: 8rem;
     background: transparent;
 }
 
-.kategori .link-kategori {
-    color: rgba(0, 0, 0, .8);
-    font-size: 1.4rem;
+.jumbotron h1 {
     font-weight: 600;
-    text-decoration: none;
 }
 
-.kategori .link-kategori:hover {
-    color: var(--green);
+.jumbotron hr {
+    width: 10rem;
+    margin: 1rem auto;
+    border: 1px solid #EF8641;
 }
 
-.kategori .link-kategori:hover::after {
-    content: "";
-    display: block;
-    border-bottom: 2px solid var(--green);
-    width: 50%;
-    margin: auto;
-    padding-bottom: 5px;
-    margin-bottom: -8px;
+.jumbotron .text-p {
+    font-size: 1rem;
 }
 
 .form-group {
-    margin-top: 2.5rem;
+    margin-top: 1.6rem;
     border: 1px solid rgba(0, 0, 0, .2);
-    border-radius: 1rem;
+    border-radius: .5rem;
+    width: 100%;
+    position: relative;
 }
 
 .form-group .form-input::-webkit-input-placeholder {
@@ -105,19 +112,19 @@ button.navbar-toggler {
 }
 
 .form-group .form-input:-moz-input-placeholder {
-    6 color: rgba(0, 0, 0, .6)
+    color: rgba(0, 0, 0, .6)
 }
 
 .form-group .form-input {
-    padding: 6.7px;
-    width: 25rem;
-    font-size: 1.6rem;
+    padding: 6px;
+    width: 90%;
+    font-size: 1.2rem;
     color: rgba(0, 0, 0, .6);
     border-radius: 10px;
     background: unset;
     border: unset;
     outline: unset;
-    padding-left: 2rem;
+    padding-left: 1rem;
     font-weight: 600;
 }
 
@@ -126,21 +133,30 @@ button.navbar-toggler {
     border: unset;
     outline: unset;
     cursor: pointer;
+    position: absolute;
+    right: 0;
 }
 
 .search-btn .fa-search {
-    font-size: 22px;
-    padding-right: 5px;
-    color: var(--green);
-    margin-top: 5px;
+    font-size: 17px;
+    color: rgba(0, 0, 0, .6);
+    margin-top: .5rem;
+    margin-right: 1rem;
 }
 
-.search-btn .fa-search:hover {
-    color: darkgreen;
+.form-inline .group-kategori {
+    border: unset;
+    background: var(--green);
+    color: white;
+    padding: .7rem;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    outline: unset;
 }
 
 /* main */
 main .card-wrapper {
+    margin-top: -2rem;
     margin-bottom: 2rem;
 }
 
@@ -150,7 +166,7 @@ main .card-wrapper img {
 }
 
 main .card-wrapper a {
-    font-size: 1.9rem;
+    font-size: 1.2rem;
     text-decoration: none;
     color: rgba(0, 0, 0, .7);
     font-weight: 700;
@@ -170,11 +186,11 @@ main .card img {
 }
 
 .card .card-body a {
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-decoration: none;
     position: absolute;
     left: 50%;
-    top: 4rem;
+    top: 1rem;
     color: rgba(0, 0, 0, .7);
     font-weight: 500;
 }
@@ -191,7 +207,7 @@ main .card img {
     position: absolute;
     bottom: 0;
     right: 0;
-    font-size: 1rem;
+    font-size: .8rem;
 }
 
 .card-wrapper .card-footer {
@@ -200,7 +216,7 @@ main .card img {
 }
 
 .card-wrapper .text-muted {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 .pagination {
@@ -232,6 +248,66 @@ main .card img {
     font-weight: 700;
 }
 
+/* footer */
+.footer {
+    position: relative;
+    background: #F1F1F1;
+    padding-top: 2rem;
+}
+
+.footer-top {
+    padding-bottom: 5rem;
+}
+
+.footer-top .footer-item {
+    padding-top: .8rem
+}
+
+.footer-top .footer-link {
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, .8);
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.footer-link span {
+    color: var(--green);
+    font-weight: 600;
+}
+
+.footer-top h3 {
+    margin-top: 2rem;
+    font-weight: 600;
+}
+
+.footer-top .link-download img {
+    margin-top: 8px;
+}
+
+.footer-top .follow-us img {
+    margin-right: 5px;
+}
+
+.footer-top .follow-us a {
+    text-decoration: none;
+}
+
+.footer .footer-bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: #f1f1f1;
+}
+
+.footer-bottom p {
+    text-transform: capitalize;
+    font-size: 1.1rem;
+}
+
+.footer-bottom span {
+    color: var(--green);
+}
+
 @media (min-width: 320px) and (max-width: 450px) {
     .jumbotron.jumbotron-fluid {
         margin-top: 20%;
@@ -241,22 +317,20 @@ main .card img {
         font-size: 1.1rem;
     }
 
+    .form-group {
+        width: 30rem;
+    }
+
     .form-group .form-input {
         padding: 6px;
-        width: 20rem;
         font-size: 1.2rem;
         border-radius: 5px;
         padding-left: 1rem;
     }
 
-    .form-group {
-        margin-top: 2rem;
-    }
-
     .search-btn .fa-search {
         font-size: 18px;
-        padding-right: 8px;
-        margin-top: 3px;
+        margin-top: 5px;
     }
 
     /* main */
@@ -270,145 +344,190 @@ main .card img {
 
     .card .card-body a {
         font-size: 1.1rem;
-        top: 0;
+        top: 15px;
+    }
+
+    /* footer */
+    .card .text-muted {
+        font-size: 1rem;
     }
 }
 
-
-/* footer */
-.footer {
-    padding-top: 3rem;
-    padding-bottom: 1rem;
-    background: #367c6d;
-    position: relative;
-    left: 0;
-    right: 0;
-}
-
-.footer h3,
-.footer h1 {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-}
-
-.footer p {
-    color: rgb(224, 224, 224);
-    font-weight: 500;
-}
-
-.footer .nav-footer {
-    color: rgb(224, 224, 224);
-}
-
-.footer-top picture {
-    display: flex;
-}
-
-.footer .footer-top img {
-    width: 15rem;
-    padding-right: 10px;
-    opacity: 0.9;
-}
-
-.footer .footer-item {
-    line-height: 3rem;
-}
-
-.nav-footer a {
-    color: rgb(224, 224, 224);
-    text-decoration: none;
-    font-size: 1.3rem;
-}
-
-.sosmed .nav-footer {
-    list-style: none;
-    display: inline-block;
-}
-
-.sosmed-item {
-    display: inline;
-    margin-right: 5px;
-}
-
-.sosmed-link {
-    border: 1px solid rgba(255, 255, 255, 1);
-    display: inline-block;
-    padding: 5px 8px;
-    border-radius: 9px;
-}
-
-.sosmed-item .fa-instagram,
-.sosmed-item .fa-facebook-square,
-.sosmed-item .fa-youtube,
-.sosmed-item .fa-twitter-square {
-    font-size: 1.6rem;
-    line-height: unset;
-}
-
-.footer-top .driver {
-    padding-top: 1rem;
-}
-
-.footer-bottom hr {
-    margin-top: 4rem;
-    width: 100%;
-    border: 1px solid rgb(211, 211, 211);
-}
-
-.footer-bottom p {
-    color: rgb(211, 211, 211);
-}
-
-@media (min-width: 768px) {
+@media (min-width: 576px) and (max-width: 767.98px) {
     .jumbotron.jumbotron-fluid {
-        margin-top: 7.5%;
+        margin-top: 12%;
+        background: transparent;
     }
 
+    .jumbotron .form-inline {
+        margin-top: 1.5rem;
+        margin-left: -7rem;
+    }
+
+    .jumbotron .form-inline .form-group {
+        width: 30rem;
+        margin-top: 0;
+    }
+
+    .jumbotron .text-p {
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+
+    .form-group .search-btn .fa-search {
+        font-size: 18px;
+        margin-top: 5px;
+        margin-right: 1.6rem;
+    }
+
+    .jumbotron .form-inline .group-kategori {
+        padding: .63rem;
+        border-radius: 0 .5rem .5rem 0;
+        position: absolute;
+        right: 3rem;
+    }
+
+    /* main */
     main .card-wrapper a {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
 
-    .card-wrapper .text-muted {
-        font-size: 2rem;
-    }
 
     .card .card-body a {
-        font-size: 2rem;
+        font-size: 1.5rem;
+        top: 3rem;
     }
 
     .card .text-muted {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-size: 1rem;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .navbar-brand {
+        width: 70px;
+    }
+
+    .nav-link {
+        color: black;
+        font-size: 1.5rem;
+    }
+
+    button.navbar-toggler {
         font-size: 1.8rem;
+    }
+
+    .jumbotron.jumbotron-fluid {
+        margin-top: 11%;
+        background: transparent;
+    }
+
+    .jumbotron .form-inline {
+        margin-top: 1.5rem;
+        margin-left: -7rem;
+    }
+
+    .jumbotron .form-inline .form-group {
+        width: 40rem;
+        margin-top: 0;
+    }
+
+    .jumbotron .text-p {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    .form-group .search-btn .fa-search {
+        font-size: 18px;
+        margin-top: 0;
+        margin-right: 3rem;
+    }
+
+    .jumbotron .form-inline .group-kategori {
+        padding: .85rem;
+        border-radius: 0 .5rem .5rem 0;
+        position: absolute;
+        right: 8rem;
+    }
+
+    .form-group .form-input {
+        padding: .8rem;
+    }
+
+
+    /*  main    */
+    .wrapper {
+        margin-top: 5rem;
+    }
+
+    main .card-wrapper a {
+        font-size: 1.7rem;
+    }
+
+    .card-wrapper .text-muted {
+        font-size: 1.4rem;
+    }
+
+    .card .card-body a {
+        font-size: 1.4rem;
+        top: 2rem;
+    }
+
+    .card .text-muted {
+        font-size: 1.2rem;
+    }
+
+    /* footer */
+    .footer-bottom p {
+        font-size: 1.2rem;
     }
 }
 
-@media (min-width: 992px) {
-    .nav-link {
-        margin-right: 30px;
-        font-size: 1.4rem;
-        color: white !important;
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .navbar-brand {
+        width: 80px;
     }
 
-    .nav-link:hover::after {
-        content: "";
-        display: block;
-        border-bottom: 2px solid white;
-        width: 50%;
-        margin: auto;
-        padding-bottom: 5px;
-        margin-bottom: -8px;
+    .nav-link {
+        font-size: 1.5rem;
     }
 
     /* header */
     .jumbotron.jumbotron-fluid {
-        margin-top: 5%;
+        margin-top: 11%;
+        background: transparent;
     }
 
-    .kategori .link-kategori {
-        font-size: 1.7rem;
+    .jumbotron .form-inline {
+        margin-top: 1.5rem;
+        margin-left: -7rem;
     }
 
-    .form-group .form-input {
-        width: 52rem;
+    .jumbotron .form-inline .form-group {
+        width: 40rem;
+        margin-top: 0;
+    }
+
+    .jumbotron .text-p {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    .form-group .search-btn .fa-search {
+        font-size: 16px;
+        margin-top: 0;
+        margin-right: 1.8rem;
+    }
+
+    .jumbotron .form-inline .group-kategori {
+        padding: 0.84rem;
+        border-radius: 0 .5rem .5rem 0;
+        position: absolute;
+        right: 19rem;
     }
 
 
@@ -442,80 +561,116 @@ main .card img {
     }
 
     /* footer */
-    footer.footer {
-        padding: 3rem 0 1rem 0;
-        background: #367c6d;
-    }
-
-    .footer h3,
-    .footer h1 {
-        color: rgb(255, 255, 255);
-        font-weight: 700;
-        font-size: 2.8rem;
-    }
-
-    .footer p {
-        color: rgb(224, 224, 224);
-        font-weight: 500;
-        font-size: 1.7rem;
-    }
-
-    .footer .nav-footer {
-        color: rgb(224, 224, 224);
-    }
-
-    .footer .footer-top img {
-        width: 15rem;
-        padding-right: 10px;
-        opacity: 0.9;
-    }
-
-    .footer .footer-item {
-        line-height: 2.5rem;
-    }
-
-    .footer .footer-item:hover {
+    .footer-top .footer-item:hover {
         transform: translateX(5px);
-        transition: 0.5s;
+        transition: .6s;
     }
 
-    .nav-footer a {
-        color: rgb(224, 224, 224);
-        text-decoration: none;
-        font-size: 1.5rem;
-    }
-
-    .sosmed .nav-footer {
-        list-style: none;
-        display: inline-block;
-    }
-
-    .sosmed-item {
-        display: inline;
-        margin-right: 5px;
-    }
-
-    .sosmed-link {
-        border: 1px solid rgba(255, 255, 255, 1);
-        display: inline-block;
-        padding: 5px 8px;
-        border-radius: 9px;
-    }
-
-    .sosmed-item .fa-instagram,
-    .sosmed-item .fa-facebook-square,
-    .sosmed-item .fa-youtube,
-    .sosmed-item .fa-twitter-square {
-        font-size: 2rem;
-        line-height: unset;
-        transform: translateY(2px);
-    }
-
-    .footer-top .driver {
-        padding-top: 10px;
+    .footer-item .footer-link:hover {
+        color: black;
+        transition: .3s;
     }
 
     .footer-bottom p {
-        color: rgb(211, 211, 211);
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .navbar-brand {
+        width: 80px;
+    }
+
+    .nav-link {
+        font-size: 1.5rem;
+    }
+
+    /* header */
+    .jumbotron.jumbotron-fluid {
+        margin-top: 9%;
+        background: transparent;
+    }
+
+    .jumbotron .form-inline {
+        margin-top: 1.5rem;
+        margin-left: -7rem;
+    }
+
+    .jumbotron .form-inline .form-group {
+        width: 40rem;
+        margin-top: 0;
+    }
+
+    .jumbotron .text-heading {
+        font-size: 3.5rem
+    }
+
+    .jumbotron .text-p {
+        font-size: 1.7rem;
+        font-weight: 300;
+        margin-top: 2rem;
+    }
+
+    .form-group .search-btn .fa-search {
+        font-size: 15px;
+        margin-top: 0;
+        margin-right: 2rem;
+    }
+
+    .jumbotron .form-inline .group-kategori {
+        padding: 1.1rem .5rem;
+        border-radius: 0 .5rem .5rem 0;
+        position: absolute;
+        right: 28rem;
+    }
+
+    .form-group .form-input {
+        padding: 1rem;
+        font-size: 1.3rem;
+    }
+
+
+    /* main */
+    main.wrapper {
+        padding-bottom: 8rem;
+    }
+
+    main .card {
+        display: unset;
+    }
+
+    main .card img {
+        width: 100%;
+        border-radius: 1.2rem 1.2rem 0 0;
+    }
+
+    .card .card-body a {
+        font-size: 1.5rem;
+        text-decoration: none;
+        position: unset;
+    }
+
+    .card .card-footer {
+        position: unset;
+    }
+
+    .card .text-muted {
+        position: unset;
+        font-size: 1.2rem;
+    }
+
+    /* footer */
+    .footer-top .footer-item:hover {
+        transform: translateX(5px);
+        transition: .6s;
+    }
+
+    .footer-item .footer-link:hover {
+        color: black;
+        transition: .3s;
+    }
+
+    .footer-bottom p {
+        font-size: 1.3rem;
     }
 }

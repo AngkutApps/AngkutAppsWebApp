@@ -3,7 +3,6 @@
 *,
 *::before,
 *::after {
-  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -17,6 +16,10 @@ html {
   font-size: 10px;
   box-sizing: border-box;
   overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -66,6 +69,14 @@ button.navbar-toggler {
   background: unset;
   border: unset;
   outline: unset;
+}
+
+.navbar .fa-angle-down {
+  margin-left: .6rem;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+  font-size: 1.2rem;
 }
 
 /* hero */
@@ -128,14 +139,15 @@ section.hero {
   display: inline-block;
   background: var(--green);
   color: white;
-  width: 10%;
-  height: 15%;
+  width: 3rem;
+  height: 2.5rem;
   text-align: center;
-  border-radius: 20%;
+  border-radius: 1rem;
+  line-height: 2.5rem;
 }
 
 .main .keterangan {
-  margin-top: 3rem;
+  margin-top: 8rem;
 }
 
 .main p {
@@ -167,6 +179,10 @@ section.hero {
   color: rgba(0, 0, 0, 0.7);
 }
 
+.info .ilustrasi-img {
+  display: none;
+}
+
 /* kelebihan */
 .kelebihan h1 {
   text-align: center;
@@ -188,7 +204,7 @@ section.hero {
 }
 
 .info-panel p {
-  font-size: 1.3rem;
+  font-size: .9rem;
   color: rgba(0, 0, 0, 0.7);
 }
 
@@ -218,9 +234,9 @@ section.hero {
 }
 
 .tim hr {
-  width: 20%;
+  width: 6rem;
   margin: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   border: 1px solid #EF8641;
 }
 
@@ -229,7 +245,7 @@ section.hero {
 }
 
 .item .our-tim img {
-  width: 50%;
+  width: 14rem;
   margin: auto;
 }
 
@@ -360,6 +376,10 @@ section.hero {
     margin-bottom: 3rem;
   }
 
+  .info .ilustrasi-img {
+    display: none;
+  }
+
   /* kelebihan */
   .kelebihan h1 {
     font-size: 2.5rem;
@@ -405,7 +425,7 @@ section.hero {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1199.98px) {
+@media (min-width: 768px) and (max-width: 991.98px) {
 
   /* navbar */
   .navbar-brand {
@@ -466,6 +486,10 @@ section.hero {
     margin-bottom: 3rem;
   }
 
+  .info .ilustrasi-img {
+    display: none;
+  }
+
   /* kelebihan */
   .kelebihan h1 {
     font-size: 3rem;
@@ -507,7 +531,7 @@ section.hero {
   }
 
   .text-area p {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
 
   /* footer */
@@ -516,7 +540,7 @@ section.hero {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1199.98px) {
   .navbar-brand {
     width: 80px;
   }
@@ -567,8 +591,8 @@ section.hero {
   }
 
   .main .keterangan {
-    padding-top: 15rem;
-    padding-left: 7rem;
+    margin-left: 4rem;
+    margin-top: 11rem;
   }
 
   .main span {
@@ -581,13 +605,13 @@ section.hero {
   }
 
   .main p {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     font-weight: 400;
   }
 
   .info h1 {
     padding-top: 4rem;
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .info hr {
@@ -595,7 +619,11 @@ section.hero {
   }
 
   .info p {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
+  }
+
+  .info .ilustrasi-img {
+    display: block;
   }
 
   .info img.img-fluid {
@@ -612,7 +640,7 @@ section.hero {
   }
 
   .info-panel p {
-    font-size: 1.6rem;
+    font-size: 1.1rem;
   }
 
   .tim h1 {
@@ -638,4 +666,131 @@ section.hero {
     font-size: 1.3rem;
   }
 
+}
+
+@media (min-width: 1200px) {
+  .navbar-brand {
+    width: 80px;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+  }
+
+  /* hero */
+  .column-text {
+    margin-top: 15rem;
+  }
+
+  .column-text .display-4 {
+    font-size: 4.7rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .column-text hr {
+    width: 20rem;
+    border: 1.5px solid var(--green);
+    margin-top: -0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .column-text h2 {
+    font-size: 2.8rem;
+  }
+
+  .column-img-illustration img {
+    margin-top: 4rem;
+  }
+
+  .column-text .btn-contact {
+    padding: 1rem 2rem;
+    font-size: 1.4rem;
+  }
+
+  /* main */
+
+  .main h3 {
+    font-size: 2rem;
+  }
+
+  .main h1 {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .main .keterangan {
+    margin-left: 4rem;
+    margin-top: 11rem;
+  }
+
+  .main span {
+    background: var(--green);
+    color: white;
+    width: 9%;
+    height: 3.4rem;
+    border-radius: 12%;
+    line-height: 3.4rem;
+  }
+
+  .main p {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+
+  .info h1 {
+    padding-top: 4rem;
+    font-size: 3rem;
+  }
+
+  .info hr {
+    width: 46%;
+  }
+
+  .info p {
+    font-size: 1.4rem;
+  }
+
+  .info .ilustrasi-img {
+    display: block;
+  }
+
+  .info img.img-fluid {
+    width: 500px !important;
+  }
+
+  .kelebihan h1 {
+    padding-top: 4rem;
+    font-size: 4rem;
+  }
+
+  .kelebihan hr {
+    width: 20%;
+  }
+
+  .info-panel p {
+    font-size: 1.3rem;
+  }
+
+  .tim h1 {
+    font-size: 4rem;
+  }
+
+  .tim hr {
+    width: 7%;
+  }
+
+  /* footer */
+  .footer-top .footer-item:hover {
+    transform: translateX(5px);
+    transition: .6s;
+  }
+
+  .footer-item .footer-link:hover {
+    color: black;
+    transition: .3s;
+  }
+
+  .footer-bottom p {
+    font-size: 1.3rem;
+  }
 }

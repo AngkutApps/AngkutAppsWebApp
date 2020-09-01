@@ -12,7 +12,22 @@
 */
 
 
-Route::get('/', 'HomeController@index');
+
+Route::get('/', 'HomeController@index')->name('angkut.index');
+Route::get('/about', 'HomeController@about')->name('angkut.about');
+
+Route::get('/news', 'HomeController@news')->name('angkut.news');
+
+//daftar
+Route::get('/daftar/pete-pete', 'HomeController@daftarPete')->name('angkut.pete');
+Route::post('/daftar/pete-pete/store', 'HomeController@storePete')->name('pete.store');
+
+Route::get('/daftar/mobil-daerah', 'HomeController@daftarDaerah')->name('angkut.daerah');
+Route::post('/daftar/mobil-daerah/store', 'HomeController@storeDaerah')->name('daerah.store');
+
+Route::get('/daftar/bus', 'HomeController@daftarBus')->name('angkut.bus');
+Route::post('/daftar/bus/store', 'HomeController@storeBus')->name('bus.store');
+
 
 Route::group(['prefix' => 'adminweb'], function () {
     Auth::routes(['register' => false]);
@@ -43,6 +58,8 @@ Route::group(['prefix' => 'adminweb', 'middleware' => ['auth']], function () {
     Route::resource('/user', 'Admin\UserController');
 
     //SMS broadcasting
-
     Route::get('/sms', 'Admin\SmsBroadcastingController@index')->name('sms.index');
+
+    //driver
+    Route::resource('/driver', 'Admin\DriverController');
 });

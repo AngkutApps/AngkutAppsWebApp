@@ -170,6 +170,11 @@ class ArticleController extends Controller
     public function kill($id)
     {
         Articel::onlyTrashed()->findOrFail($id)->forceDelete();
+        $image = Articel::onlyTrashed()->findOrFail($id)->select('image');
+        $file_path = $image;
+        if (file_exists($file_path)) {
+            unlink($file_path);
+        }
         toast('Data berhasil di delete', 'success');
         return redirect()->back();
     }

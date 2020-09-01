@@ -13,10 +13,13 @@
 }
 
 html {
-  font-family: "Poppins", sans-serif;
   font-size: 10px;
   box-sizing: border-box;
   overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -43,21 +46,23 @@ section {
 
 /* nav */
 nav.navbar {
-  background: var(--green);
-}
-
-nav.navbar {
   z-index: 999;
-  width: 100%;
+  padding: .7rem 1rem !important;
 }
 
 .navbar-brand {
-  width: 70px;
+  width: 60px;
 }
 
 .nav-link {
-  color: white !important;
+  color: rgba(0, 0, 0, 0.8) !important;
   font-size: 1.2rem;
+  font-weight: 600;
+  margin-right: 2.5rem;
+}
+
+.nav-link:hover {
+  color: var(--green) !important;
 }
 
 button.navbar-toggler {
@@ -66,160 +71,159 @@ button.navbar-toggler {
   outline: unset;
 }
 
-.carousel {
-  height: 450px;
-  background-color: #16a085;
-  color: white;
+.navbar .fa-angle-down {
+  margin-left: .6rem;
 }
 
-.carousel .display-4 {
-  text-align: center;
-  color: white;
-  margin-top: 38%;
-  font-size: 3.2rem;
-  font-weight: 700;
+.navbar .dropdown-menu .dropdown-item {
+  font-size: 1.2rem;
 }
 
-.carousel h2 {
-  text-align: center;
-  color: white;
-  font-size: 2.1rem;
-  font-weight: 200;
+/* features */
+
+.features {
+  margin-top: 15%;
 }
 
-.carousel span {
+.features h1 {
+  text-transform: capitalize;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.features hr {
+  width: 26%;
+  margin: auto;
+  margin-bottom: 2rem;
+  border: 1px solid #EF8641;
+}
+
+.features .nav-pills .nav-item {
+  margin-top: 1rem;
+}
+
+.features .nav-item .nav-link {
+  border: 1px solid rgba(0, 0, 0, .3);
+  font-weight: 400;
+  border-radius: 1rem;
+}
+
+.features .nav-item .nav-link.active {
+  background: unset;
+  color: var(--green) !important;
+  border: 1px solid var(--green);
   font-weight: 500;
 }
 
-/* brands */
-.brands h1 {
-  font-size: 3rem;
-  color: var(--green);
-  font-weight: 700;
-  text-align: center;
-}
 
-.cek-tarif h2 {
-  font-size: 3rem;
-  color: var(--green);
-  font-weight: 700;
-  text-align: center;
-}
-
-.brands hr {
-  width: 45%;
-  margin: auto;
-  margin-bottom: 3rem;
-  margin-top: 1rem;
-  border: 1px solid var(--green);
-}
-
-.brands img {
-  width: 29%;
-}
-
-.info-panel {
-  background: var(--green);
-  position: relative;
-  border-radius: 1rem;
-  margin: 1.5rem 0;
-}
-
-.info-panel span {
-  position: absolute;
-  background: white;
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  line-height: 4rem;
-  text-align: center;
-  top: 2.5rem;
-  left: 1rem;
-}
-
-.text-info {
-  margin-left: 6rem;
-  padding: 1rem 0;
-}
-
-.text-info h2 {
-  color: white;
-  font-size: 1.8rem;
-}
-
-.text-info p {
-  color: white;
-  font-size: 1.4rem;
-}
-
-/*form cek tarif*/
-.input-group {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
-}
-
-
-.input-group-text {
-  border: unset;
-  background: unset;
-  font-size: 1.7rem;
-  color: #ff0000ce;
-  padding-top: 1.8rem;
-}
-
-.input-group input {
-  font-size: 1.5rem;
-  height: 3rem;
-  background: unset !important;
-  outline: none !important;
-  border: unset;
+.features .tab-content h2 {
+  font-size: 2rem;
+  text-transform: capitalize;
   margin-top: 2rem;
 }
 
-textarea:focus,
-textarea.form-control:focus,
-input.form-control:focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-[type="text"].form-control:focus,
-[type="password"].form-control:focus,
-[type="email"].form-control:focus,
-[type="tel"].form-control:focus,
-[contenteditable].form-control:focus {
-  box-shadow: inset 0 -1px 0 #ddd !important;
+.features .tab-content .info-panel {
+  position: relative;
 }
 
+.features .tab-content .info-panel img {
+  width: 18%;
+  position: absolute;
+  top: .8rem;
+  left: 1rem;
+}
 
-.cek-tarif button.btn-success {
+.features .tab-content .info-panel .text-info {
+  margin-left: 8.5rem;
+}
+
+.features .tab-content .info-panel .text-info h2 {
+  color: rgba(0, 0, 0, .9);
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.features .tab-content .info-panel .text-info p {
+  color: rgba(0, 0, 0, .7);
+  font-size: 1.2rem;
+}
+
+/* form cek tarif */
+.features .form-cek-tarif {
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 1.5rem;
+  padding: 2rem 1rem;
+  width: 95%;
+  margin: auto;
+}
+
+.form-cek-tarif .form-group {
+  margin-top: 1.5rem;
+}
+
+.form-cek-tarif .form-group img {
+  float: left;
+  margin-top: 2rem;
+  width: 3.5rem;
+}
+
+.form-cek-tarif .form-group img::after {
+  content: '';
+  clear: both;
+}
+
+.form-cek-tarif .form-group .form-check {
+  margin-left: 2.8rem;
+}
+
+.form-group .form-check label {
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.form-group .form-check .form-input {
   outline: unset;
+  border: 1px solid rgba(0, 0, 0, .3);
+  background: #f1f1f1f1;
+  width: 100%;
+  padding: .3rem 1rem;
+  border-radius: .3rem;
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, .8);
+}
+
+.form-cek-tarif .btn-cek {
+  margin-top: 1.2rem;
   border: unset;
   background: var(--green);
-  padding: 1rem;
   color: white;
-  width: 70%;
+  width: 100%;
+  padding: .7rem;
   font-size: 1.3rem;
-  border-radius: 12px;
-  margin-top: 12px;
+  font-weight: 400;
+  border-radius: .5rem
 }
 
-.cek-tarif button.btn-success:hover {
-  background-color: #106d5a;
-  transition: 0.5s;
+.form-cek-tarif .btn-cek:hover {
+  background: #106d5a;
+  transition: .5s;
 }
+
+
 
 /* berita pengguna */
+
 .driver h1 {
-  font-size: 3rem;
-  color: var(--green);
-  font-weight: 700;
-  text-align: center;
+  text-transform: capitalize;
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
 }
 
 .driver hr {
-  width: 50%;
-  margin: 1rem auto;
-  border: 1px solid var(--green);
+  width: 40%;
+  margin: auto;
+  margin-bottom: 1rem;
+  border: 1px solid #EF8641;
 }
 
 .driver .card {
@@ -269,15 +273,18 @@ input[type="number"]:focus,
 /* faq */
 
 .question h1 {
-  color: var(--green);
-  font-weight: 550;
+  text-transform: capitalize;
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
 }
 
 .question hr {
-  width: 50%;
-  border: 1px solid var(--green);
+  width: 40%;
   margin: auto;
+  margin-bottom: 1rem;
+  border: 1px solid #EF8641;
 }
+
 
 .question .collapsible-link::before {
   content: "";
@@ -314,117 +321,461 @@ input[type="number"]:focus,
 
 /* footer */
 .footer {
-  padding-top: 3rem;
-  padding-bottom: 1rem;
-  background: #367c6d;
   position: relative;
-  left: 0;
-  right: 0;
+  background: #F1F1F1;
+  padding-top: 2rem;
 }
 
-.footer h3,
-.footer h1 {
-  color: rgb(255, 255, 255);
-  font-weight: 700;
+.footer-top {
+  padding-bottom: 5rem;
 }
 
-.footer p {
-  color: rgb(224, 224, 224);
-  font-weight: 500;
+.footer-top .footer-item {
+  padding-top: .8rem
 }
 
-.footer .nav-footer {
-  color: rgb(224, 224, 224);
-}
-
-.footer-top picture {
-  display: flex;
-}
-
-.footer .footer-top img {
-  width: 15rem;
-  padding-right: 10px;
-  opacity: 0.9;
-}
-
-.footer .footer-item {
-  line-height: 3rem;
-}
-
-.nav-footer a {
-  color: rgb(224, 224, 224);
+.footer-top .footer-link {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, .8);
+  font-weight: 300;
   text-decoration: none;
-  font-size: 1.3rem;
 }
 
-.sosmed .nav-footer {
-  list-style: none;
-  display: inline-block;
+.footer-link span {
+  color: var(--green);
+  font-weight: 600;
 }
 
-.sosmed-item {
-  display: inline;
+.footer-top h3 {
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+.footer-top .link-download img {
+  margin-top: 8px;
+}
+
+.footer-top .follow-us img {
   margin-right: 5px;
 }
 
-.sosmed-link {
-  border: 1px solid rgba(255, 255, 255, 1);
-  display: inline-block;
-  padding: 5px 8px;
-  border-radius: 9px;
+.footer-top .follow-us a {
+  text-decoration: none;
 }
 
-.sosmed-item .fa-instagram,
-.sosmed-item .fa-facebook-square,
-.sosmed-item .fa-youtube,
-.sosmed-item .fa-twitter-square {
-  font-size: 1.6rem;
-  line-height: unset;
-}
-
-.footer-top .driver {
-  padding-top: 1rem;
-}
-
-.footer-bottom hr {
-  margin-top: 4rem;
-  width: 100%;
-  border: 1px solid rgb(211, 211, 211);
+.footer .footer-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #f1f1f1;
 }
 
 .footer-bottom p {
-  color: rgb(211, 211, 211);
+  text-transform: capitalize;
+  font-size: 1rem;
 }
 
-@media (min-width: 768px) {
-  .carousel .display-4 {
-    font-size: 5rem;
-    text-align: left;
-    margin-top: 10%;
+.footer-bottom span {
+  color: var(--green);
+}
+
+@media (min-width:361px) and (max-width: 575.98px) {
+  /* features */
+
+  .features {
+    margin-top: 15%;
   }
 
-  .carousel h2 {
+  .features h1 {
+    text-transform: capitalize;
     font-size: 3rem;
-    text-align: left;
   }
 
-  .carousel img {
-    margin-top: 10rem;
+  .features hr {
+    width: 30%;
+    margin: auto;
+    margin-bottom: 2rem;
+    border: 1px solid #EF8641;
   }
 
-  .brands hr {
-    width: 20%;
+  .features .nav-pills .nav-item {
+    margin-top: 1rem;
   }
 
-  .brands img {
+  .features .nav-item .nav-link {
+    border: 1px solid rgba(0, 0, 0, .3);
+    font-weight: 400;
+    border-radius: 1rem;
+  }
+
+  .features .nav-item .nav-link.active {
+    background: unset;
+    color: var(--green) !important;
+    border: 1px solid var(--green);
+    font-weight: 500;
+  }
+
+
+  .features .tab-content h2 {
+    font-size: 2.3rem;
+    text-transform: capitalize;
+    margin-top: 2rem;
+  }
+
+  .features .tab-content .info-panel {
+    position: relative;
+  }
+
+  .features .tab-content .info-panel img {
+    width: 55px;
+    position: absolute;
+    top: .8rem;
+    left: 1rem;
+  }
+
+  .features .tab-content .info-panel .text-info {
+    margin-left: 8rem;
+  }
+
+  .features .tab-content .info-panel .text-info h2 {
+    color: rgba(0, 0, 0, .9);
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+
+  .features .tab-content .info-panel .text-info p {
+    color: rgba(0, 0, 0, .7);
+    font-size: 1.3rem;
+  }
+
+  /* form cek tarif */
+  .features .form-cek-tarif {
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 1.5rem;
+    padding: 2rem 1rem;
     width: 95%;
-    margin-left: 0rem;
+    margin: auto;
   }
 
-  .brands .info-panel {
-    margin-top: 0rem;
+  .form-cek-tarif .form-group {
+    margin-top: 1.5rem;
   }
 
+  .form-cek-tarif .form-group img {
+    float: left;
+    margin-top: 2rem;
+    width: 3.5rem;
+  }
+
+  .form-cek-tarif .form-group img::after {
+    content: '';
+    clear: both;
+  }
+
+  .form-cek-tarif .form-group .form-check {
+    margin-left: 2.8rem;
+  }
+
+  .form-group .form-check label {
+    font-weight: 500;
+    font-size: 1.4rem;
+  }
+
+  .form-group .form-check .form-input {
+    outline: unset;
+    border: 1px solid rgba(0, 0, 0, .3);
+    background: #f1f1f1f1;
+    width: 100%;
+    padding: .3rem 1rem;
+    border-radius: .3rem;
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, .8);
+  }
+
+  .form-cek-tarif .btn-cek {
+    margin-top: 1.2rem;
+    border: unset;
+    background: var(--green);
+    color: white;
+    width: 100%;
+    padding: .7rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    border-radius: .5rem
+  }
+
+  .form-cek-tarif .btn-cek:hover {
+    background: #106d5a;
+    transition: .5s;
+  }
+
+  .question h1 {
+    text-transform: capitalize;
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .question hr {
+    width: 40%;
+    margin: auto;
+    margin-bottom: 1rem;
+    border: 1px solid #EF8641;
+  }
+
+  .driver h1 {
+    text-transform: capitalize;
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .driver hr {
+    width: 40%;
+    margin: auto;
+    margin-bottom: 1rem;
+    border: 1px solid #EF8641;
+  }
+
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* features */
+
+  .features {
+    margin-top: 12%;
+  }
+
+  .features h1 {
+    text-transform: capitalize;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .features hr {
+    width: 20%;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  .features .nav.nav-pills {
+    margin-left: 0;
+  }
+
+  .features .nav-pills .nav-item {
+    margin-left: 0;
+    margin-bottom: 2rem;
+  }
+
+  .features .nav-item .nav-link {
+    font-size: 1.6rem;
+    padding: .5rem 2.5rem;
+    border-radius: 12rem;
+  }
+
+  .features .tab-content h2 {
+    font-size: 2.4rem;
+  }
+
+  .features .tab-content .info-panel img {
+    width: 5rem;
+    left: 0rem;
+    top: .1rem;
+  }
+
+  .features .tab-content .info-panel .text-info {
+    margin-left: 8.5rem;
+  }
+
+  .features .tab-content .info-panel .text-info h2 {
+    font-size: 2rem;
+  }
+
+  .features .tab-content .info-panel .text-info p {
+    font-size: 1.5rem;
+  }
+
+  /* form cek tarif */
+  .features .form-cek-tarif {
+    border-radius: 1.5rem;
+    padding: 2rem 3rem;
+  }
+
+  .form-cek-tarif h2 {
+    font-size: 2.6rem;
+  }
+
+  .form-cek-tarif .form-group {
+    margin-top: 2rem;
+  }
+
+  .form-cek-tarif .form-group img {
+    margin-top: 2.8rem;
+    width: 5rem;
+  }
+
+  .form-cek-tarif .form-group .form-check {
+    margin-left: 4.6rem;
+  }
+
+  .form-group .form-check label {
+    font-size: 1.8rem;
+  }
+
+  .form-group .form-check .form-input {
+    padding: .9rem 1rem;
+    font-size: 1.7rem;
+  }
+
+  .form-cek-tarif .btn-cek {
+    margin-top: 1.5rem;
+    padding: 1.3rem;
+    font-size: 1.8rem;
+  }
+
+  .driver h1 {
+    text-transform: capitalize;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .driver hr {
+    width: 20%;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  .question h1 {
+    text-transform: capitalize;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .question hr {
+    width: 20%;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  /* features */
+  .features {
+    margin-top: 7rem;
+  }
+
+  .features h1 {
+    text-transform: capitalize;
+    font-size: 3.5rem;
+  }
+
+  .features hr {
+    width: 16%;
+    margin-bottom: 2rem;
+    margin-top: 1.4rem;
+  }
+
+  .features .nav-pills .nav-item {
+    margin-left: 4.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .features .nav-item .nav-link {
+    font-size: 1.6rem;
+    padding: .5rem 2.5rem;
+    border-radius: 12rem;
+  }
+
+  .features .tab-content h2 {
+    font-size: 2rem;
+    text-transform: capitalize;
+    margin-top: 3rem;
+  }
+
+  .features .tab-content .info-panel {
+    position: relative;
+    margin-bottom: 1rem;
+  }
+
+  .features .tab-content .info-panel img {
+    width: 5.2rem;
+    position: absolute;
+    top: .5rem;
+  }
+
+  .features .tab-content .info-panel .text-info {
+    margin-left: 8rem;
+  }
+
+  .features .tab-content .info-panel .text-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .features .tab-content .info-panel .text-info p {
+    font-size: 1.1rem;
+  }
+
+  /* form cek tarif */
+  .features .form-cek-tarif {
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 1.5rem;
+    padding: 1.5rem 1rem;
+    width: 100%;
+    margin-top: 7rem;
+  }
+
+  .form-cek-tarif .form-group {
+    margin-top: 1.5rem;
+  }
+
+  .form-cek-tarif .form-group img {
+    float: left;
+    margin-top: 1.8rem;
+    width: 3rem;
+  }
+
+  .form-cek-tarif .form-group img::after {
+    content: '';
+    clear: both;
+  }
+
+  .form-cek-tarif .form-group .form-check {
+    margin-left: 2.5rem;
+  }
+
+  .form-group .form-check label {
+    font-weight: 500;
+    font-size: 1.2rem;
+  }
+
+  .form-group .form-check .form-input {
+    outline: unset;
+    border: 1px solid rgba(0, 0, 0, .3);
+    background: #f1f1f1f1;
+    width: 100%;
+    padding: .2rem 1rem;
+    border-radius: .3rem;
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, .8);
+  }
+
+  .form-cek-tarif .btn-cek {
+    margin-top: 1.2rem;
+    border: unset;
+    background: var(--green);
+    color: white;
+    width: 100%;
+    padding: .3rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    border-radius: .5rem
+  }
+
+  .form-cek-tarif .btn-cek:hover {
+    background: #106d5a;
+    transition: .5s;
+  }
+
+  /* berita pengguna */
   .driver hr {
     width: 20%;
   }
@@ -433,75 +784,120 @@ input[type="number"]:focus,
     width: 20%;
     margin: 2rem auto;
   }
+
+  /* footer */
+  .footer-bottom p {
+    font-size: 1.2rem;
+  }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .navbar-brand {
+    width: 80px;
+  }
+
   .nav-link {
-    margin-right: 30px;
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    color: white !important;
+    font-size: 1.5rem;
   }
 
-  .nav-link:hover::after {
-    content: "";
-    display: block;
-    border-bottom: 2px solid white;
-    width: 50%;
-    margin: auto;
-    padding-bottom: 5px;
-    margin-bottom: -8px;
+  /* features */
+  .features {
+    margin-top: 9rem;
   }
 
-  /* header */
-  .carousel {
-    height: 600px;
-  }
-
-  .carousel .display-4 {
-    text-align: left;
-    font-size: 5rem;
-    margin-top: 30%;
-  }
-
-  .carousel h2 {
-    font-size: 3.1rem;
-    text-align: left;
-  }
-
-  .carousel img {
-    margin-top: 30%;
-  }
-
-  /* brands */
-  .brands h1 {
+  .features h1 {
+    text-transform: capitalize;
     font-size: 3.5rem;
   }
 
-  .brands hr {
+  .features hr {
     width: 15%;
+    margin-bottom: 2rem;
+    margin-top: 1.2rem;
   }
 
-  .brands img {
-    width: 50%;
-    margin-left: 10rem;
+  .features .nav-pills .nav-item {
+    margin-left: 4.5rem;
+    margin-bottom: 2rem;
   }
 
-  .info-panel {
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-  }
-
-  .info-panel span {
-    font-size: 1.9rem;
-  }
-
-  .text-info h2 {
-    font-size: 2rem;
-  }
-
-  .text-info p {
+  .features .nav-item .nav-link {
     font-size: 1.6rem;
+    padding: .5rem 2.5rem;
+    border-radius: 12rem;
+  }
+
+
+  .features .tab-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .features .tab-content .info-panel img {
+    width: 5.4rem;
+    position: absolute;
+    top: .5rem;
+  }
+
+  .features .tab-content .info-panel .text-info {
+    margin-left: 8rem;
+  }
+
+  .features .tab-content .info-panel .text-info h2 {
+    font-size: 1.7rem;
+  }
+
+  .features .tab-content .info-panel .text-info p {
+    font-size: 1.3rem;
+  }
+
+
+  /* form cek tarif */
+  .features .form-cek-tarif {
+    padding: 2rem 2rem;
+    width: 100%;
+    margin-top: 6.7rem;
+  }
+
+  .form-cek-tarif .form-group {
+    margin-top: 1.5rem;
+  }
+
+  .form-cek-tarif .form-group img {
+    float: left;
+    margin-top: 2.3rem;
+    width: 3.4rem;
+  }
+
+  .form-cek-tarif .form-group img::after {
+    content: '';
+    clear: both;
+  }
+
+  .form-cek-tarif .form-group .form-check {
+    margin-left: 3rem;
+  }
+
+  .form-group .form-check label {
+    font-weight: 500;
+    font-size: 1.4rem;
+  }
+
+  .form-group .form-check .form-input {
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: .5rem 1rem;
+  }
+
+  .form-cek-tarif .btn-cek {
+    margin-top: 1.5rem;
+    padding: .5rem;
+    margin-bottom: .8rem;
+    font-size: 1.3rem;
+
+  }
+
+  .form-cek-tarif .btn-cek:hover {
+    background: #106d5a;
+    transition: .5s;
   }
 
   /*berita pengguna*/
@@ -537,80 +933,174 @@ input[type="number"]:focus,
   }
 
   /* footer */
-  footer.footer {
-    padding: 3rem 0 1rem 0;
-    background: #367c6d;
-  }
-
-  .footer h3,
-  .footer h1 {
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-size: 2.8rem;
-  }
-
-  .footer p {
-    color: rgb(224, 224, 224);
-    font-weight: 500;
-    font-size: 1.7rem;
-  }
-
-  .footer .nav-footer {
-    color: rgb(224, 224, 224);
-  }
-
-  .footer .footer-top img {
-    width: 15rem;
-    padding-right: 10px;
-    opacity: 0.9;
-  }
-
-  .footer .footer-item {
-    line-height: 2.5rem;
-  }
-
-  .footer .footer-item:hover {
+  .footer-top .footer-item:hover {
     transform: translateX(5px);
-    transition: 0.5s;
+    transition: .6s;
   }
 
-  .nav-footer a {
-    color: rgb(224, 224, 224);
-    text-decoration: none;
-    font-size: 1.5rem;
-  }
-
-  .sosmed .nav-footer {
-    list-style: none;
-    display: inline-block;
-  }
-
-  .sosmed-item {
-    display: inline;
-    margin-right: 5px;
-  }
-
-  .sosmed-link {
-    border: 1px solid rgba(255, 255, 255, 1);
-    display: inline-block;
-    padding: 5px 8px;
-    border-radius: 9px;
-  }
-
-  .sosmed-item .fa-instagram,
-  .sosmed-item .fa-facebook-square,
-  .sosmed-item .fa-youtube,
-  .sosmed-item .fa-twitter-square {
-    font-size: 2rem;
-    line-height: unset;
-    transform: translateY(2px);
-  }
-
-  .footer-top .driver {
-    padding-top: 10px;
+  .footer-item .footer-link:hover {
+    color: black;
+    transition: .3s;
   }
 
   .footer-bottom p {
-    color: rgb(211, 211, 211);
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navbar-brand {
+    width: 80px;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+  }
+
+  /* features */
+  .features {
+    margin-top: 9rem;
+  }
+
+  .features h1 {
+    text-transform: capitalize;
+    font-size: 3.5rem;
+  }
+
+  .features hr {
+    width: 15%;
+    margin-bottom: 2rem;
+    margin-top: 1.2rem;
+  }
+
+  .features .nav-pills .nav-item {
+    margin-left: 4.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .features .nav-item .nav-link {
+    font-size: 1.6rem;
+    padding: .5rem 2.5rem;
+    border-radius: 12rem;
+  }
+
+
+  .features .tab-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .features .tab-content .info-panel img {
+    width: 5rem;
+    position: absolute;
+    top: 0;
+  }
+
+  .features .tab-content .info-panel .text-info {
+    margin-left: 8rem;
+  }
+
+  .features .tab-content .info-panel .text-info h2 {
+    font-size: 1.7rem;
+  }
+
+  .features .tab-content .info-panel .text-info p {
+    font-size: 1.3rem;
+  }
+
+
+  /* form cek tarif */
+  .features .form-cek-tarif {
+    padding: 2rem 2rem;
+    width: 100%;
+    margin-top: 6.7rem;
+  }
+
+  .form-cek-tarif .form-group {
+    margin-top: 1.5rem;
+  }
+
+  .form-cek-tarif .form-group img {
+    float: left;
+    margin-top: 2.3rem;
+    width: 3.4rem;
+  }
+
+  .form-cek-tarif .form-group img::after {
+    content: '';
+    clear: both;
+  }
+
+  .form-cek-tarif .form-group .form-check {
+    margin-left: 3rem;
+  }
+
+  .form-group .form-check label {
+    font-weight: 500;
+    font-size: 1.4rem;
+  }
+
+  .form-group .form-check .form-input {
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: .5rem 1rem;
+  }
+
+  .form-cek-tarif .btn-cek {
+    margin-top: 1.5rem;
+    padding: .5rem;
+    margin-bottom: .8rem;
+    font-size: 1.3rem;
+
+  }
+
+  .form-cek-tarif .btn-cek:hover {
+    background: #106d5a;
+    transition: .5s;
+  }
+
+  /*berita pengguna*/
+  .driver h1 {
+    font-size: 3.5rem;
+  }
+
+  .driver hr {
+    width: 15%;
+  }
+
+  .profile-card-2 .profile {
+    top: -4.2rem;
+    left: 0;
+    max-width: 75px;
+    border: 2px solid #16a085;
+  }
+
+  /* faq */
+
+  .question h1 {
+    font-size: 3.5rem;
+  }
+
+  .question hr {
+    width: 15%;
+    margin-bottom: 2rem;
+  }
+
+  .question .card h6 {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  /* footer */
+  .footer-top .footer-item:hover {
+    transform: translateX(5px);
+    transition: .6s;
+  }
+
+  .footer-item .footer-link:hover {
+    color: black;
+    transition: .3s;
+  }
+
+  .footer-bottom p {
+    font-size: 1.3rem;
   }
 }

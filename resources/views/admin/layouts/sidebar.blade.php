@@ -29,7 +29,7 @@
 
     <!-- Nav Item - DriverMenu -->
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{route('driver.index')}}">
             <i class="fas fa-fw fa-car-side"></i>
             <span>All Driver</span>
         </a>
