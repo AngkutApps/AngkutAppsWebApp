@@ -13,10 +13,13 @@
 }
 
 html {
-  font-family: "Poppins", sans-serif;
   font-size: 10px;
   box-sizing: border-box;
   overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
 }
 
 a {
@@ -42,23 +45,28 @@ section {
 }
 
 /* nav */
-.navbar {
-  background: var(--green);
-}
-
-.navbar {
+nav.navbar {
   z-index: 999;
-  width: 100%;
+  padding: .7rem 1rem !important;
 }
 
 .navbar-brand {
-  width: 70px;
+  width: 48px;
 }
 
 .nav-link {
-  color: white !important;
+  color: rgba(0, 0, 0, 0.8) !important;
   font-size: 1.2rem;
-  text-transform: uppercase;
+  font-weight: 600;
+  margin-right: 2.5rem;
+}
+
+.nav-link:hover {
+  color: var(--green) !important;
+}
+
+.nav-link.active {
+  color: var(--green) !important;
 }
 
 button.navbar-toggler {
@@ -67,610 +75,663 @@ button.navbar-toggler {
   outline: unset;
 }
 
-/* header */
-.jumbotron {
-  margin-top: 9rem;
+.navbar .fa-angle-down {
+  margin-left: .6rem;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+  font-size: 1.2rem;
+}
+
+/* jumbotron */
+.jumbotron.jumbotron-fluid {
+  background-image: url(../img/pusat-bantuan/Group-641.png);
+  background-size: cover;
+  width: 100%;
+  height: 350px;
+  margin-top: 5rem;
+  background-position-x: -60rem;
+  background-repeat: no-repeat;
+}
+
+.jumbotron .display-4 {
+  color: white;
+  text-align: center;
+  margin-top: 4rem;
+  font-weight: 600;
+}
+
+.jumbotron hr {
+  width: 15rem;
+  border: 1px solid #EF8641;
+  margin: 2rem auto;
+}
+
+.jumbotron .form-inline {
+  display: flex;
+  justify-content: center;
+}
+
+.jumbotron .form-inline .form-group {
   background: white;
+  padding: .9rem;
+  border-radius: 2rem;
 }
 
-.jumbotron p {
-  font-size: 2.5rem;
+.jumbotron .form-inline .form-group .form-input {
+  border: unset;
+  background: unset;
+  padding: 0px 5px;
+  width: 20rem;
+  outline: unset;
+}
+
+.jumbotron .form-inline .form-group .search-btn {
+  background: unset;
+  outline: unset;
+  border: unset;
+}
+
+.jumbotron .form-inline .form-group .search-btn .fa-search {
   color: var(--green);
+  margin-right: 3px;
+  font-size: 1.3rem;
 }
 
-.jumbotron .form-group {
-  margin: 0.5rem auto;
-  background-color: #e9eceb;
-  border-radius: 10px;
+.jumbotron .lead {
+  color: white;
+  font-weight: 300;
+  text-align: center;
 }
 
-.form-group .form-input::-webkit-input-placeholder {
-  color: var(--green);
+.jumbotron .lead a {
+  color: white;
+  font-weight: 400;
+  text-decoration: none;
 }
 
-.form-group .form-input:-moz-input-placeholder {
-  color: var(--green);
+/* features */
+.features h2 {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
 }
 
-.form-group .form-input {
-  padding: 6.7px;
+.features .card {
   width: 25rem;
-  font-size: 1.6rem;
-  color: var(--green);
-  border-radius: 10px;
-  background: unset;
-  border: unset;
-  outline: unset;
-  padding-left: 2rem;
-}
-
-.form-group .search-btn {
-  background: unset;
-  border: unset;
-  outline: unset;
-  cursor: pointer;
-}
-
-.search-btn .fa-search {
-  font-size: 22px;
-  padding-right: 5px;
-  color: var(--green);
-  margin-top: 5px;
-}
-
-.search-btn .fa-search:hover {
-  color: darkgreen;
-}
-
-/* content */
-.content {
-  margin-top: -20px;
-}
-
-.content h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  color: var(--green);
-  font-weight: 600;
-}
-
-.content a {
-  font-size: 1.4rem;
-  color: rgba(0, 0, 0, 0.7);
-  font-weight: 600;
-}
-
-.content .pagination {
-  margin-bottom: 5rem;
-}
-
-.content h2.text-isu {
-  margin-left: 0rem;
-  font-size: 1.8rem;
-  color: var(--green);
-  font-weight: 600;
-}
-
-.content .isu {
-  border-left: 1px solid var(--green);
-  height: 85vh;
-}
-
-.content .isuLainnya p {
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 15px;
-  padding-left: 2rem;
-  margin-bottom: 1.7rem;
-  line-height: 2.5;
-}
-
-/* bantuan */
-.bantuan {
-  padding: 35px;
-}
-
-.bantuan h1 {
-  color: var(--green);
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 40px;
-}
-
-.bantuan p {
-  font-size: 16px;
-  text-align: center;
-}
-
-.form-area {
-  max-width: 450px;
-  padding: 20px 30px;
-  margin: 10px auto;
-  background: #fafafa;
-  border-radius: 5px;
-}
-
-.form-area .single-form {
-  position: relative;
-  margin-bottom: 30px;
-}
-
-.form-area .single-form input,
-.form-area .single-form textarea {
-  width: 100%;
-  padding: 10px;
-  outline-color: rgb(169, 169, 169);
-}
-
-.form-area .single-form input:focus + label,
-.form-area .single-form input:valid + label,
-.form-area .single-form textarea:focus + label,
-.form-area .single-form textarea:valid + label {
-  color: var(--green);
-  font-size: 0.9rem;
-  top: -10px;
-}
-
-.form-area .single-form input:focus + label:after,
-.form-area .single-form input:valid + label:after,
-.form-area .single-form textarea:focus + label:after,
-.form-area .single-form textarea:valid + label:after {
-  content: " ";
-}
-
-.form-area .single-form textarea {
-  height: 120px;
-}
-
-.form-area label {
-  position: absolute;
-  top: 12px;
-  left: 10px;
-  color: #777;
-  font-size: 0.9rem;
-  background: #fff;
-  transition: 0.5s;
-}
-
-.form-area button {
-  outline: unset;
-  border: unset;
-  background: var(--green);
-  border-radius: 10px;
-  width: 100%;
-  padding: 5px 20px;
-  color: #fafafa;
-  display: inline-block;
-  font-size: 15px;
-}
-
-.form-area button:hover {
-  background: #036635;
-  transition: 0.4s;
-}
-
-.bantuan .b-hp {
-  margin-top: 50px;
-}
-
-.b-hp picture img {
-  padding-top: 10px;
-  padding-right: 10px;
-  margin-left: 10px;
-  width: 80px;
-  height: 150px;
-}
-
-.bantuan h4 {
-  color: var(--green);
-}
-
-/*penumpang*/
-.faq-penumpang h1 {
-  color: #16a085;
-}
-.faq-penumpang .collapsible-link::before {
-  content: "";
-  width: 14px;
-  height: 2px;
-  background: #333;
-  position: absolute;
-  top: calc(50% - 1px);
-  right: 1rem;
-  display: block;
-  transition: all 0.3s;
-}
-
-/* Vertical line */
-.faq-penumpang .collapsible-link::after {
-  content: "";
-  width: 2px;
-  height: 14px;
-  background: #333;
-  position: absolute;
-  top: calc(50% - 7px);
-  right: calc(1rem + 6px);
-  display: block;
-  transition: all 0.3s;
-}
-
-.faq-penumpang .collapsible-link[aria-expanded="true"]::after {
-  transform: rotate(90deg) translateX(-1px);
-}
-
-.faq-penumpang .collapsible-link[aria-expanded="true"]::before {
-  transform: rotate(180deg);
-}
-
-.faq-penumpang h6 {
-  font-size: 1.3rem;
-}
-
-.faq-penumpang p {
-  font-size: 2rem;
-}
-
-/* question */
-.question {
-  background-color: var(--green);
-}
-
-.question h1 {
-  color: var(--green);
-  font-weight: 550;
-}
-
-.question h6 {
-  font-size: 1.3rem;
-}
-
-.question p {
-  font-size: 2rem;
-}
-
-.question hr {
-  width: 50%;
-  border: 1px solid var(--green);
   margin: auto;
+  margin-top: 1rem;
 }
 
-/* .question {
-  background: #007b5e;
-  color: #eee;
-} */
-.question h6.section-title {
-  color: #eee;
+.card-img-top {
+  height: 15rem;
 }
 
-.question .nav-tabs .nav-item.show .nav-link,
-.nav-tabs .nav-link.active {
-  color: white;
-  background-color: transparent;
-  border-color: transparent transparent white;
-  border-bottom: 4px solid !important;
-  font-size: 20px;
-  font-weight: bold;
+.features .card-body {
+  margin-top: 1rem;
 }
 
-.question .nav-tabs .nav-link {
-  border: 1px solid transparent;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  color: white;
-  font-size: 20px;
+.features .card-body a.card-text {
+  color: rgba(0, 0, 0, .7);
+  font-weight: 400;
 }
 
-.question .collapsible-link::before {
-  content: "";
-  width: 14px;
-  height: 2px;
-  background: #333;
-  position: absolute;
-  top: calc(50% - 1px);
-  right: 1rem;
-  display: block;
-  transition: all 0.3s;
+/* info-panel */
+.info-panel img {
+  margin-bottom: 2rem;
 }
 
-/* Vertical line */
-.question .collapsible-link::after {
-  content: "";
-  width: 2px;
-  height: 14px;
-  background: #333;
-  position: absolute;
-  top: calc(50% - 7px);
-  right: calc(1rem + 6px);
-  display: block;
-  transition: all 0.3s;
-}
-
-.question .collapsible-link[aria-expanded="true"]::after {
-  transform: rotate(90deg) translateX(-1px);
-}
-
-.question .collapsible-link[aria-expanded="true"]::before {
-  transform: rotate(180deg);
-}
-
-/* alamat */
-.alamat-cabang picture img {
-  width: 10rem !important;
-  margin-left: 63px;
-}
-
-.alamat-cabang h1 {
-  color: var(--green);
-  font-size: 27px;
+.info-panel h2 {
   font-weight: 600;
-  margin-bottom: 50px;
 }
 
-.alamat-cabang p {
-  color: var(--green);
+.info-panel ul {
+  list-style: outside;
+  margin-top: 1.2rem;
 }
 
-/*faq penumpang - accordion */
-section.faq-penumpang {
-  background: #16a0841a;
+.info-panel ul>li {
+  font-size: 1.2rem;
+  margin: .5rem;
+  color: rgba(0, 0, 0, .8)
 }
 
-section.faq-penumpang h1 {
-  margin-bottom: 3rem;
+/* helper */
+section.helper {
+  margin-top: -6.5rem;
 }
 
-#accordion {
-  width: 60%;
+.helper .form-helper {
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: 1rem;
+  padding: 2rem 3rem 3rem;
+  width: 95%;
 }
 
-.card {
-  padding-bottom: 2rem;
+.helper .form-helper h2 {
+  font-weight: 600;
 }
 
-.card p {
-  font-size: 1.3rem;
-  color: rgba(0, 0, 0, 0.7);
+.helper .form-helper p {
+  font-size: 1rem;
+  font-weight: 300;
 }
 
-.card-header .card-link {
-  font-size: 1.3rem;
-  color: rgba(0, 0, 0, 0.7);
+.helper .form-helper .form-group input,
+.helper .form-helper .form-group textarea {
+  width: 100%;
+  padding: .6rem;
+  outline: unset;
+  background: #f1f1f1;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: .4rem;
+  font-size: 1.1rem;
 }
 
-/* faq driver */
+.helper .form-helper .btn-kirim {
+  width: 100%;
+  background: var(--green);
+  border: unset;
+  outline: unset;
+  color: white;
+  font-weight: 300;
+  padding: .6rem;
+  font-size: 1.1rem;
+  border-radius: .4rem;
+}
 
-/* footer */
-.footer {
-  padding-top: 3rem;
-  padding-bottom: 1rem;
-  background: #367c6d;
+.helper .form-helper .btn-kirim:hover {
+  background: #106d5a;
+}
+
+.helper img.img-ilustrasi {
+  display: none;
+}
+
+/* faq-penumpang */
+
+.faq-penumpang {
+  margin-top: -5rem;
+}
+
+.faq-penumpang h2 {
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.faq-penumpang hr {
+  width: 10rem;
+  margin: 1rem auto 2rem;
+  border: 1px solid #EF8641;
+}
+
+.faq-penumpang .card-header {
   position: relative;
-  left: 0;
+}
+
+.faq-penumpang .card-header button.btn-link {
+  color: unset;
+  font-weight: 500;
+  font-size: 1.2rem
+}
+
+.faq-penumpang .fa-angle-down {
+  position: absolute;
+  top: 30%;
   right: 0;
+  font-size: 1.7rem;
+  margin-right: 1.2rem;
 }
 
-.footer h3,
-.footer h1 {
-  color: rgb(255, 255, 255);
-  font-weight: 700;
+.faq-penumpang .collapse .card-body {
+  font-size: 1.1rem;
+  font-weight: 300;
 }
 
-.footer p {
-  color: rgb(224, 224, 224);
+/* faq-driver */
+
+.faq-driver h2 {
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.faq-driver hr {
+  width: 10rem;
+  margin: 1rem auto 2rem;
+  border: 1px solid #EF8641;
+}
+
+.faq-driver .card-header {
+  position: relative;
+}
+
+.faq-driver .card-header button.btn-link {
+  color: unset;
+  font-weight: 500;
+  font-size: 1.2rem
+}
+
+.faq-driver .fa-angle-down {
+  position: absolute;
+  top: 30%;
+  right: 0;
+  font-size: 1.7rem;
+  margin-right: 1.2rem;
+}
+
+.faq-driver .collapse .card-body {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.faq-driver .nav-pills .nav-item {
+  margin-left: 3rem;
+  margin-bottom: 1rem;
+}
+
+.faq-driver .nav-item .nav-link {
+  border: 1px solid rgba(0, 0, 0, .3);
+  font-weight: 400;
+  border-radius: 1rem;
+}
+
+.faq-driver .nav-item .nav-link.active {
+  background: unset;
+  color: var(--green) !important;
+  border: 1px solid var(--green);
   font-weight: 500;
 }
 
-.footer .nav-footer {
-  color: rgb(224, 224, 224);
+
+.features .tab-content h2 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  margin-top: 2rem;
 }
 
-.footer-top picture {
-  display: flex;
+.features .tab-content .info-panel {
+  position: relative;
 }
 
-.footer .footer-top img {
-  width: 15rem;
-  padding-right: 10px;
-  opacity: 0.9;
+.features .tab-content .info-panel img {
+  width: 18%;
+  position: absolute;
+  top: .8rem;
+  left: 1rem;
 }
 
-.footer .footer-item {
-  line-height: 3rem;
+.features .tab-content .info-panel .text-info {
+  margin-left: 8.5rem;
 }
 
-.nav-footer a {
-  color: rgb(224, 224, 224);
+.features .tab-content .info-panel .text-info h2 {
+  color: rgba(0, 0, 0, .9);
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.features .tab-content .info-panel .text-info p {
+  color: rgba(0, 0, 0, .7);
+  font-size: 1.2rem;
+}
+
+/* footer */
+.footer {
+  position: relative;
+  background: #F1F1F1;
+  padding-top: 2rem;
+}
+
+.footer-top {
+  padding-bottom: 5rem;
+}
+
+.footer-top .footer-item {
+  padding-top: .8rem
+}
+
+.footer-top .footer-link {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, .8);
+  font-weight: 300;
   text-decoration: none;
-  font-size: 1.3rem;
 }
 
-.sosmed .nav-footer {
-  list-style: none;
-  display: inline-block;
+.footer-link span {
+  color: var(--green);
+  font-weight: 600;
 }
 
-.sosmed-item {
-  display: inline;
+.footer-top h3 {
+  margin-top: 2rem;
+  font-weight: 600;
+}
+
+.footer-top .link-download img {
+  margin-top: 8px;
+}
+
+.footer-top .follow-us img {
   margin-right: 5px;
 }
 
-.sosmed-link {
-  border: 1px solid rgba(255, 255, 255, 1);
-  display: inline-block;
-  padding: 5px 8px;
-  border-radius: 9px;
+.footer-top .follow-us a {
+  text-decoration: none;
 }
 
-.sosmed-item .fa-instagram,
-.sosmed-item .fa-facebook-square,
-.sosmed-item .fa-youtube,
-.sosmed-item .fa-twitter-square {
-  font-size: 1.6rem;
-  line-height: unset;
-}
-
-.footer-top .driver {
-  padding-top: 1rem;
-}
-
-.footer-bottom hr {
-  margin-top: 4rem;
-  width: 100%;
-  border: 1px solid rgb(211, 211, 211);
+.footer .footer-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #f1f1f1;
 }
 
 .footer-bottom p {
-  color: rgb(211, 211, 211);
+  text-transform: capitalize;
+  font-size: 1rem;
 }
 
-@media (min-width: 768px) {
-  .content .isu {
-    border-left: 1px solid var(--green);
-    height: 100%;
-  }
-
-  .content .isuLainnya p {
-    line-height: 2;
-  }
+.footer-bottom span {
+  color: var(--green);
 }
 
-@media (min-width: 992px) {
-  nav.navbar {
-    background: var(--green);
-  }
 
-  .nav-link {
-    margin-right: 30px;
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    color: white !important;
-  }
+@media (max-width: 575.98px) {}
 
-  .nav-link:hover::after {
-    content: "";
-    display: block;
-    border-bottom: 2px solid white;
-    width: 50%;
-    margin: auto;
-    padding-bottom: 5px;
-    margin-bottom: -8px;
-  }
+@media (min-width: 576px) and (max-width: 767.98px) {
 
-  /* header */
-  .jumbotron p {
-    font-size: 3rem;
-  }
-
-  .jumbotron .form-group {
-    margin: 0 auto;
-  }
-
-  .form-group .form-input {
-    font-size: 1.8rem;
+  .jumbotron .form-inline .form-group .form-input {
+    padding: 0 1rem;
     width: 30rem;
+    font-size: 1.3rem;
   }
 
-  /* content */
-  .content {
-    margin-left: 20rem;
-  }
-
-  .content .card {
-    border-radius: 1.2rem;
-  }
-
-  .content h2 {
-    text-align: left;
-    font-size: 2.2rem;
-    margin-left: 4.8rem;
-  }
-
-  .content h2.text-isu {
-    font-size: 2.2rem;
-  }
-
-  .card-body a {
-    font-size: 1.4rem;
-  }
-
-  /* bantuan personal */
-  .bantuan h1 {
-    font-size: 27px;
-  }
-
-  .bantuan .b-hp {
-    border-left: 2px solid var(--green);
-    height: 26rem;
-    padding-left: 15px;
-    margin-top: -4px;
-  }
-
-  .bantuan .b-hp picture {
-    margin-left: 65px;
-  }
-
-  .bantuan picture img {
-    margin-top: 5px;
-    width: 150px;
-    height: 200px;
-  }
-
-  .bantuan h4 {
-    color: var(--green);
-    text-align: center;
-  }
-
-  /* alamat */
-  .alamat-cabang picture img {
-    width: 10rem !important;
-    margin-left: 63px;
-  }
-
-  .alamat-cabang h1 {
-    color: var(--green);
-    font-size: 27px;
-    font-weight: 600;
-    margin-bottom: 50px;
-  }
-
-  .alamat-cabang p {
-    color: var(--green);
-  }
-
-  /* footer */
-  .footer h3,
-  .footer h1 {
-    font-size: 2.8rem;
-  }
-
-  .footer p {
-    font-size: 1.7rem;
-  }
-
-  .footer .footer-item {
-    line-height: 2.5rem;
-  }
-
-  .footer .footer-item:hover {
-    transform: translateX(5px);
-    transition: 0.5s;
-  }
-
-  .nav-footer a {
+  .jumbotron .form-inline .form-group .search-btn .fa-search {
     font-size: 1.5rem;
   }
 
-  .sosmed-item .fa-instagram,
-  .sosmed-item .fa-facebook-square,
-  .sosmed-item .fa-youtube,
-  .sosmed-item .fa-twitter-square {
+  .jumbotron .lead {
+    margin-top: 1rem;
+  }
+
+  /* features */
+  .features .card {
+    width: 35rem;
+  }
+
+  .features .card-body .card-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  /* info panel   */
+  .info-panel ul>li {
+    font-size: 1.4rem;
+    margin: 1rem 2rem;
+    font-weight: 300;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+  /* navbar */
+  .navbar-brand {
+    width: 70px;
+  }
+
+  .nav-link {
+    font-size: 1.4rem;
+  }
+
+  /* jumbotron */
+
+  .jumbotron.jumbotron-fluid {
+    height: 355px;
+    margin-top: 5rem;
+    background-position-x: -2rem;
+    background-repeat: no-repeat;
+  }
+
+  .jumbotron .display-4 {
+    margin-top: 5rem;
+  }
+
+  .jumbotron .form-inline .form-group .form-input {
+    padding: 0 1rem;
+    width: 40rem;
+    font-size: 1.3rem;
+  }
+
+  .jumbotron .form-inline .form-group .search-btn .fa-search {
     font-size: 2rem;
-    transform: translateY(0.1rem);
+  }
+
+  .jumbotron .lead {
+    font-size: 1.35rem;
+    margin-top: 1.3rem;
+  }
+
+  /* features */
+  .features .card {
+    width: 16rem;
+    height: 22rem;
+  }
+
+  /* info-panel */
+  .info-panel {
+    margin-top: -4.5rem;
+  }
+
+  .info-panel ul>li {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  /* helper */
+  .helper img.img-ilustrasi {
+    display: block;
+  }
+
+  /* footer */
+  .footer-bottom p {
+    font-size: 1.2rem;
   }
 }
 
-@media (min-width: 1024px) {
-  .bantuan picture img {
-    width: 110px;
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+  /* navbar */
+  .navbar-brand {
+    width: 75px;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+  }
+
+  /* jumbotron */
+  .jumbotron.jumbotron-fluid {
+    height: 260px;
+    margin-top: 6rem;
+    background-position-x: -2rem;
+    background-repeat: no-repeat;
+  }
+
+  .jumbotron .display-4 {
+    margin-top: 2rem;
+    font-weight: 400;
+  }
+
+  .jumbotron .form-inline .form-group .form-input {
+    padding: 0 1rem;
+    width: 49rem;
+    font-size: 1.2rem;
+  }
+
+  .jumbotron .form-inline .form-group .search-btn .fa-search {
+    font-size: 1.5rem;
+  }
+
+  .jumbotron .lead {
+    font-size: 1.4rem;
+    margin-top: 1.2rem;
+  }
+
+  /* features */
+  .features .card {
+    width: 23rem;
+    height: 26rem;
+  }
+
+  .features .card .card-body .card-text {
+    font-size: 1.2rem;
+  }
+
+  .info-panel ul>li {
+    font-size: 1.38rem;
+    font-weight: 400;
+  }
+
+  /* helper */
+  .helper img.img-ilustrasi {
+    display: block;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  /* navbar */
+  .navbar-brand {
+    width: 80px;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+  }
+
+  /* jumbotron */
+  .jumbotron.jumbotron-fluid {
+    height: 300px;
+    margin-top: 7rem;
+    width: 100%;
+    background-position-x: -.5rem;
+    background-color: rgba(61, 172, 152, 0.486);
+  }
+
+  .jumbotron .form-inline .form-group .form-input {
+    width: 49rem;
+    padding: 0 1rem;
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, .7);
+  }
+
+  .jumbotron .form-inline .form-group .search-btn .fa-search {
+    font-size: 1.6rem;
+  }
+
+  .jumbotron .display-4 {
+    margin-top: 2.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .jumbotron .lead {
+    font-size: 1.4rem;
+    margin-top: 1.2rem;
+  }
+
+  /* features */
+  .features .card {
+    width: 26rem;
+    height: 29rem;
+  }
+
+  .features .card:hover {
+    transform: scale(1.1);
+    transition: .7s;
+  }
+
+  .features .card .card-body .card-text {
+    font-size: 1.4rem;
+  }
+
+  /*  info-panel  */
+
+  .info-panel .isu ul>li {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 1.5rem;
+  }
+
+  /* helper */
+  section.helper {
+    margin-top: 0rem;
+  }
+
+  .helper img.img-ilustrasi {
+    display: block;
+  }
+
+  .helper .form-helper p {
+    font-size: 1.2rem;
+  }
+
+  .helper .form-helper .form-group input,
+  .helper .form-helper .form-group textarea {
+    padding: 1rem;
+    font-size: 1.39rem;
+  }
+
+  .helper .form-helper .btn-kirim {
+    padding: 1rem;
+    font-size: 1.5rem;
+  }
+
+  /*  faq-penumpang  */
+  .faq-penumpang .card-header button.btn-link {
+    font-size: 1.4rem
+  }
+
+  .faq-penumpang .fa-angle-down {
+    font-size: 1.9rem;
+  }
+
+  .faq-penumpang .collapse .card-body {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  /* faq-driver */
+  .faq-driver {
+    margin-top: -3rem;
+    margin-bottom: 4rem;
+  }
+
+  .faq-driver .card-header button.btn-link {
+    font-size: 1.4rem
+  }
+
+  .faq-driver .fa-angle-down {
+    font-size: 1.9rem;
+  }
+
+  .faq-driver .collapse .card-body {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  /* footer */
+  .footer-top .footer-item:hover {
+    transform: translateX(5px);
+    transition: .6s;
+  }
+
+  .footer-item .footer-link:hover {
+    color: black;
+    transition: .3s;
+  }
+
+  .footer-bottom p {
+    font-size: 1.3rem;
   }
 }

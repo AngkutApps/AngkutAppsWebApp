@@ -65,6 +65,10 @@ nav.navbar {
     color: var(--green) !important;
 }
 
+.nav-link.active {
+    color: var(--green) !important;
+}
+
 button.navbar-toggler {
     background: unset;
     border: unset;
@@ -97,6 +101,7 @@ button.navbar-toggler {
 
 .jumbotron .text-p {
     font-size: 1rem;
+    color: rgba(0, 0, 0, .7);
 }
 
 .form-group {
@@ -597,7 +602,7 @@ main .card img {
     }
 
     .jumbotron .form-inline .form-group {
-        width: 40rem;
+        width: 50rem;
         margin-top: 0;
     }
 
@@ -621,7 +626,7 @@ main .card img {
         padding: 1.1rem .5rem;
         border-radius: 0 .5rem .5rem 0;
         position: absolute;
-        right: 28rem;
+        right: 23rem;
     }
 
     .form-group .form-input {

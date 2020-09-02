@@ -15,7 +15,7 @@
                         <label>Nama Category</label>
                         <input type="text" name="name" class="form-control form-control-user rounded-pill @error('name') is-invalid @enderror">
                         @error('name')
-                        <span class="invalid feedback" role="alert">
+                        <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
                         @enderror

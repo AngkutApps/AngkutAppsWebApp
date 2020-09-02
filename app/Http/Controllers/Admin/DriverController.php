@@ -48,7 +48,8 @@ class DriverController extends Controller
      */
     public function show($id)
     {
-        //
+        $driver = Driver::findOrFail($id);
+        return view('admin.driver.show', compact('driver'));
     }
 
     /**

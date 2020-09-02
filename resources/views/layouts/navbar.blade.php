@@ -9,19 +9,19 @@
           <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav m-auto">
                   <li class="nav-item">
-                      <a class="nav-link" href="{{route('angkut.index')}}">Beranda</a>
+                      <a class="nav-link {{ Route::currentRouteNamed('angkut.index')  ? 'active' : '' }} " href="{{route('angkut.index')}}">Beranda</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="{{route('angkut.about')}}">Tentang Kami</a>
+                      <a class="nav-link  {{ Route::currentRouteNamed('angkut.about')? 'active' : '' }}" href="{{route('angkut.about')}}">Tentang Kami</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="">Layanan</a>
+                      <a class="nav-link {{ Route::currentRouteNamed('angkut.layanan')? 'active' : '' }} " href="{{route('angkut.layanan')}}">Layanan</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="{{route('angkut.news')}}">Berita & Artikel</a>
+                      <a class="nav-link {{ Route::currentRouteNamed('angkut.news')? 'active' : '' }}" href="{{route('angkut.news')}}">Berita & Artikel</a>
                   </li>
                   <li class="nav-item dropdown">
-                      <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <a class="nav-link {{  Route::currentRouteNamed('angkut.pete') || Route::currentRouteNamed('angkut.daerah') || Route::currentRouteNamed('angkut.bus')  ? 'active' : '' }}" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           Daftar<i class="fas fa-angle-down"></i>
                       </a>
                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -31,7 +31,7 @@
                       </div>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="hlmnBantuan.html">Pusat Bantuan</a>
+                      <a class="nav-link {{ Route::currentRouteNamed('angkut.bantuan')? 'active' : '' }}" href="{{route('angkut.bantuan')}}">Pusat Bantuan</a>
                   </li>
               </ul>
           </div>

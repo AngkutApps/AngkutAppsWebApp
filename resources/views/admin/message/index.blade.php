@@ -37,7 +37,6 @@
                                 <td>{{$message->hp}}</td>
                                 <td>{{$message->message}}</td>
                                 <td>
-                                    <a href="{{route('message.edit',$message->id)}}" class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></a>
                                     <a href="{{route('message.destroy',$message->id)}}" class="btn btn-sm btn-danger btn-hapus"><i class="fas fa-trash"></i></a>
                                 </td>
                             </tr>

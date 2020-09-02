@@ -65,6 +65,10 @@ nav.navbar {
   color: var(--green) !important;
 }
 
+.active {
+  color: var(--green) !important;
+}
+
 button.navbar-toggler {
   background: unset;
   border: unset;
@@ -91,14 +95,13 @@ button.navbar-toggler {
 
 .jumbotron .text-heading {
   color: white;
-  font-weight: 600;
-  margin-top: 3rem;
+  font-weight: 300;
+  margin-top: 6rem;
+  text-align: center;
 }
 
-.jumbotron .text-p {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: 300;
+.jumbotron .text-heading span {
+  font-weight: 500;
 }
 
 .jumbotron .container {
@@ -117,7 +120,7 @@ button.navbar-toggler {
 
 .info-panel img {
   width: 5rem;
-  height: 2.5rem;
+  height: 3.2rem;
 }
 
 .info-panel p {
@@ -129,6 +132,10 @@ button.navbar-toggler {
 }
 
 /* form daftar */
+.daftar {
+  margin-top: -4rem;
+}
+
 .form-daftar {
   border: 1px solid rgba(0, 0, 0, .1);
   padding: 20px;
@@ -137,7 +144,7 @@ button.navbar-toggler {
 }
 
 .form-daftar h2 {
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .form-daftar p {
@@ -147,7 +154,7 @@ button.navbar-toggler {
 
 .form-group input {
   font-size: 1.2rem;
-  margin-top: 1.5rem;
+  margin-top: .7rem;
   margin-bottom: 2rem;
   height: 3rem;
   background: unset !important;
@@ -165,7 +172,7 @@ button.navbar-toggler {
 }
 
 .form-daftar label {
-  margin-top: 12px;
+  margin-top: 0px;
   font-size: 1.3rem;
   font-weight: 600;
 }
@@ -174,7 +181,7 @@ button.navbar-toggler {
   outline: unset;
   border: unset;
   background: var(--green);
-  padding: .6rem;
+  padding: .8rem;
   color: white;
   width: 100%;
   font-size: 1.3rem;
@@ -230,7 +237,7 @@ input[type="number"]:focus,
 
 .barcode-ios p,
 .barcode-android p {
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -332,14 +339,8 @@ input[type="number"]:focus,
 
   .jumbotron .text-heading {
     color: white;
-    font-weight: 600;
-    margin-top: 8rem;
+    margin-top: 11rem;
     font-size: 4rem;
-  }
-
-  .jumbotron .text-p {
-    color: white;
-    font-size: 2rem;
   }
 
   /* info-panel */
@@ -406,15 +407,9 @@ input[type="number"]:focus,
 
   .jumbotron .text-heading {
     color: white;
-    font-weight: 600;
-    margin-top: 8rem;
+    margin-top: 11rem;
     font-size: 5rem;
     margin-bottom: 2rem;
-  }
-
-  .jumbotron .text-p {
-    color: white;
-    font-size: 2.5rem;
   }
 
   /*   info-panel */
@@ -424,12 +419,6 @@ input[type="number"]:focus,
     background-color: white;
     border-radius: 10px;
     padding: 2rem .5rem;
-  }
-
-  .info-panel .friendly img {
-    margin-top: -6px;
-    width: 5rem;
-    height: 3rem;
   }
 
   /* download */

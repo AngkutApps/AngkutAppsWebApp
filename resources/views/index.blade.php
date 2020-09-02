@@ -5,6 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="icon" href="{{asset('asset_frontend/img/logo.png')}}">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{asset('asset_frontend/css/bootstrap.css')}}" />
@@ -21,7 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- My CSS -->
-    <link rel="stylesheet" href="{{asset('asset_frontend/css/styleIndex2.css')}}" />
+    <link rel="stylesheet" href="{{asset('asset_frontend/css/styleindex.css')}}" />
 
     <title>Angkut App</title>
 </head>

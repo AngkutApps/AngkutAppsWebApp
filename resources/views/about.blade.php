@@ -4,12 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="icon" href="{{asset('asset_frontend/img/logo.png')}}">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{asset('asset_frontend/css/bootstrap.css')}}" />
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset('asset_frontend/css/all.css')}}" />
+    <link rel="stylesheet" href="{{asset('asset_frontend/css/bootstrap.min.css')}}" />
 
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -18,7 +15,8 @@
     <link rel="stylesheet" href="{{asset('asset_frontend/vendor/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css')}}">
     <link rel="stylesheet" href="{{asset('asset_frontend/vendor/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css')}}">
 
-
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="{{asset('asset_frontend/css/all.css')}}" />
 
     <!-- style css -->
     <link rel="stylesheet" href="{{asset('asset_frontend/css/styleabout.css')}}" />
@@ -61,22 +59,35 @@
                         <img src="{{asset('asset_frontend/img/business_conference_.svg')}}" alt="" class="img-fluid" />
                     </picture>
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 d-flex align-items-center">
                     <div class="keterangan">
-                        <p>
-                            <span>1</span> Membantu mitra kami (transportasi lintas daerah) untuk menemukan penumpang secara cepat dan
-                            aman
-                        </p>
-                        <p>
-                            <span>2</span> Memberikan layanan terbaik yang disukai oleh penumpang berupa merchant dan snack.
-                        </p>
-                        <p>
-                            <span>3</span> Memperbaharui dan mempermudah alur pemesanan jasa transportasi lintas daerah.
-                        </p>
-                        <p>
-                            <span>4</span> Membantu penumpang untuk menemukan driver yang terpercaya dengan layanan transportasi
-                            yang aman dan nyaman serta fleksibel.
-                        </p>
+                        <div class="isi">
+                            <span>1</span>
+                            <p>
+                                Membantu mitra kami (transportasi lintas daerah) untuk menemukan penumpang secara cepat
+                                dan
+                                aman
+                            </p>
+                        </div>
+                        <div class="isi">
+                            <span>2</span>
+                            <p>
+                                Memberikan layanan terbaik yang disukai oleh penumpang berupa merchant dan snack.
+                            </p>
+                        </div>
+                        <div class="isi">
+                            <span>3</span>
+                            <p>
+                                Memperbaharui dan mempermudah alur pemesanan jasa transportasi lintas daerah.
+                            </p>
+                        </div>
+                        <div class="isi">
+                            <span>4</span>
+                            <p>
+                                Membantu penumpang untuk menemukan driver yang terpercaya dengan layanan transportasi
+                                yang aman dan nyaman serta fleksibel.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -94,9 +105,9 @@
                         telponan teman yang meminta nomor telepon supir daerah. Yang pada akhirnya menjadi pertanyaan bagi
                         sekelompok sahabat yang ambisius dan haus akan pengalaman baru. Dari hasil ambisius itu, sekelompok sahabat
                         menginisiasikan ide ini untuk diikutkan lomba startup lokal kampus yang kemudian membuahkan hasil
-                        penghargaan
-                        juara 2. Tidak puas hanya sekedar untuk diikutkan lomba, Sekelompok sahabat membuat komitmen untuk ide ini
-                        dapat dijadikan sebagai perusahaan startup yang dapat digunakan dan juga membantu para penggunannya yaitu
+                        penghargaan juara 2. Tidak puas hanya sekedar untuk diikutkan lomba, Sekelompok sahabat membuat komitmen
+                        untuk ide ini
+                        dapat dijadikan sebagai perusahaan startup yang dapat digunakan dan juga membantu para penggunanya yaitu
                         transportasi mobil daerah, pete-pete, dan bus untuk bepergian lintas daerah. Hingga saat ini kami sangat
                         optimis dan ambisius ide kami dibutuhkan oleh banyak orang serta akan terus melakukan pengembangan dan
                         mengevaluasi demi kenyamanan pengguna.
@@ -164,7 +175,7 @@
                 <div class="col-6 col-lg-4">
                     <div class="keenam shadow p-3 mb-5 bg-white rounded">
                         <p>
-                            Melakukan aktivitas jasa transportasi sesuai dengan keinginanmu tanpa takut akun terkena punishment /
+                            Melakukan aktivitas jasa transportasi sesuai dengan keinginanmu tanpa takut akun terkena punishment atau
                             sanksi.
                             <span class="badge badge-secondary">6</span>
                         </p>
@@ -211,7 +222,7 @@
                             </div>
                             <div class="info-tim">
                                 <h4>Ayu</h4>
-                                <p>Android Developer</p>
+                                <p>Web Developer</p>
                             </div>
                         </div>
 
@@ -240,8 +251,8 @@
                                 <img src="{{asset('asset_frontend/img/Tim/iccank.png')}}" alt="">
                             </div>
                             <div class="info-tim">
-                                <h4>Ichsan B</h4>
-                                <p>Android Developer</p>
+                                <h4>Ichsan</h4>
+                                <p>Web Developer</p>
                             </div>
                         </div>
 
@@ -251,7 +262,7 @@
                             </div>
                             <div class="info-tim">
                                 <h4>Asep</h4>
-                                <p>Android Developer</p>
+                                <p>Web Developer</p>
                             </div>
                         </div>
 
@@ -262,7 +273,7 @@
     </section>
 
     @include('layouts.footer')
-
+    <!--Akhir Footer -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="{{asset('asset_frontend/js/popper.min.js')}}"></script>
@@ -274,6 +285,8 @@
             loop: true,
             margin: 10,
             nav: false,
+            autoplay: true,
+            autoplayTimeout: 3000,
             responsive: {
                 0: {
                     items: 1

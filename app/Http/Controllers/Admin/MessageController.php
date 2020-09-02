@@ -37,7 +37,21 @@ class MessageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'email' => 'required|email',
+            'hp' => 'required',
+            'message' => 'required|min:3|max:30'
+        ]);
+
+        $message = [
+            'email' => $request->email,
+            'hp' => $request->hp,
+            'message' => $request->message
+        ];
+
+        Message::create($message);
+        alert()->success('Sukses', 'Pesan Berhasil di kirim');
+        return redirect()->back();
     }
 
     /**
@@ -82,6 +96,8 @@ class MessageController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Message::findOrFail($id)->delete();
+        toast('berhasil di hapus', 'success');
+        return redirect()->back();
     }
 }

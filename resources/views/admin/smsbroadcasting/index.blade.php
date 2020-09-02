@@ -6,11 +6,10 @@
     <div class="col">
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a href="{{route('user.index')}}" class="btn btn-md btn-success rounded-pill shadow-lg"><i class="fas fa-arrow-left"></i> Back</a>
+
             </div>
             <div class="card-body">
-                <form id="ajaxform" method="post">
-                    @csrf
+                <form id="ajaxform">
                     <div class="form-group">
                         <label>Title</label>
                         <input type="text" name="title" class="form-control form-control-user rounded-pill @error('title') is-invalid @enderror">

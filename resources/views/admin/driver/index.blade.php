@@ -6,6 +6,13 @@
     <div class="col">
         <div class="card shadow mb-4">
             <div class="card-header py-3">
+                <form action="" method="GET">
+                    <div class="float-right">
+                        <button type="submit" class="btn btn-sm btn-primary">Mobil Pete-pete()</button> |
+                        <button type="submit" class="btn btn-sm btn-primary" name="published" value="published">Mobil Daerah()</button> |
+                        <button type="submit" class="btn btn-sm btn-primary" name="draft" value="draft">Mobil Bus()</button>
+                    </div>
+                </form>
             </div>
             <div class="card-body">
                 <div class="table-responsive">

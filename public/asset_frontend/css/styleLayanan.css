@@ -65,6 +65,10 @@ nav.navbar {
   color: var(--green) !important;
 }
 
+.nav-link.active {
+  color: var(--green) !important;
+}
+
 button.navbar-toggler {
   background: unset;
   border: unset;
@@ -87,8 +91,9 @@ button.navbar-toggler {
 
 .features h1 {
   text-transform: capitalize;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .features hr {
@@ -117,9 +122,10 @@ button.navbar-toggler {
 
 
 .features .tab-content h2 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-transform: capitalize;
   margin-top: 2rem;
+  font-weight: 700;
 }
 
 .features .tab-content .info-panel {
@@ -229,7 +235,7 @@ button.navbar-toggler {
 .driver .card {
   margin-top: 6rem !important;
   border: unset;
-  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .profile-card-2 .card-body {
@@ -271,6 +277,9 @@ button.navbar-toggler {
 }
 
 /* faq */
+.question {
+  margin-bottom: 8rem;
+}
 
 .question h1 {
   text-transform: capitalize;
@@ -283,6 +292,10 @@ button.navbar-toggler {
   margin: auto;
   margin-bottom: 1rem;
   border: 1px solid #EF8641;
+}
+
+.question p {
+  font-size: 1.2rem;
 }
 
 
@@ -427,10 +440,10 @@ button.navbar-toggler {
   }
 
   .features .tab-content .info-panel img {
-    width: 55px;
+    width: 45px;
     position: absolute;
     top: .8rem;
-    left: 1rem;
+    left: 1.7rem;
   }
 
   .features .tab-content .info-panel .text-info {
@@ -439,8 +452,8 @@ button.navbar-toggler {
 
   .features .tab-content .info-panel .text-info h2 {
     color: rgba(0, 0, 0, .9);
-    font-weight: 600;
-    font-size: 1.8rem;
+    font-weight: 700;
+    font-size: 1.7rem;
   }
 
   .features .tab-content .info-panel .text-info p {
@@ -576,13 +589,13 @@ button.navbar-toggler {
   }
 
   .features .tab-content .info-panel img {
-    width: 5rem;
+    width: 5.5rem;
     left: 0rem;
-    top: .1rem;
+    top: .3rem;
   }
 
   .features .tab-content .info-panel .text-info {
-    margin-left: 8.5rem;
+    margin-left: 7.5rem;
   }
 
   .features .tab-content .info-panel .text-info h2 {
@@ -802,12 +815,12 @@ button.navbar-toggler {
 
   /* features */
   .features {
-    margin-top: 9rem;
+    margin-top: 8%;
   }
 
   .features h1 {
     text-transform: capitalize;
-    font-size: 3.5rem;
+    font-size: 3.2rem;
   }
 
   .features hr {
@@ -892,7 +905,6 @@ button.navbar-toggler {
     padding: .5rem;
     margin-bottom: .8rem;
     font-size: 1.3rem;
-
   }
 
   .form-cek-tarif .btn-cek:hover {
@@ -917,6 +929,9 @@ button.navbar-toggler {
   }
 
   /* faq */
+  .question p {
+    font-size: 1.4rem;
+  }
 
   .question h1 {
     font-size: 3.5rem;
@@ -959,7 +974,7 @@ button.navbar-toggler {
 
   /* features */
   .features {
-    margin-top: 9rem;
+    margin-top: 8%;
   }
 
   .features h1 {
@@ -1046,10 +1061,9 @@ button.navbar-toggler {
 
   .form-cek-tarif .btn-cek {
     margin-top: 1.5rem;
-    padding: .5rem;
+    padding: .59rem;
     margin-bottom: .8rem;
     font-size: 1.3rem;
-
   }
 
   .form-cek-tarif .btn-cek:hover {
@@ -1074,6 +1088,10 @@ button.navbar-toggler {
   }
 
   /* faq */
+
+  .question p {
+    font-size: 1.5rem;
+  }
 
   .question h1 {
     font-size: 3.5rem;

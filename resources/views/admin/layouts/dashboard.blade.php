@@ -11,6 +11,7 @@ header('Access-Control-Max-Age: 1000'); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="icon" href="{{asset('asset_frontend/img/logo.png')}}">
 
     <title>AngkutApps - Dashboard</title>
 
@@ -135,8 +136,8 @@ header('Access-Control-Max-Age: 1000'); ?>
 
 
     <!-- Bootstrap core JavaScript-->
-    <script src="{{asset('asset_backend/vendor/jquery/jquery.min.js')}}">
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <script src="{{asset('asset_backend/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
     <!-- Core plugin JavaScript-->
@@ -170,28 +171,35 @@ header('Access-Control-Max-Age: 1000'); ?>
 
             $(".save-data").click(function(event) {
                 event.preventDefault();
-                // let title = $("input[name=title]").val();
-                // let body = $("input[name=body]").val();
                 var formData = {
-                    "smsblast_username": "",
-                    "smsblast_password": "",
-                    "smsblast_senderid": "",
-                    "msisdns": ["+62895806368692"],
+                    "msisdns": [
+                        "+62895806368692"
+                    ],
                     "text": "testing"
                 };
-
+                var apiKey = "b4emnOXwXDdGSeTZH2DcHKqhHCXCFSqI";
                 $.ajax({
                     url: "https://api.thebigbox.id/sms-broadcast/1.0.0/send",
                     type: "POST",
-                    contentType: "application/json; charset=utf-8",
+                    xhrFields: {
+                        withCredentials: true,
+                        cors: false
+                    },
+                    contentType: "application/json",
                     dataType: 'json',
                     CrossDomain: true,
-                    async: false,
                     cache: false,
+                    async: false,
                     data: JSON.stringify(formData),
                     headers: {
-                        "x-api-key": "b4emnOXwXDdGSeTZH2DcHKqhHCXCFSqI"
+                        "Authorization": apiKey,
+                        'Access-Control-Allow-Origin': '*',
+                        'accept': 'application/json',
+                        'x-api-key': apiKey
                     },
+                    // beforeSend: function(xhr) {
+                    //     xhr.setRequestHeader('x-api-key', apiKey);
+                    // },
                     success: function(response) {
                         console.log(response);
                         Swal.fire(
@@ -199,10 +207,15 @@ header('Access-Control-Max-Age: 1000'); ?>
                             'You clicked the button!',
                             'success'
                         )
-                        if (response) {
-                            $('.success').text(response.success);
-                            $("#ajaxform")[0].reset();
-                        }
+                    },
+                    error: function(xhr, status, error) {
+                        // console.log(status);
+                        console.log(error);
+                        Swal.fire(
+                            console.log(error),
+                            'error',
+                            'error'
+                        )
                     },
                 });
             });

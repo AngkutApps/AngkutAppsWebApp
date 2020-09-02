@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="{{asset('asset_frontend/img/logo.png')}}">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{asset('asset_frontend/css/bootstrap.css')}}" />
@@ -27,11 +28,8 @@
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="text-heading" class="display-4">
-                Angkut Apps Bus
+                Cara <span>Simple</span> Untuk Memenuhi Kursi dan <span>Memanjakan</span> Penumpang <span>Anda</span>.
             </h1>
-            <p class="text-p">Cara Simple Untuk Memenuhi Kursi dan Memanjakan Penumpang Anda.</p>
-            <p class="text-p">Tidak ada Sanksi, Ramah Pengguna, Mudah dan Cepat Mencari Penumpang.
-            </p>
         </div>
     </div>
 
@@ -82,13 +80,35 @@
                         <form action="{{route('bus.store')}}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <input type="text" class="form-control" name="name" placeholder="Nama Lengkap" required />
-                                <input type="text" class="form-control" name="kabkota" placeholder="Kab / Kota Domisili" required />
-                                <input type="telp" class="form-control" name="hp" placeholder="Nomor Hp" required />
-                                <input type="email" class="form-control" name="email" placeholder="Email" required />
-                                <input type="password" class="form-control" name="password" placeholder="Password" required />
-                                <input type="password" class="form-control" name="passwordtwo" placeholder="Konfirmasi Password" required />
+
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" name="name" placeholder="Nama Lengkap" required />
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" name="kabkota" placeholder="Kab / Kota Domisili" required />
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="telp" class="form-control" name="hp" placeholder="Nomor Hp" required />
+                                    </div>
+                                    <div class="col">
+                                        <input type="email" class="form-control" name="email" placeholder="Email" required />
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="password" class="form-control" name="password" placeholder="Password" required />
+                                    </div>
+                                    <div class="col">
+                                        <input type="password" class="form-control" name="passwordtwo" placeholder="Konfirmasi Password" required />
+                                    </div>
+                                </div>
                                 <input type="text" class="form-control" name="nikktp" placeholder="NIK KTP" required />
+
                                 <label for="">Identitas Kendaraan</label>
                                 <div class="row">
                                     <div class="col">

@@ -6,6 +6,7 @@ use App\Articel;
 use App\Driver;
 use Illuminate\Http\Request;
 use Alert;
+use App\Message;
 
 class HomeController extends Controller
 {
@@ -64,10 +65,10 @@ class HomeController extends Controller
                 'sumber' => $request->sumber
             ];
             Driver::create($driver);
-            alert()->success('SuccessAlert', 'Daftar Berhasil');
+            alert()->success('Sukses', 'Daftar Berhasil');
             return redirect()->back();
         } else {
-            alert()->error('ErrorAlert', 'Password tidak sama');
+            alert()->error('Error', 'Password tidak sama');
             return redirect()->back();
         }
     }
@@ -103,10 +104,10 @@ class HomeController extends Controller
                 'sumber' => $request->sumber
             ];
             Driver::create($driver);
-            alert()->success('SuccessAlert', 'Daftar Berhasil');
+            alert()->success('Sukses', 'Daftar Berhasil');
             return redirect()->back();
         } else {
-            alert()->error('ErrorAlert', 'Password tidak sama');
+            alert()->error('Error', 'Password tidak sama');
             return redirect()->back();
         }
     }
@@ -142,11 +143,28 @@ class HomeController extends Controller
                 'sumber' => $request->sumber
             ];
             Driver::create($driver);
-            alert()->success('SuccessAlert', 'Daftar Berhasil');
+            alert()->success('Sukses', 'Daftar Berhasil');
             return redirect()->back();
         } else {
-            alert()->error('ErrorAlert', 'Password tidak sama');
+            alert()->error('Error', 'Password tidak sama');
             return redirect()->back();
         }
+    }
+
+    public function layanan()
+    {
+        return view('layanan');
+    }
+
+    public function cekTarif()
+    {
+        alert()->info('Info', 'Fitur Coming Soon');
+        return redirect()->back();
+    }
+
+    public function bantuan()
+    {
+        $messages = Message::paginate(4);
+        return view('bantuan', compact('messages'));
     }
 }

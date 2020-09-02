@@ -1,5 +1,6 @@
 <?php
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,7 +11,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 
 
 Route::get('/', 'HomeController@index')->name('angkut.index');
@@ -28,6 +28,10 @@ Route::post('/daftar/mobil-daerah/store', 'HomeController@storeDaerah')->name('d
 Route::get('/daftar/bus', 'HomeController@daftarBus')->name('angkut.bus');
 Route::post('/daftar/bus/store', 'HomeController@storeBus')->name('bus.store');
 
+Route::get('/layanan', 'HomeController@layanan')->name('angkut.layanan');
+Route::post('/layanan/cek-tarif', 'HomeController@cekTarif')->name('angkut.tarif');
+
+Route::get('/bantuan', 'HomeController@bantuan')->name('angkut.bantuan');
 
 Route::group(['prefix' => 'adminweb'], function () {
     Auth::routes(['register' => false]);
