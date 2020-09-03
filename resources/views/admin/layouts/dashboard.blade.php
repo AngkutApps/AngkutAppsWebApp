@@ -162,15 +162,7 @@ header('Access-Control-Max-Age: 1000'); ?>
 
     <script>
         $(document).ready(function() {
-            $.ajaxSetup({
-                headers: {
-                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                }
-            });
 
-            var contentType = "application/json; charset=utf-8";
-
-            if (window.XDomainRequest) contentType = "text/plain";
 
             $('body').on('click', '.btn-hapus', function(e) {
                 e.preventDefault();
@@ -179,45 +171,20 @@ header('Access-Control-Max-Age: 1000'); ?>
                 $('#modal-hapus').modal();
             });
 
-            $(".save-data").click(function(event) {
-                event.preventDefault();
-                var formData = {
-                    "msisdns": [
-                        "+62895806368692"
-                    ],
-                    "text": "testing"
-                };
-                var apiKey = "b4emnOXwXDdGSeTZH2DcHKqhHCXCFSqI";
-                $.ajax({
-                    url: "https://api.thebigbox.id/sms-broadcast/1.0.0/send",
-                    type: "POST",
-                    xhrFields: {
-                        withCredentials: true
-                    },
-                    contentType: contentType,
-                    dataType: 'json',
-                    CrossDomain: true,
-                    data: JSON.stringify(formData),
-                    headers: {
-                        "Authorization": apiKey,
-                        'Access-Control-Allow-Origin': 'https://api.thebigbox.id/',
-                        'accept': 'application/json',
-                        'x-api-key': apiKey
-                    },
-                    success: function(response) {
-                        console.log(response);
-                        Swal.fire(
-                            'Good job!',
-                            'You clicked the button!',
-                            'success'
-                        )
-                    },
-                    error: function(xhr, status, error) {
-                        // console.log(status);
-                        console.log(xhr);
-                    },
-                });
+            var i = 1;
+
+
+            $('#add').click(function() {
+                i++;
+                $('#dynamic_field').append('<tr id="row' + i + '" class="dynamic-added"><td><label>Phone Number</label></td><td><input type="text" name="phonenum[]"  class="form-control" /></td><td><button type="button" name="remove" id="' + i + '" class="btn btn-danger btn_remove">X</button></td></tr>');
             });
+
+
+            $(document).on('click', '.btn_remove', function() {
+                var button_id = $(this).attr("id");
+                $('#row' + button_id + '').remove();
+            });
+
         });
     </script>
 

@@ -68,6 +68,7 @@ Route::group(['prefix' => 'adminweb', 'middleware' => ['auth']], function () {
 
     //SMS broadcasting
     Route::get('/sms', 'Admin\SmsBroadcastingController@index')->name('sms.index');
+    Route::post('/sms/send', 'Admin\SmsBroadcastingController@sendSms')->name('sms.send');
 
     //driver
     Route::resource('/driver', 'Admin\DriverController');

@@ -222,7 +222,7 @@
                             </div>
                             <div class="info-tim">
                                 <h4>Ayu</h4>
-                                <p>Web Developer</p>
+                                <p>UI/UX Designer</p>
                             </div>
                         </div>
 
@@ -232,7 +232,7 @@
                             </div>
                             <div class="info-tim">
                                 <h4>Furqan</h4>
-                                <p>Android Developer</p>
+                                <p>Dev Ops</p>
                             </div>
                         </div>
 

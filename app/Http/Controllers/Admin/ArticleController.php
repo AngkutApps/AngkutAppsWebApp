@@ -100,6 +100,10 @@ class ArticleController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'image' => 'required'
+        ]);
+
         $articleData = Articel::findOrFail($id);
         $this->validate($request, [
             'title' => 'required|min:3',

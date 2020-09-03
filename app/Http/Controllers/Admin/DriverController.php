@@ -72,7 +72,8 @@ class DriverController extends Controller
      */
     public function edit($id)
     {
-        //
+        $driver = Driver::findOrFail($id);
+        return view('admin.driver.edit', compact('driver'));
     }
 
     /**
@@ -84,7 +85,48 @@ class DriverController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $driverData = Driver::findOrFail($id);
+
+
+        if ($request->password != null && $request->image != null) {
+            $image = $request->image;
+            $imageName = time() . $image->getClientOriginalName();
+            $image->move('asset_backend/img/upload/drivers', $imageName);
+            $driver = [
+                'name' => $request->name,
+                'kabkota' =>  $request->kabkota,
+                'hp' => $request->hp,
+                'email' => $request->email,
+                'password' => $request->password,
+                'nikktp' => $request->nikktp,
+                'noplat' => $request->noplat,
+                'merkmobil' => $request->merkmobil,
+                'image' => 'asset_backend/img/upload/drivers/' . $imageName,
+                'jenisdriver' => $request->jenisdriver,
+                'sumber' => $request->sumber
+
+            ];
+            $file_path = $driverData->image;
+            if (file_exists($file_path)) {
+                unlink($file_path);
+            }
+        } else {
+            $driver = [
+                'name' => $request->name,
+                'kabkota' =>  $request->kabkota,
+                'hp' => $request->hp,
+                'email' => $request->email,
+                'nikktp' => $request->nikktp,
+                'noplat' => $request->noplat,
+                'merkmobil' => $request->merkmobil,
+                'jenisdriver' => $request->jenisdriver,
+                'sumber' => $request->sumber
+            ];
+        }
+        $driverData->update($driver);
+        alert()->success('Sukses', 'Daftar Berhasil di update');
+        return redirect()->back();
     }
 
     /**

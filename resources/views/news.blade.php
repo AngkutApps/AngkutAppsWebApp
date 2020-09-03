@@ -75,7 +75,7 @@
                             <img src="{{asset($articleGet->image)}}" alt="" />
                         </picture>
                         <div class="card-body">
-                            <a class="card-link" href="postDetail.html" target="_blank">
+                            <a class="card-link" href="{{route('angkut.detail',$articleGet->slug)}}" target="_blank">
                                 {{$articleGet->title}}
                             </a>
                             <p>{!! Str::words($articleGet->content, $words = 20, $end = '...') !!}</p>
@@ -86,10 +86,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6">
-                    <div class="row mt-md-n4">
+                <div class="col-12 col-md-6">
+                    <div class="row">
                         @foreach($articles as $article)
-                        <div class="col-12 col-lg-6 mb-lg-5">
+                        <div class="col-12 col-lg-6">
                             <div class="card">
                                 <picture>
                                     <img src="{{asset($article->image)}}" alt="" />
