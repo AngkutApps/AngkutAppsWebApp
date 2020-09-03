@@ -6,6 +6,7 @@ use App\Articel;
 use App\Driver;
 use Illuminate\Http\Request;
 use Alert;
+use App\Category;
 use App\Message;
 
 class HomeController extends Controller
@@ -31,6 +32,17 @@ class HomeController extends Controller
         $articleGet = Articel::first();
 
         $articles = Articel::orderBy('id', 'DESC')->paginate(4);
+        return view('news', compact('articles', 'articleGet'));
+    }
+
+    public function cariNews(Request $request)
+    {
+        $cari = $request->cari;
+
+        $articleGet = Articel::first();
+
+        $articles = Articel::where('title', 'like', "%" . $cari . "%")->paginate(4);
+
         return view('news', compact('articles', 'articleGet'));
     }
 
@@ -166,5 +178,22 @@ class HomeController extends Controller
     {
         $messages = Message::paginate(4);
         return view('bantuan', compact('messages'));
+    }
+
+    public function cariBantuan(Request $request)
+    {
+        $cari = $request->cari;
+
+
+        $messages = Message::where('message', 'like', "%" . $cari . "%")->paginate(4);
+
+        return view('bantuan', compact('messages'));
+    }
+
+    public function postDetail($slug)
+    {
+        $categories = Category::all();
+        $news = Articel::where('slug', $slug)->firstOrFail();
+        return view('postdetail', compact('news', 'categories'));
     }
 }

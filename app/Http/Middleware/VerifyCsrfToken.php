@@ -19,6 +19,7 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        'api/*'
+        'api/*',
+        'https://api.thebigbox.id/sms-broadcast/1.0.0/send'
     ];
 }

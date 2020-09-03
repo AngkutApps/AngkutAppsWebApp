@@ -16,6 +16,8 @@ class AdminController extends Controller
         $articleCount = Articel::all()->count();
         $pesanCount = Message::all()->count();
         $driverCount = Driver::all()->count();
-        return view('admin.index', compact('userCount', 'articleCount', 'pesanCount', 'driverCount'));
+        $drivers = Driver::take(5)->get();
+        $messages = Message::take(5)->get();
+        return view('admin.index', compact('userCount', 'articleCount', 'pesanCount', 'driverCount', 'drivers', 'messages'));
     }
 }

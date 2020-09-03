@@ -12,8 +12,8 @@
     <hr class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
-        <a class="nav-link" href="{{route('admin.index')}}">
+    <li class="nav-item {{ Route::currentRouteNamed('admin.index')  ? 'active' : '' }}">
+        <a class="nav-link  " href="{{route('admin.index')}}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
@@ -28,14 +28,14 @@
     </div>
 
     <!-- Nav Item - DriverMenu -->
-    <li class="nav-item">
-        <a class="nav-link" href="{{route('driver.index')}}">
+    <li class="nav-item {{ Route::currentRouteNamed('driver.index')  ? 'active' : '' }} ">
+        <a class="nav-link " href="{{route('driver.index')}}">
             <i class="fas fa-fw fa-car-side"></i>
             <span>All Driver</span>
         </a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{{route('message.index')}}">
+    <li class="nav-item {{ Route::currentRouteNamed('message.index')  ? 'active' : '' }}">
+        <a class="nav-link  " href="{{route('message.index')}}">
             <i class="fas fa-fw fa-envelope"></i>
             <span>All Pesan</span>
         </a>
@@ -46,7 +46,7 @@
         SMS Broadcasting
     </div>
 
-    <li class="nav-item">
+    <li class="nav-item {{ Route::currentRouteNamed('sms.index')  ? 'active' : '' }} ">
         <a class="nav-link" href="{{route('sms.index')}}">
             <i class="fas fa-fw fa-sms"></i>
             <span>Send SMS</span>
@@ -62,7 +62,7 @@
     </div>
 
     <!-- Nav Item - Pages Collapse Menu -->
-    <li class="nav-item">
+    <li class="nav-item {{ Route::currentRouteNamed('category.index') || Route::currentRouteNamed('category.trash')   ? 'active' : '' }}  ">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-fw fa-bookmark"></i>
             <span>Category</span>
@@ -77,7 +77,7 @@
     </li>
 
     <!-- Nav Item - Utilities Collapse Menu -->
-    <li class="nav-item">
+    <li class="nav-item  {{ Route::currentRouteNamed('article.index') || Route::currentRouteNamed('article.trash')   ? 'active' : '' }}">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
             <i class="fas fa-fw fa-newspaper"></i>
             <span>Artikel</span>
@@ -98,8 +98,8 @@
         Site Setting
     </div>
 
-    <li class="nav-item">
-        <a class="nav-link" href="{{route('user.index')}}">
+    <li class="nav-item {{ Route::currentRouteNamed('user.index')  ? 'active' : '' }}">
+        <a class="nav-link " href="{{route('user.index')}}">
             <i class="fas fa-fw fa-user"></i>
             <span>User Setting</span>
         </a>

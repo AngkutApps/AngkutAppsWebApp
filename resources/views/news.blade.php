@@ -20,7 +20,7 @@
     <!-- My CSS -->
     <link rel="stylesheet" href="{{asset('asset_frontend/css/stylePost.css')}}" />
 
-    <title>Post</title>
+    <title>News</title>
 </head>
 
 <body>
@@ -42,9 +42,10 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <form class="form-inline justify-content-center">
+                    <form class="form-inline justify-content-center" method="GET" action="{{route('angkut.cari')}}">
+
                         <div class="form-group">
-                            <input class="form-input" type="cari" placeholder="Search Disini" aria-label="cari" />
+                            <input class="form-input" name="cari" type="cari" placeholder="Search Disini" aria-label="cari" />
                             <button type="submit" class="search-btn">
                                 <i class="fas fa-search"></i>
                             </button>
@@ -74,9 +75,10 @@
                             <img src="{{asset($articleGet->image)}}" alt="" />
                         </picture>
                         <div class="card-body">
-                            <a href="postDetail.html" target="_blank">
+                            <a class="card-link" href="postDetail.html" target="_blank">
                                 {{$articleGet->title}}
                             </a>
+                            <p>{!! Str::words($articleGet->content, $words = 20, $end = '...') !!}</p>
 
                         </div>
                         <div class="card-footer">
@@ -93,8 +95,8 @@
                                     <img src="{{asset($article->image)}}" alt="" />
                                 </picture>
                                 <div class="card-body">
-                                    <a href="">{{$article->title}}</a>
-
+                                    <a href="{{route('angkut.detail',$article->slug)}}" class="card-link">{{$article->title}}</a>
+                                    <p>{!! Str::words($article->content, $words = 5, $end = '...') !!}</p>
                                 </div>
                                 <div class="card-footer">
                                     <small class="text-muted">{{$article->created_at->diffForHumans()}}</small>
@@ -106,12 +108,14 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 d-flex justify-content-center">
                     {{ $articles->links() }}
                 </div>
             </div>
         </div>
     </main>
+
+
 
     <!-- Footer -->
     @include('layouts.footer')

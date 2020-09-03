@@ -6,11 +6,12 @@
     <div class="col">
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <form action="" method="GET">
+                <form action="{{route('driver.index')}}" method="GET">
                     <div class="float-right">
-                        <button type="submit" class="btn btn-sm btn-primary">Mobil Pete-pete()</button> |
-                        <button type="submit" class="btn btn-sm btn-primary" name="published" value="published">Mobil Daerah()</button> |
-                        <button type="submit" class="btn btn-sm btn-primary" name="draft" value="draft">Mobil Bus()</button>
+                        <button type="submit" class="btn btn-sm btn-primary" name="all" value="all">All({{$driversCount}})</button> |
+                        <button type="submit" class="btn btn-sm btn-primary" name="pete" value="pete-pete">Mobil Pete-pete({{$peteCount}})</button> |
+                        <button type="submit" class="btn btn-sm btn-primary" name="daerah" value="Mobil Daerah">Mobil Daerah({{$daerahCount}})</button> |
+                        <button type="submit" class="btn btn-sm btn-primary" name="bus" value="Mobil Bus">Mobil Bus({{$busCount}})</button>
                     </div>
                 </form>
             </div>

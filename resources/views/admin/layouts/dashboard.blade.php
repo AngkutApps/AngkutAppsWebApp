@@ -9,6 +9,7 @@ header('Access-Control-Max-Age: 1000'); ?>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="{{asset('asset_frontend/img/logo.png')}}">
@@ -161,6 +162,15 @@ header('Access-Control-Max-Age: 1000'); ?>
 
     <script>
         $(document).ready(function() {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+            var contentType = "application/json; charset=utf-8";
+
+            if (window.XDomainRequest) contentType = "text/plain";
 
             $('body').on('click', '.btn-hapus', function(e) {
                 e.preventDefault();
@@ -182,24 +192,18 @@ header('Access-Control-Max-Age: 1000'); ?>
                     url: "https://api.thebigbox.id/sms-broadcast/1.0.0/send",
                     type: "POST",
                     xhrFields: {
-                        withCredentials: true,
-                        cors: false
+                        withCredentials: true
                     },
-                    contentType: "application/json",
+                    contentType: contentType,
                     dataType: 'json',
                     CrossDomain: true,
-                    cache: false,
-                    async: false,
                     data: JSON.stringify(formData),
                     headers: {
                         "Authorization": apiKey,
-                        'Access-Control-Allow-Origin': '*',
+                        'Access-Control-Allow-Origin': 'https://api.thebigbox.id/',
                         'accept': 'application/json',
                         'x-api-key': apiKey
                     },
-                    // beforeSend: function(xhr) {
-                    //     xhr.setRequestHeader('x-api-key', apiKey);
-                    // },
                     success: function(response) {
                         console.log(response);
                         Swal.fire(
@@ -210,12 +214,7 @@ header('Access-Control-Max-Age: 1000'); ?>
                     },
                     error: function(xhr, status, error) {
                         // console.log(status);
-                        console.log(error);
-                        Swal.fire(
-                            console.log(error),
-                            'error',
-                            'error'
-                        )
+                        console.log(xhr);
                     },
                 });
             });

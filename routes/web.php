@@ -13,10 +13,14 @@
 */
 
 
+
 Route::get('/', 'HomeController@index')->name('angkut.index');
 Route::get('/about', 'HomeController@about')->name('angkut.about');
 
 Route::get('/news', 'HomeController@news')->name('angkut.news');
+Route::get('/news/cari', 'HomeController@cariNews')->name('angkut.cari');
+Route::get('/news/{slug}', 'HomeController@postDetail')->name('angkut.detail');
+
 
 //daftar
 Route::get('/daftar/pete-pete', 'HomeController@daftarPete')->name('angkut.pete');
@@ -32,6 +36,7 @@ Route::get('/layanan', 'HomeController@layanan')->name('angkut.layanan');
 Route::post('/layanan/cek-tarif', 'HomeController@cekTarif')->name('angkut.tarif');
 
 Route::get('/bantuan', 'HomeController@bantuan')->name('angkut.bantuan');
+Route::get('/bantuan/cari', 'HomeController@cariBantuan')->name('bantuan.cari');
 
 Route::group(['prefix' => 'adminweb'], function () {
     Auth::routes(['register' => false]);

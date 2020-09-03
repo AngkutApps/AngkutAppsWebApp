@@ -11,12 +11,12 @@
             <div class="card-body">
                 <form id="ajaxform">
                     <div class="form-group">
-                        <label>Title</label>
+                        <label>Phone Number</label>
                         <input type="text" name="title" class="form-control form-control-user rounded-pill @error('title') is-invalid @enderror">
                     </div>
                     <div class="form-group">
-                        <label>Body</label>
-                        <input type="text" name="body" class="form-control form-control-user rounded-pill @error('body') is-invalid @enderror">
+                        <label>Text</label>
+                        <textarea class="form-control" name="text"></textarea>
                     </div>
                     <button class="btn btn-primary float-right save-data">Submit</button>
                     <button type="reset" class="btn btn-danger float-right mr-1">Reset</button>

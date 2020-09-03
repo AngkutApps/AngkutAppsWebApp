@@ -13,10 +13,22 @@ class DriverController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $drivers = Driver::all();
-        return view('admin.driver.index', compact('drivers'));
+        if ($request->get('pete')) {
+            $drivers = Driver::where('jenisdriver', 'pete-pete')->get();
+        } elseif ($request->get('daerah')) {
+            $drivers = Driver::where('jenisdriver', 'Mobil Daerah')->get();
+        } elseif ($request->get('bus')) {
+            $drivers = Driver::where('jenisdriver', 'Mobil Bus')->get();
+        } else {
+            $drivers = Driver::all();
+        }
+        $driversCount = Driver::all()->count();
+        $peteCount = Driver::where('jenisdriver', 'pete-pete')->count();
+        $daerahCount = Driver::where('jenisdriver', 'Mobil Daerah')->count();
+        $busCount = Driver::where('jenisdriver', 'Mobil Bus')->count();
+        return view('admin.driver.index', compact('drivers', 'peteCount', 'daerahCount', 'busCount', 'driversCount'));
     }
 
     /**

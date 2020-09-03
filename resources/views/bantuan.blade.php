@@ -33,9 +33,9 @@
     <div class="jumbotron jumbotron-fluid">
         <div class="container">
             <h1 class="display-4">Bagaimana kami bisa membantu anda ?</h1>
-            <form class="form-inline">
+            <form class="form-inline" method="GET" action="{{route('bantuan.cari')}}">
                 <div class="form-group">
-                    <input class="form-input" type="cari" placeholder="Cari disini . . ." aria-label="cari">
+                    <input class="form-input" name="cari" type="cari" placeholder="Cari disini . . ." aria-label="cari">
                     <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
                 </div>
             </form>
